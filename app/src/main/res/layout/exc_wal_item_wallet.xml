@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/cover_image_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        tools:src="@drawable/exc_wal_ic_btc" />
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/cover_image_view"
+        android:layout_alignBottom="@id/cover_image_view"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/cover_image_view"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        tools:text="BTC" />
+
+
+    <TextView
+        android:id="@+id/balance_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/cover_image_view"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:text="0.00" />
+
+    <TextView
+        android:id="@+id/balance_text_view_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/cover_image_view"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:text="≈ ¥--"
+        android:textColor="@color/excWalColorB7B7C4"
+        android:textSize="10sp"
+        tools:text="≈ ¥20.78" />
+
+    <TextView
+        android:id="@+id/released_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cover_image_view"
+        android:layout_marginLeft="16dp"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/excWalColor292A49"
+        android:textSize="14sp"
+        tools:text="485588.00000 CAT" />
+
+    <TextView
+        android:id="@+id/unreleased_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cover_image_view"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/excWalColor292A49"
+        android:textSize="14sp"
+        tools:text="485588.00000 CAT" />
+
+    <TextView
+        android:id="@+id/released_text_view_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/released_text_view"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        android:text="@string/exc_wal_released"
+        android:textColor="@color/excWalColorB7B7C4"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/unreleased_text_view_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/unreleased_text_view"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        android:layout_marginRight="16dp"
+        android:text="@string/exc_wal_unreleased"
+        android:textColor="@color/excWalColorB7B7C4"
+        android:textSize="10sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/released_text_view_"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/excWalColorF1F1F1" />
+</RelativeLayout>

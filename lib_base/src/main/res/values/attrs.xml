@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomEditText">
+
+        <attr name="ce_left_button_text_size" format="dimension" />
+        <attr name="ce_left_button_text_color" format="color" />
+        <attr name="ce_left_button_drawable_left" format="reference" />
+        <attr name="ce_left_button_drawable_right" format="reference" />
+        <attr name="ce_left_button_drawable_top" format="reference" />
+        <attr name="ce_left_button_drawable_bottom" format="reference" />
+        <attr name="ce_left_button_drawable_padding" format="dimension" />
+        <attr name="ce_left_button_left_padding" format="dimension" />
+        <attr name="ce_left_button_right_padding" format="dimension" />
+        <attr name="ce_left_button_top_padding" format="dimension" />
+        <attr name="ce_left_button_bottom_padding" format="dimension" />
+        <attr name="ce_left_button_hint" format="string" />
+        <attr name="ce_left_button_hint_color" format="color" />
+        <attr name="ce_left_button_enable" format="boolean" />
+
+        <attr name="ce_edit_text_size" format="dimension" />
+        <attr name="ce_edit_text_color" format="color" />
+        <attr name="ce_edit_hint" format="string" />
+        <attr name="ce_edit_hint_color" format="color" />
+        <attr name="ce_edit_left_padding" format="dimension" />
+        <attr name="ce_edit_right_padding" format="dimension" />
+        <attr name="ce_edit_top_padding" format="dimension" />
+        <attr name="ce_edit_bottom_padding" format="dimension" />
+        <attr name="ce_edit_single_line" format="boolean" />
+        <attr name="ce_edit_digits" format="string" />
+        <attr name="ce_edit_max_length" format="integer" />
+        <attr name="ce_edit_height" format="dimension" />
+        <attr name="ce_edit_input_type" format="enum">
+            <enum name="text" value="0" />
+            <enum name="password" value="1" />
+            <enum name="phone" value="2" />
+            <enum name="number" value="3" />
+            <enum name="numberDecimal" value="4" />
+            <enum name="textEmailAddress" value="5"/>
+        </attr>
+
+        <attr name="ce_clean_button_drawable" format="reference" />
+        <attr name="ce_clean_button_enable" format="boolean" />
+
+        <attr name="ce_eye_button_drawable" format="reference" />
+        <attr name="ce_eye_button_enable" format="boolean" />
+
+        <attr name="ce_bottom_line_focus_color" format="color" />
+        <attr name="ce_bottom_line_unfocus_color" format="color" />
+        <attr name="ce_bottom_line_error_color" format="color" />
+
+        <attr name="ce_error_text_size" format="dimension" />
+        <attr name="ce_error_text_color" format="color" />
+        <attr name="ce_error_drawable_left" format="reference" />
+        <attr name="ce_error_drawable_right" format="reference" />
+        <attr name="ce_error_drawable_top" format="reference" />
+        <attr name="ce_error_drawable_bottom" format="reference" />
+        <attr name="ce_error_drawable_padding" format="dimension" />
+
+        <attr name="ce_level_view_enable" format="boolean" />
+        <attr name="ce_level_normal_color" format="color" />
+        <attr name="ce_low_level_color" format="color" />
+        <attr name="ce_middle_level_color" format="color" />
+        <attr name="ce_high_level_color" format="color" />
+        <attr name="ce_level_view_height" format="dimension" />
+        <attr name="ce_level_view_margin" format="dimension" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/container"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:paddingTop="15dp"
+        android:background="#131e30">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:scaleType="centerInside"
+            android:src="@drawable/rc_back_icon_white" />
+
+        <TextView
+            android:id="@+id/title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="?actionBarSize"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:drawableRight="@drawable/exc_ic_triangle_down"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="BTC/USDT" />
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:background="#131e30"
+        android:layout_weight="1"/>
+
+
+   <!-- <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/excColorF6F6FB" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#142a41"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="10dp">
+
+        <Button
+            android:id="@+id/buy_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/exc_shape_00da97_04d192_radius_2"
+            android:minHeight="42dp"
+            android:text="@string/exc_buy"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/sell_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/exc_shape_f3752e_e95602_radius_2"
+            android:minHeight="42dp"
+            android:text="@string/exc_sell"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

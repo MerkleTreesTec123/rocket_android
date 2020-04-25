@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPageBackground"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:paddingTop="20dp">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:scaleType="centerInside"
+            android:src="@drawable/rc_back_icon_black" />
+
+        <TextView
+            android:id="@+id/title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:drawableRight="@drawable/exc_ic_triangle_down"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="BTC/USDT" />
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+</LinearLayout>

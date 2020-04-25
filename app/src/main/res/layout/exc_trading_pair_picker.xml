@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7d000000"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_coin_select"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:gravity="center"
+        android:text="@string/exc_coin_coin"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:background="@color/color071724"
+        android:textStyle="bold" />
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        app:tl_indicator_color="@color/excColor8488F5"
+        app:tl_indicator_height="2dp"
+        app:tl_indicator_width="42dp"
+        app:tl_tab_padding="16dp"
+        app:tl_tab_space_equal="false"
+        android:background="@color/color131e30"
+        app:tl_textSelectColor="@color/excColor8488F5"
+        app:tl_textUnselectColor="@color/excColorB7B7C4"
+        app:tl_textsize="14sp" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color071724" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:orientation="vertical"
+        android:background="@drawable/exc_shape_131e30_bottom_radius_4"
+        android:overScrollMode="never"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+<View
+    android:id="@+id/empty_view"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"/>
+</LinearLayout>

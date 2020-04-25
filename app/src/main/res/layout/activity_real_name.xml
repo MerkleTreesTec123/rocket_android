@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_actionbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorF1F1F1" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0.5dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/identity_information"
+                android:textColor="@color/color72727B"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorF1F1F1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/name"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:background="@android:color/transparent"
+                android:hint="@string/input_real_name_hint"
+                android:maxLines="50"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/colorB7B7C4"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/colorF1F1F1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/id_number"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/ic_card_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:background="@android:color/transparent"
+                android:digits="@string/edit_input_sfznum"
+                android:hint="@string/input_card_number_hint"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/colorB7B7C4"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/colorF1F1F1" />
+
+            <TextView
+                android:id="@+id/sf_info_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/identity_information"
+                android:textColor="@color/color72727B"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorF1F1F1" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/front_image_view"
+                    android:layout_width="0dp"
+                    android:layout_height="104dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/shape_e5e5e5_radius_4"
+                    android:padding="0.5dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/real_name_image_front_id_card"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/back_image_view"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/back_image_view"
+                    android:layout_width="0dp"
+                    android:layout_height="104dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/shape_e5e5e5_radius_4"
+                    android:padding="0.5dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/real_name_image_back_id_card"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toRightOf="@id/front_image_view"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/front_image_view" />
+
+                <ImageView
+                    android:id="@+id/case_image_view"
+                    android:layout_width="0dp"
+                    android:layout_height="104dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="14dp"
+                    android:src="@drawable/real_name_image_id_card_case"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/handle_image_view"
+                    app:layout_constraintTop_toBottomOf="@id/front_image_view" />
+
+                <ImageView
+                    android:id="@+id/handle_image_view"
+                    android:layout_width="0dp"
+                    android:layout_height="104dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/shape_e5e5e5_radius_4"
+                    android:padding="0.5dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/real_name_image_handle_id_card"
+                    app:layout_constraintBottom_toBottomOf="@id/case_image_view"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toRightOf="@id/case_image_view"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/case_image_view" />
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/colorFF0000"
+                android:text="@string/bind_friend_hint"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorF1F1F1" />
+
+            <RelativeLayout
+                android:id="@+id/ll_look_ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#01AA78"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:padding="15dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/left_img_ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/img_look"/>
+
+                <ImageView
+                    android:id="@+id/left_img_ok_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:src="@mipmap/img_look_down"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="正确示例"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    android:gravity="center" />
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorF1F1F1" />
+
+            <Button
+                android:id="@+id/submit_button"
+                style="@style/SubmitButton"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="30dp"
+                android:enabled="false"
+                android:text="@string/submit" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

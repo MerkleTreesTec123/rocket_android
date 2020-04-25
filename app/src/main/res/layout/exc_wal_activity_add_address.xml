@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_color_f9"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_actionbar"/>
+
+    <!--选择币种-->
+    <LinearLayout
+        android:id="@+id/coin_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorFFF9F9"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/right_icon"
+            android:text="@string/exc_wal_select_currency"
+            android:textColor="@color/excWalColorB7B7C4"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/title_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:text="--"
+            android:textColor="@color/excWalColor292A49"
+            android:textSize="14sp"
+            tools:text="BTC" />
+
+        <ImageView
+            android:id="@+id/right_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/exc_wal_ic_more" />
+    </LinearLayout>
+
+    <!--地址-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/address_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:digits="@string/edit_input_0zZ"
+            android:hint="@string/exc_wal_input_address_hint"
+            android:paddingBottom="14dp"
+            android:paddingTop="14dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/excWalColorB7B7C4"
+            android:textSize="14sp"/>
+
+        <ImageButton
+            android:id="@+id/scan_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:paddingBottom="12dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="12dp"
+            android:src="@drawable/exc_wal_ic_address_scan"/>
+    </LinearLayout>
+
+    <!--短信验证码-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/code_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:digits="@string/edit_input_0zZ"
+            android:hint="@string/exc_wal_input_sms_code_hint"
+            android:paddingBottom="14dp"
+            android:paddingTop="14dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/excWalColorB7B7C4"
+            android:textSize="14sp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/excWalColorF1F1F1"/>
+
+        <Button
+            android:id="@+id/send_button"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:text="@string/send_sms"
+            android:textColor="@color/color_enable_8488f5_8284a8"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <!--备注-->
+    <EditText
+        android:id="@+id/remark_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:hint="@string/exc_wal_input_address_remarks"
+        android:paddingBottom="14dp"
+        android:paddingTop="14dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textColorHint="@color/excWalColorB7B7C4"
+        android:textSize="14sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/submit_button"
+        style="@style/SubmitButton"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:enabled="false"
+        android:text="@string/ok"/>
+</LinearLayout>

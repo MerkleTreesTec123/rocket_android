@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_actionbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/c2cColorF1F1F1" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/c2c_shape_f6f6fb_radius_2">
+
+                <TextView
+                    android:id="@+id/account_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="--"
+                    android:textColor="@color/c2cColor000000"
+                    android:textColorHint="@color/c2cColor000000"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="me***ey" />
+
+                <TextView
+                    android:id="@+id/percentage_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:hint="--"
+                    android:textColor="@color/c2cColorB7B7C4"
+                    android:textColorHint="@color/c2cColorB7B7C4"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/account_text_view"
+                    tools:text="90%" />
+
+                <View
+                    android:id="@+id/divider22"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/c2cColorF1F1F1"
+                    app:layout_constraintBottom_toBottomOf="@+id/account_text_view"
+                    app:layout_constraintEnd_toStartOf="@+id/percentage_text_view"
+                    app:layout_constraintTop_toTopOf="@+id/account_text_view" />
+
+                <TextView
+                    android:id="@+id/percentage_num_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:hint="--"
+                    android:textColor="@color/c2cColorB7B7C4"
+                    android:textColorHint="@color/c2cColorB7B7C4"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/account_text_view"
+                    app:layout_constraintEnd_toStartOf="@+id/divider22"
+                    app:layout_constraintTop_toTopOf="@+id/account_text_view"
+                    tools:text="128" />
+
+                <TextView
+                    android:id="@+id/price_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="--"
+                    android:textColor="@color/c2cColor292A49"
+                    android:textColorHint="@color/c2cColor292A49"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/account_text_view" />
+
+                <TextView
+                    android:id="@+id/price_hint_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/c2c_price_cny"
+                    android:textColor="@color/c2cColorB7B7C4"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/price_text_view" />
+
+                <ImageView
+                    android:id="@+id/wechat_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/price_text_view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/price_text_view"
+                    app:srcCompat="@drawable/c2c_ic_home_wechat" />
+
+                <ImageView
+                    android:id="@+id/alipay_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginRight="12dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/price_text_view"
+                    app:layout_constraintEnd_toStartOf="@+id/wechat_icon"
+                    app:layout_constraintTop_toTopOf="@+id/price_text_view"
+                    app:layout_goneMarginEnd="16dp"
+                    app:layout_goneMarginRight="16dp"
+                    app:srcCompat="@drawable/c2c_ic_home_alipay" />
+
+                <ImageView
+                    android:id="@+id/bank_card_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginRight="12dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/price_text_view"
+                    app:layout_constraintEnd_toStartOf="@+id/alipay_icon"
+                    app:layout_constraintTop_toTopOf="@+id/price_text_view"
+                    app:layout_goneMarginEnd="16dp"
+                    app:layout_goneMarginRight="16dp"
+                    app:srcCompat="@drawable/c2c_ic_home_bank_card" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/num_hint_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/c2c_quantity_of_sale_"
+                    android:textColor="@color/c2cColor000000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/balance_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/c2c_available_balance_"
+                    android:textColor="@color/c2cColor9298B3"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+
+            <com.muye.rocket.widget.UnderLineEditText
+                android:id="@+id/num_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                app:focusColor="@color/c2cColor8488F5"
+                app:textColor="@color/c2cColor000000"
+                app:textPaddingBottom="14dp"
+                app:textPaddingTop="14dp"
+                app:textSize="14sp"
+                app:unFocusColor="@color/c2cColorF1F1F1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/c2c_transaction_limit"
+                    android:textColor="@color/c2cColor9298B3"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/limit_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:hint="--"
+                    android:textColor="@color/c2cColor9298B3"
+                    android:textColorHint="@color/excColor9298B3"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/amount_hint_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/c2c_amount_obtained"
+                android:textColor="@color/c2cColor000000"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/amount_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"
+                    android:text="0.00"
+                    android:textColor="@color/c2cColor000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:text="CNY"
+                    android:textColor="@color/c2cColor72727B"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/c2cColorF1F1F1" />
+
+            <Button
+                android:id="@+id/submit_button"
+                style="@style/SubmitButton"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="16dp"
+                android:enabled="false"
+                android:text="@string/c2c_confirm_sale" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:drawableLeft="@drawable/c2c_ic_tips"
+                android:drawablePadding="4dp"
+                android:text="@string/c2c_transaction_description"
+                android:textColor="@color/c2cColor292A49"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="40dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/c2c_buy_tips"
+                android:textColor="@color/c2cColorB7B7C4"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

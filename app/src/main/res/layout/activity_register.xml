@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_actionbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="注册账号"
+                android:textSize="25sp"
+                android:textColor="@color/text_color_333"/>
+
+            <!--手机，邮箱-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/phoneTab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/phoneRegist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:maxLines="1"
+                        android:text="@string/phone_registration"
+                        android:textColor="@color/color01AA78"
+                        android:textSize="20sp"/>
+
+                    <View
+                        android:id="@+id/phoneView"
+                        android:layout_width="30dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/phoneRegist"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/color01AA78"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/emailTab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp">
+
+                    <TextView
+                        android:id="@+id/emailRegist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/email_registration"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="20sp"/>
+
+                    <View
+                        android:id="@+id/emailView"
+                        android:layout_width="80dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/emailRegist"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/color01AA78"
+                        android:visibility="invisible"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!--手机号-->
+            <com.ifenduo.lib_base.widget.CustomEditText
+                android:id="@+id/phone_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:visibility="visible"
+                app:ce_bottom_line_error_color="@color/colorEF2357"
+                app:ce_bottom_line_focus_color="@color/colorAccent"
+                app:ce_bottom_line_unfocus_color="@color/colorF1F1F1"
+                app:ce_clean_button_drawable="@drawable/ic_custom_edit_clean"
+                app:ce_clean_button_enable="false"
+                app:ce_edit_height="44dp"
+                app:ce_edit_hint="@string/input_phone_hint"
+                app:ce_edit_hint_color="@color/hint_color"
+                app:ce_edit_input_type="phone"
+                app:ce_edit_text_color="@color/black"
+                app:ce_edit_text_size="15sp"
+                app:ce_error_drawable_left="@drawable/ic_edit_error"
+                app:ce_error_text_color="@color/colorD81A33"
+                app:ce_eye_button_drawable="@drawable/selector_custom_edit_eye"
+                app:ce_eye_button_enable="false"
+                app:ce_left_button_drawable_padding="8dp"
+                app:ce_left_button_drawable_right="@drawable/ic_phone_area_right_drawable"
+                app:ce_left_button_enable="true"
+                app:ce_left_button_right_padding="10dp"
+                app:ce_left_button_text_color="@color/black"
+                app:ce_left_button_text_size="14sp"/>
+
+            <!--邮箱-->
+            <com.ifenduo.lib_base.widget.CustomEditText
+                android:id="@+id/email_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:visibility="gone"
+                app:ce_bottom_line_error_color="@color/colorEF2357"
+                app:ce_bottom_line_focus_color="@color/colorAccent"
+                app:ce_bottom_line_unfocus_color="@color/colorF1F1F1"
+                app:ce_clean_button_drawable="@drawable/ic_custom_edit_clean"
+                app:ce_clean_button_enable="false"
+                app:ce_edit_height="44dp"
+                app:ce_edit_hint="@string/input_email_hint"
+                app:ce_edit_hint_color="@color/hint_color"
+                app:ce_edit_input_type="textEmailAddress"
+                app:ce_edit_text_color="@color/black"
+                app:ce_edit_text_size="15sp"
+                app:ce_error_drawable_left="@drawable/ic_edit_error"
+                app:ce_error_text_color="@color/colorD81A33"
+                app:ce_eye_button_drawable="@drawable/selector_custom_edit_eye"
+                app:ce_eye_button_enable="false"/>
+
+            <!--密码-->
+            <com.ifenduo.lib_base.widget.CustomEditText
+                android:id="@+id/cet_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                app:ce_bottom_line_error_color="@color/colorEF2357"
+                app:ce_bottom_line_focus_color="@color/colorAccent"
+                app:ce_bottom_line_unfocus_color="@color/colorF1F1F1"
+                app:ce_clean_button_drawable="@drawable/ic_custom_edit_clean"
+                app:ce_clean_button_enable="false"
+                app:ce_edit_digits="@string/edit_input_password"
+                app:ce_edit_height="44dp"
+                app:ce_edit_hint="@string/input_6_12_pay_password_hint"
+                app:ce_edit_hint_color="@color/hint_color"
+                app:ce_edit_input_type="password"
+                app:ce_edit_max_length="50"
+                app:ce_edit_text_color="@color/black"
+                app:ce_edit_text_size="15sp"
+                app:ce_error_drawable_left="@drawable/ic_edit_error"
+                app:ce_eye_button_drawable="@drawable/selector_custom_edit_eye"
+                app:ce_eye_button_enable="false"
+                app:ce_left_button_enable="false"
+                app:ce_level_normal_color="@color/colorF1F1F1"
+                app:ce_level_view_enable="true"
+                app:ce_level_view_height="4dp"
+                app:ce_low_level_color="@color/colorEF2357"
+                app:ce_high_level_color="@color/color24D95F"
+                app:ce_middle_level_color="@color/colorEF5923" />
+
+            <!--确认密码-->
+            <com.ifenduo.lib_base.widget.CustomEditText
+                android:id="@+id/cet_sure_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                app:ce_bottom_line_error_color="@color/colorEF2357"
+                app:ce_bottom_line_focus_color="@color/colorAccent"
+                app:ce_bottom_line_unfocus_color="@color/colorF1F1F1"
+                app:ce_clean_button_drawable="@drawable/ic_custom_edit_clean"
+                app:ce_clean_button_enable="false"
+                app:ce_edit_digits="@string/edit_input_password"
+                app:ce_edit_height="44dp"
+                app:ce_edit_hint="@string/confirm_login_password"
+                app:ce_edit_hint_color="@color/hint_color"
+                app:ce_edit_input_type="password"
+                app:ce_edit_text_color="@color/black"
+                app:ce_edit_text_size="15sp"
+                app:ce_error_drawable_left="@drawable/ic_edit_error"
+                app:ce_eye_button_drawable="@drawable/selector_custom_edit_eye"
+                app:ce_eye_button_enable="false"
+                app:ce_left_button_enable="false" />
+
+            <!--验证码-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:orientation="horizontal">
+
+                <com.ifenduo.lib_base.widget.CustomEditText
+                    android:id="@+id/cet_code"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:ce_bottom_line_error_color="@color/colorEF2357"
+                    app:ce_bottom_line_focus_color="@color/colorAccent"
+                    app:ce_bottom_line_unfocus_color="@color/colorF1F1F1"
+                    app:ce_edit_max_length="6"
+                    app:ce_edit_height="44dp"
+                    app:ce_edit_hint="@string/input_verification_code"
+                    app:ce_edit_hint_color="@color/hint_color"
+                    app:ce_edit_input_type="text"
+                    app:ce_edit_text_color="@color/black"
+                    app:ce_edit_text_size="15sp"
+                    app:ce_error_drawable_left="@drawable/ic_edit_error"
+                    app:ce_eye_button_drawable="@drawable/selector_custom_edit_eye"
+                    app:ce_eye_button_enable="false"
+                    app:ce_left_button_enable="false" />
+
+                <TextView
+                    android:id="@+id/tv_send_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/send_code"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:background="@drawable/shape_01aa78_radius_2"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!--邀请码-->
+            <com.ifenduo.lib_base.widget.CustomEditText
+                android:id="@+id/cet_invite_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                app:ce_bottom_line_error_color="@color/colorEF2357"
+                app:ce_bottom_line_focus_color="@color/colorAccent"
+                app:ce_bottom_line_unfocus_color="@color/colorF1F1F1"
+                app:ce_edit_height="44dp"
+                app:ce_edit_hint="@string/input_invite_code_hint"
+                app:ce_edit_hint_color="@color/hint_color"
+                app:ce_edit_input_type="text"
+                app:ce_edit_text_color="@color/black"
+                app:ce_edit_text_size="15sp"
+                app:ce_error_drawable_left="@drawable/ic_edit_error"
+                app:ce_eye_button_drawable="@drawable/selector_custom_edit_eye"
+                app:ce_eye_button_enable="false"
+                app:ce_left_button_enable="false" />
+
+            <!--用户协议-->
+            <TextView
+                android:id="@+id/agreement_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="@string/the_registrar_agrees_to_the"
+                android:textColor="@color/color8284A8"
+                android:textSize="12sp"
+                tools:text="@string/platform_user_agreement"/>
+
+            <!--提示-->
+            <TextView
+                android:id="@+id/login_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/email_login_hint"
+                android:textColor="@color/color8284A8"
+                android:textSize="12sp"/>
+
+            <!--下一步-->
+            <TextView
+                android:id="@+id/tv_next_step"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/next_step"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/shape_01aa78_radius_2"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

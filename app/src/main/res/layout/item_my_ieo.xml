@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="16dp"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="20dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="--"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/purchase_amount_usdt"
+            android:textColor="@color/colorB7B7C4"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/number_of_locks_ufo"
+            android:textColor="@color/colorB7B7C4"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/excTime"
+            android:textColor="@color/colorB7B7C4"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/buyNum_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="--"
+            android:textColor="@color/color292A49" />
+
+        <TextView
+            android:id="@+id/lockNum_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="--"
+            android:textColor="@color/color292A49" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/time_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:layout_gravity="center_vertical"
+            android:text="--/--  --:--:--"
+            android:textColor="@color/color292A49"
+            app:autoSizeMaxTextSize="12sp"
+            app:autoSizeMinTextSize="4sp"
+            app:autoSizeTextType="uniform" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/number_of_days_released"
+            android:textColor="@color/colorB7B7C4"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/release_today_ufo"
+            android:textColor="@color/colorB7B7C4"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/total_released_ufo"
+            android:textColor="@color/colorB7B7C4"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/freedTime_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="-/-"
+            android:textColor="@color/color292A49" />
+
+        <TextView
+            android:id="@+id/freedTodayNum_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="--"
+            android:textColor="@color/color292A49" />
+
+        <TextView
+            android:id="@+id/freedTotalNum_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="--"
+            android:textColor="@color/color292A49" />
+    </LinearLayout>
+
+</LinearLayout>

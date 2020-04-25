@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="exc_buy">Buy</string>
+    <string name="exc_sell">Sell</string>
+    <string name="exc_24h_vol">24h vol</string>
+    <string name="exc_highest">Highest</string>
+    <string name="exc_lowest">lowest</string>
+    <string name="excTime">Time</string>
+    <string name="exc_direction">Direction</string>
+    <string name="exc_price_">Price(%1$s)</string>
+    <string name="exc_quantity_">Quantity(%1$s)</string>
+    <string name="publish_time">Publish time</string>
+    <string name="exc_total_amount_of_issuance">Total amount of issuance</string>
+    <string name="exc_total_circulation">Total circulation</string>
+    <string name="exc_introduction">Introduction</string>
+    <string name="exc_1_min">1min</string>
+    <string name="exc_5_min">5min</string>
+    <string name="exc_15_min">15min</string>
+    <string name="exc_30_min">30min</string>
+    <string name="exc_60_min">60min</string>
+    <string name="exc_1_day">1day</string>
+    <string name="exc_transaction">Transaction</string>
+    <string name="exc_quantity">Quantity</string>
+    <string name="exc_price">Price</string>
+    <string name="exc_available_balance_">Available Balance:</string>
+    <string name="transaction_amount">Amount</string>
+    <string name="exc_no_commission_record">No commission record yet</string>
+    <string name="exc_no_commission_record_hint">There are currently no commission records, and relevant records can be viewed here after buying or selling.</string>
+    <string name="exc_deal_done">Deal done</string>
+    <string name="exc_cancel_order">Cancel the order</string>
+    <string name="exc_current_commission">Current commission</string>
+    <string name="exc_historical_commission">Historical commission</string>
+    <string name="exc_please_enter_the_price">Please enter the price</string>
+    <string name="exc_please_enter_quantity">Please enter quantity</string>
+    <string name="exc_price_must_be_greater_than_0">Price must be greater than 0</string>
+    <string name="exc_quantity_must_be_greater_than_0">Quantity must be greater than 0</string>
+    <string name="exc_insufficient_balance">Insufficient balance</string>
+    <string name="exc_exchange_submit_success">Transaction submitted successfully</string>
+    <string name="exc_cancel_order_success">Cancel order successfully</string>
+    <string name="exc_coin_coin">TradingPair</string>
+</resources>

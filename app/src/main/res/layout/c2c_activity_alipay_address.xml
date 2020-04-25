@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_color_f9"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_actionbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--姓名-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/c2c_name"
+                    android:textColor="@color/c2cColor000000"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/accountName_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:background="@null"
+                    android:hint="@string/c2c_input_name_hint"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp"
+                    android:singleLine="true"
+                    android:textColor="@color/c2cColor292A49"
+                    android:textColorHint="@color/c2cColorB7B7C4"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/c2c_alipay_rel_name_tips"
+                android:textColor="@color/colorD81A33"
+                android:textSize="12sp"/>
+
+            <!--账号-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/c2c_account"
+                    android:textColor="@color/c2cColor000000"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/account_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:background="@null"
+                    android:hint="@string/c2c_enter_alipay_account"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp"
+                    android:singleLine="true"
+                    android:textColor="@color/c2cColor292A49"
+                    android:textColorHint="@color/c2cColorB7B7C4"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <!--收款码-->
+            <RelativeLayout
+                android:id="@+id/add_ali_qr"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/c2c_shape_f1f1f1_frame">
+
+                <ImageView
+                    android:id="@+id/qr_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"/>
+
+                <LinearLayout
+                    android:id="@+id/addQrCodeTips_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/c2c_ic_add_qr"
+                        android:drawablePadding="4dp"
+                        android:text="@string/c2c_collection_qr_code"
+                        android:textColor="@color/c2cColor292A49"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="26dp"
+                        android:drawablePadding="4dp"
+                        android:text="@string/c2c_upload_alipay_collection_qr_code"
+                        android:textColor="@color/c2cColorB7B7C4"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/submit_button"
+                style="@style/SubmitButton"
+                android:layout_marginBottom="80dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:enabled="false"
+                android:text="@string/c2c_save"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

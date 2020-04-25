@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/type_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/excColor00DA97"
+        android:textSize="10sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/exc_buy" />
+
+    <TextView
+        android:id="@+id/sell_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/type_text_view"
+        app:layout_constraintStart_toEndOf="@+id/type_text_view"
+        app:layout_constraintTop_toTopOf="@+id/type_text_view"
+        tools:text="BTC" />
+
+    <TextView
+        android:id="@+id/buy_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:textColor="@color/excColor72727B"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/sell_text_view"
+        app:layout_constraintStart_toEndOf="@+id/sell_text_view"
+        tools:text="/USDT" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/exc_price"
+        android:textColor="@color/excColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView19"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/type_text_view" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:text="@string/exc_quantity"
+        android:textColor="@color/excColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView18"
+        app:layout_constraintEnd_toStartOf="@+id/textView20"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/excTime"
+        android:textColor="@color/excColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/textView19" />
+
+    <TextView
+        android:id="@+id/price_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="--"
+        android:textColor="@color/excColor292A49"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView18"
+        app:layout_constraintStart_toStartOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/num_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="--"
+        android:textColor="@color/excColor292A49"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/price_text_view"
+        app:layout_constraintEnd_toEndOf="@+id/textView19"
+        app:layout_constraintStart_toStartOf="@+id/textView19" />
+
+    <TextView
+        android:id="@+id/time_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="--"
+        android:textColor="@color/excColor292A49"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/price_text_view"
+        app:layout_constraintEnd_toEndOf="@+id/textView20"
+        app:layout_constraintStart_toStartOf="@+id/textView20" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/exc_average_transaction_price"
+        android:textColor="@color/excColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView18"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/price_text_view" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/exc_deal_done"
+        android:textColor="@color/excColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView24"
+        app:layout_constraintEnd_toEndOf="@+id/textView19"
+        app:layout_constraintStart_toStartOf="@+id/textView19" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/exc_freeze_fee"
+        android:textColor="@color/excColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView24"
+        app:layout_constraintEnd_toEndOf="@+id/time_text_view"
+        app:layout_constraintStart_toStartOf="@+id/time_text_view" />
+
+    <TextView
+        android:id="@+id/price_text_view_"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="--"
+        android:textColor="@color/excColor292A49"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/divider9"
+        app:layout_constraintEnd_toEndOf="@+id/textView18"
+        app:layout_constraintStart_toStartOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <TextView
+        android:id="@+id/num_text_view_"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="--"
+        android:textColor="@color/excColor292A49"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/price_text_view_"
+        app:layout_constraintEnd_toEndOf="@+id/textView19"
+        app:layout_constraintStart_toStartOf="@+id/textView19" />
+
+    <TextView
+        android:id="@+id/fee_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="--"
+        android:textColor="@color/excColor292A49"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/price_text_view_"
+        app:layout_constraintEnd_toEndOf="@+id/textView20"
+        app:layout_constraintStart_toStartOf="@+id/textView20" />
+
+    <TextView
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:text="@string/exc_cancel_order"
+        android:textColor="@color/excColor8488F5"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/type_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/type_text_view" />
+
+    <View
+        android:id="@+id/divider9"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/excColorF1F1F1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_service_bg" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="240dp">
+
+                    <ImageView
+                        android:id="@+id/serviceCodeImgOne"
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="12dp"
+                        android:layout_gravity="center_horizontal"
+                         />
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"/>
+
+                    <ImageView
+                        android:id="@+id/serviceCodeImgTwo"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="200dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="15dp"
+                    android:text="客服邮箱"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="14dp"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/emailOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:text="1961373652@qq.com（点击复制）"
+                    android:padding="10dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/emailTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:padding="10dp"
+                    android:text="3408503835@qq.com（点击复制）"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
+
+    <include layout="@layout/toolbar_actionbar" />
+</FrameLayout>

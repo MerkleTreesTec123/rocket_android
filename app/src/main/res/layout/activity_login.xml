@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/image_login_logo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="2dp"
+        android:text="@string/welcome"
+        android:textSize="14sp"
+        android:textColor="@color/hint_color"/>
+
+    <!--账号-->
+    <com.ifenduo.lib_base.widget.CustomEditText
+        android:id="@+id/phone_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        app:ce_bottom_line_error_color="@color/colorEF2357"
+        app:ce_bottom_line_focus_color="@color/colorAccent"
+        app:ce_bottom_line_unfocus_color="@color/colorF1F1F1"
+        app:ce_clean_button_drawable="@drawable/ic_custom_edit_clean"
+        app:ce_clean_button_enable="false"
+        app:ce_edit_height="44dp"
+        app:ce_edit_hint="@string/input_phone_email"
+        app:ce_edit_hint_color="@color/hint_color"
+        app:ce_edit_text_color="@color/black"
+        app:ce_edit_text_size="14sp"
+        app:ce_error_drawable_left="@drawable/ic_edit_error"
+        app:ce_eye_button_enable="false"/>
+
+    <!--密码-->
+    <com.ifenduo.lib_base.widget.CustomEditText
+        android:id="@+id/password_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:ce_bottom_line_error_color="@color/colorEF2357"
+        app:ce_bottom_line_focus_color="@color/colorAccent"
+        app:ce_bottom_line_unfocus_color="@color/colorF1F1F1"
+        app:ce_clean_button_drawable="@drawable/ic_custom_edit_clean"
+        app:ce_clean_button_enable="false"
+        app:ce_edit_height="44dp"
+        app:ce_edit_hint="@string/password"
+        app:ce_edit_hint_color="@color/hint_color"
+        app:ce_edit_input_type="password"
+        app:ce_edit_text_color="@color/color262626"
+        app:ce_edit_text_size="14sp"
+        app:ce_error_drawable_left="@drawable/ic_edit_error"
+        app:ce_eye_button_drawable="@drawable/selector_custom_edit_eye"
+        app:ce_eye_button_enable="true"
+        app:ce_left_button_enable="false" />
+
+    <Button
+        android:id="@+id/submit_button"
+        style="@style/SubmitButton"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:enabled="false"
+        android:text="@string/login" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_forget_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="30dp"
+            android:text="@string/forget_password"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/hint_color"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/register_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="30dp"
+            android:text="@string/regist"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

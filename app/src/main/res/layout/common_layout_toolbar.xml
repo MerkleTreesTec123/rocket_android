@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:layout_gravity="center"
+    android:gravity="bottom"
+    android:paddingTop="15dp"
+    android:background="@color/white"
+    android:minHeight="?attr/actionBarSize"
+    app:contentInsetStart="0dp">
+
+    <ImageView
+        android:id="@+id/tb_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:padding="15dp"
+        android:src="@drawable/rc_back_icon_black"/>
+
+    <TextView
+        android:id="@+id/tb_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+    <ImageView
+        android:id="@+id/tb_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:visibility="gone"
+        android:padding="15dp"
+        android:src="@drawable/rc_back_icon_black"/>
+
+    <TextView
+        android:id="@+id/tb_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:visibility="gone"
+        android:textSize="16sp"
+        android:paddingRight="15dp"
+        android:textColor="@color/white"/>
+</android.support.v7.widget.Toolbar>

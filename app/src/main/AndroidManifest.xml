@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.muye.rocket">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.any"/>
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+<!--    @mipmap/app_icon_test    @drawable/app_icon -->
+    <application
+        android:name="com.muye.rocket.RApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- bugly sdk begin -->
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" />
+        <provider
+            android:name="com.muye.rocket.tools.fileprovider.BuglyFileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="name,authorities,exported,grantUriPermissions">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/bugly_paths"
+                tools:replace="name,resource" />
+        </provider>
+
+        <meta-data
+            android:name="5db2c68c0cafb207b0000b6e"
+            android:value="YOUR_APP_KEY" />
+        <meta-data
+            android:name="FIR_CHANNEL"
+            android:value="Channel ID" />
+
+        <!-- bugly sdk end -->
+
+        <service android:name=".mvp.SystemTimeService" />
+        <activity
+            android:name="com.muye.rocket.mvp.me.splash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LauncherTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+<!--        android:launchMode="singleInstance"-->
+        <activity
+            android:name="com.muye.rocket.mvp.account.view.LoginActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"/>
+        <!--国家或地区列表-->
+        <activity
+            android:name="com.muye.rocket.mvp.account.view.PhoneAreaActivity"
+            android:screenOrientation="portrait" />
+        <!--创建支付密码-->
+        <activity
+            android:name="com.muye.rocket.mvp.account.view.PayPasswordActivity"
+            android:screenOrientation="portrait" />
+        <!--手机注册-->
+        <activity
+            android:name="com.muye.rocket.mvp.account.view.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <!--首页-->
+        <activity
+            android:name="com.muye.rocket.mvp.home.view.HomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!--交易对详情-->
+        <activity
+            android:name="com.muye.rocket.mvp.exchange.view.TradingPairDetailActivity"
+            android:screenOrientation="portrait" />
+        <!--币币交易-->
+        <activity
+            android:name="com.muye.rocket.mvp.exchange.view.ExchangeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!--忘记支付密码-->
+        <activity
+            android:name="com.muye.rocket.mvp.me.view.ForgetSafePasswordStep1Activity"
+            android:screenOrientation="portrait" />
+        <!--忘记支付密码-->
+        <activity
+            android:name="com.muye.rocket.mvp.me.view.ForgetSafePasswordStep2Activity"
+            android:screenOrientation="portrait" />
+        <!--修改-->
+        <activity
+            android:name="com.muye.rocket.mvp.me.view.UpdateSafePasswordActivity"
+            android:screenOrientation="portrait" />
+        <!--设置支付密码-->
+        <activity
+            android:name="com.muye.rocket.mvp.me.view.SetSafePasswordActivity"
+            android:screenOrientation="portrait" />
+        <!--资产钱包-->
+        <activity
+            android:name="com.muye.rocket.mvp.exc_wallet.view.ExcWalletActivity"
+            android:screenOrientation="portrait" />
+        <!--资产详情-->
+        <activity
+            android:name="com.muye.rocket.mvp.exc_wallet.view.ExcWalletDetailActivity"
+            android:screenOrientation="portrait" />
+        <!--充币-->
+        <activity
+            android:name="com.muye.rocket.mvp.exc_wallet.view.ExcRechargeActivity"
+            android:screenOrientation="portrait" />
+        <!--充币记录-->
+        <activity
+            android:name="com.muye.rocket.mvp.exc_wallet.view.ExcRechargeRecordActivity"
+            android:screenOrientation="portrait" />
+        <!--提币地址薄-->
+        <activity
+            android:name="com.muye.rocket.mvp.exc_wallet.view.ExcAddressBookActivity"
+            android:screenOrientation="portrait" />
+        <!--添加提币地址-->
+        <activity
+            android:name="com.muye.rocket.mvp.exc_wallet.view.ExcAddAddressActivity"
+            android:screenOrientation="portrait" />
+        <!--扫一扫-->
+        <activity
+            android:name="com.muye.rocket.mvp.exc_wallet.view.ScanActivity"
+            android:screenOrientation="portrait" />
+        <!--提币-->
+        <activity
+            android:name="com.muye.rocket.mvp.exc_wallet.view.ExcWithdrawActivity"
+            android:screenOrientation="portrait" />
+        <!--提币记录-->
+        <activity
+            android:name="com.muye.rocket.mvp.exc_wallet.view.ExcWithdrawRecordActivity"
+            android:screenOrientation="portrait" />
+        <!--安全中心-->
+        <activity
+            android:name="com.muye.rocket.mvp.me.view.SafeCenterActivity"
+            android:screenOrientation="portrait" />
+        <!--创建手势密码-->
+        <activity
+            android:name="com.muye.rocket.mvp.account.view.CreateLockActivity"
+            android:screenOrientation="portrait" />
+        <!--手势密码-->
+        <activity
+            android:name="com.muye.rocket.mvp.account.view.LockLoginActivity"
+            android:screenOrientation="portrait" />
+        <!--注册成功-->
+        <activity
+            android:name="com.muye.rocket.mvp.account.view.RegistSuccessActivity"
+            android:screenOrientation="portrait" />
+        <!--绑定Google验证码第一步-->
+        <activity
+            android:name="com.muye.rocket.mvp.me.view.BindGoogleStep1Activity"
+            android:screenOrientation="portrait" />
+        <!--绑定Google验证码第二步-->
+        <activity
+            android:name="com.muye.rocket.mvp.me.view.BindGoogleStep2Activity"
+            android:screenOrientation="portrait" />
+        <!--绑定Google验证码第三步-->
+        <activity
+            android:name="com.muye.rocket.mvp.me.view.BindGoogleStep3Activity"
+            android:screenOrientation="portrait" />
+        <!--实名认证结果-->
+        <activity
+            android:name="com.muye.rocket.mvp.me.view.RealNameResultActivity"
+            android:screenOrientation="portrait" />
+        <!--修改登录密码-->
+        <activity
+            android:name="com.muye.rocket.mvp.me.view.UpdateLoginPasswordActivity"
+            android:screenOrientation="portrait" />
+        <!--忘记登录密码-->
+        <activity
+            android:name="com.muye.rocket.mvp.account.view.ResetLoginPwdActivity"
+            android:screenOrientation="portrait" />
+        <!--邀请榜-->
+        <activity
+            android:name="com.muye.rocket.mvp.me.view.InviteRankingActivity"
+            android:screenOrientation="portrait" />
+        <!--个人直推记录-->
+        <activity
+            android:name="com.muye.rocket.mvp.me.view.InviteRecordActivity"
+            android:screenOrientation="portrait" />
+        <!--邀请-->
+        <activity
+            android:name="com.muye.rocket.mvp.me.view.InviteActivity"
+            android:screenOrientation="portrait" />
+        <!--网页-->
+        <activity
+            android:name="com.muye.rocket.mvp.WebBrowser"
+            android:screenOrientation="portrait" />
+        <!--设置-->
+        <activity
+            android:name="com.muye.rocket.mvp.me.view.SettingActivity"
+            android:screenOrientation="portrait" />
+        <!--客服-->
+        <activity
+            android:name="com.muye.rocket.mvp.me.view.CustomerServiceActivity"
+            android:screenOrientation="portrait" />
+        <!--关于我们-->
+        <activity
+            android:name="com.muye.rocket.mvp.me.view.AboutActivity"
+            android:screenOrientation="portrait" />
+        <!-- Rocket简介 -->
+        <activity android:name=".mvp.me.view.RocketProfileActivity"
+            android:screenOrientation="portrait" />
+        <!--帮助与支持-->
+        <activity
+            android:name="com.muye.rocket.mvp.me.view.HelpSupportActivity"
+            android:screenOrientation="portrait" />
+        <!--累计获得奖励详情-->
+        <activity
+            android:name="com.muye.rocket.mvp.me.view.CumulativeRewardActivity"
+            android:screenOrientation="portrait" />
+        <!--发现列表-->
+        <activity
+            android:name="com.muye.rocket.mvp.discover.view.DiscoverMoreActivity"
+            android:screenOrientation="portrait" />
+        <!--我的IEO-->
+        <activity
+            android:name="com.muye.rocket.mvp.ieo.view.MyIeoActivity"
+            android:screenOrientation="portrait" />
+        <!--IEO记录详情-->
+        <activity
+            android:name="com.muye.rocket.mvp.ieo.view.MyIeoDetailActivity"
+            android:screenOrientation="portrait" />
+        <!--IEO规则-->
+        <activity
+            android:name="com.muye.rocket.mvp.ieo.view.IEORuleActivity"
+            android:screenOrientation="portrait" />
+        <!--IEO兑换-->
+        <!--IEO氪星计划-->
+        <activity
+            android:name="com.muye.rocket.mvp.ieo.view.SpacePlanActivity"
+            android:screenOrientation="portrait" />
+        <!--超级矿池规则说明-->
+<!--        <activity-->
+<!--            android:name="com.muye.rocket.mvp.mining.view.MiningRuleActivity"-->
+<!--            android:screenOrientation="portrait" />-->
+<!--        &lt;!&ndash;超级矿池记录&ndash;&gt;-->
+<!--        <activity-->
+<!--            android:name="com.muye.rocket.mvp.mining.view.MiningRecordActivity"-->
+<!--            android:screenOrientation="portrait" />-->
+<!--        &lt;!&ndash;算力记录&ndash;&gt;-->
+<!--        <activity-->
+<!--            android:name="com.muye.rocket.mvp.mining.view.MiningPowerRecordActivity"-->
+<!--            android:screenOrientation="portrait" />-->
+        <!--公告详情-->
+        <activity
+            android:name="com.muye.rocket.mvp.home.view.MarqueeDetailActivity"
+            android:screenOrientation="portrait" />
+        <!--个人资料-->
+        <activity
+            android:name="com.muye.rocket.mvp.me.view.PersonalActivity"
+            android:screenOrientation="portrait" />
+        <!--语言-->
+        <activity
+            android:name="com.muye.rocket.mvp.me.view.LanguageActivity"
+            android:screenOrientation="portrait" />
+        <!--C2C购买-->
+        <activity
+            android:name=".mvp.c2c.view.BuyActivity"
+            android:screenOrientation="portrait" />
+        <!--C2C出售-->
+        <activity
+            android:name=".mvp.c2c.view.SellActivity"
+            android:screenOrientation="portrait" />
+        <!--订单详情-->
+        <activity
+            android:name=".mvp.c2c.view.OrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <!--订单记录-->
+        <activity
+            android:name=".mvp.c2c.view.OrderListActivity"
+            android:screenOrientation="portrait" />
+        <!--申诉-->
+        <activity
+            android:name=".mvp.c2c.view.AppealActivity"
+            android:screenOrientation="portrait" />
+        <!--C2C收款地址-->
+        <activity
+            android:name=".mvp.c2c.view.C2CPayAccountActivity"
+            android:screenOrientation="portrait" />
+        <!--C2C银行卡-->
+        <activity
+            android:name=".mvp.c2c.view.BankAddressActivity"
+            android:screenOrientation="portrait" />
+        <!--c2c支付宝账号-->
+        <activity
+            android:name=".mvp.c2c.view.AlipayAddressActivity"
+            android:screenOrientation="portrait" />
+        <!--c2c微信账号-->
+        <activity
+            android:name=".mvp.c2c.view.WeChatAddressActivity"
+            android:screenOrientation="portrait" />
+        <!--c2c发布-->
+        <activity
+            android:name=".mvp.c2c.view.ReleaseActivity"
+            android:screenOrientation="portrait" />
+        <!--C2C发布成功-->
+        <activity
+            android:name=".mvp.c2c.view.ReleaseSuccessActivity"
+            android:screenOrientation="portrait" />
+        <!--C2C发布失败-->
+        <activity
+            android:name=".mvp.c2c.view.ReleaseFailActivity"
+            android:screenOrientation="portrait" />
+        <!--C2C划转-->
+        <!--C2C我的发布-->
+        <activity
+            android:name=".mvp.c2c.view.MyReleaseActivity"
+            android:screenOrientation="portrait" />
+        <!--C2C我的发布详情-->
+        <activity
+            android:name=".mvp.c2c.view.MyReleaseDetailActivity"
+            android:screenOrientation="portrait" />
+        <!--C2C钱包-->
+        <activity
+            android:name=".mvp.c2c.view.C2CWalletActivity"
+            android:screenOrientation="portrait" />
+        <!--C2C钱包详情-->
+        <activity
+            android:name=".mvp.c2c.view.WalletDetailActivity"
+            android:screenOrientation="portrait" />
+        <!--划转-->
+        <activity
+            android:name=".mvp.c2c.view.C2CTransferActivity"
+            android:screenOrientation="portrait" />
+        <!--C2C划转记录-->
+        <activity
+            android:name=".mvp.c2c.view.C2CTransferRecordActivity"
+            android:screenOrientation="portrait" />
+        <!--C2C打款凭证-->
+        <activity
+            android:name=".mvp.c2c.view.C2CCertificateActivity"
+            android:screenOrientation="portrait" />
+        <!-- 绑定手机号 -->
+        <activity
+            android:name=".mvp.me.view.BindPhoneActivity"
+            android:screenOrientation="portrait" />
+        <!-- 绑定钱包用户 -->
+        <activity android:name=".mvp.me.view.BindWalletQrCodeActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 绑定钱包列表 -->
+        <activity android:name=".mvp.me.view.MyBindWalletListsActivity"
+            android:screenOrientation="portrait" />
+        <!--中间记录-->
+        <!-- 活动邀请列表 -->
+
+        <!-- 邀请分享好友 -->
+
+        <!-- 极光推送 -->
+        <!-- Since JCore2.0.0 Required SDK核心功能-->
+        <!-- 可配置android:process参数将Service放在其他进程中；android:enabled属性不能是false -->
+        <!-- 这个是自定义Service，要继承极光JCommonService，可以在更多手机平台上使得推送通道保持的更稳定 -->
+        <service android:name=".service.MyPushService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:exported="false"
+            android:process=":multiprocess"
+            tools:node="replace">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- Required since 3.0.7 -->
+        <!-- 新的 tag/alias 接口结果返回需要开发者配置一个自定的广播 -->
+        <!-- 3.3.0开始所有事件将通过该类回调 -->
+        <!-- 该广播需要继承 JPush 提供的 JPushMessageReceiver 类, 并如下新增一个 Intent-Filter -->
+        <receiver
+            android:name=".reveive.MyMessageReceive"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+        <!-- 推送弹出框样式 -->
+        <activity android:name=".reveive.PushInfoDataActivity"
+            android:theme="@style/DialogStyle"/>
+        <activity android:name=".reveive.PushInfoAddressActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name=".mvp.me.view.ColumnFreeActivity"
+                  android:screenOrientation="portrait" />
+        <!--查看提示（提交实名认证照片）-->
+        <activity android:name=".mvp.me.view.RealFailReasonActivity"
+                  android:screenOrientation="portrait" />
+
+
+        <!--实名认证-->
+        <activity android:name=".mvp.me.auth.RealNameAuthActivity"
+                  android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

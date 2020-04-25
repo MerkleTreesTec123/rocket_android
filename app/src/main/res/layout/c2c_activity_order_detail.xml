@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_actionbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/c2cColorF1F1F1" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/status_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:textSize="26sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="未付款" />
+
+            <TextView
+                android:id="@+id/textView53"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/c2c_order_no"
+                android:textColor="@color/c2cColorB7B7C4"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/status_text_view" />
+
+            <TextView
+                android:id="@+id/no_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:hint="--"
+                android:textColor="@color/c2cColorB7B7C4"
+                android:textColorHint="@color/c2cColorB7B7C4"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView53"
+                app:layout_constraintTop_toTopOf="@+id/textView53" />
+
+            <TextView
+                android:id="@+id/pay_no_hint_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="30dp"
+                android:singleLine="true"
+                android:text="@string/c2c_payment_reference_no"
+                android:textColor="@color/c2cColorB7B7C4"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/num_hint_text_view"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView53" />
+
+            <TextView
+                android:id="@+id/num_hint_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:singleLine="true"
+                android:text="@string/c2c_transaction_quantity_"
+                android:textColor="@color/c2cColorB7B7C4"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@id/price_hint_text_view"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/pay_no_hint_text_view"
+                app:layout_constraintTop_toTopOf="@+id/pay_no_hint_text_view" />
+
+            <TextView
+                android:id="@+id/price_hint_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="@string/c2c_transaction_price_cny"
+                android:textColor="@color/c2cColorB7B7C4"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/num_hint_text_view"
+                app:layout_constraintTop_toTopOf="@+id/pay_no_hint_text_view" />
+
+            <TextView
+                android:id="@+id/pay_no_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="--"
+                android:textColor="#FF0000"
+                android:textColorHint="@color/c2cColor292A49"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/pay_no_hint_text_view"
+                app:layout_constraintStart_toStartOf="@+id/pay_no_hint_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/pay_no_hint_text_view" />
+
+            <TextView
+                android:id="@+id/num_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="--"
+                android:singleLine="true"
+                android:textColor="@color/c2cColor292A49"
+                android:textColorHint="@color/c2cColor292A49"
+                app:layout_constraintBottom_toBottomOf="@+id/pay_no_text_view"
+                app:layout_constraintEnd_toEndOf="@+id/num_hint_text_view"
+                app:layout_constraintStart_toStartOf="@+id/num_hint_text_view" />
+
+            <TextView
+                android:id="@+id/price_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:hint="--"
+                android:singleLine="true"
+                android:textColor="@color/c2cColor292A49"
+                android:textColorHint="@color/c2cColor292A49"
+                app:layout_constraintBottom_toBottomOf="@+id/pay_no_text_view"
+                app:layout_constraintEnd_toEndOf="@+id/price_hint_text_view"
+                app:layout_constraintStart_toStartOf="@+id/price_hint_text_view" />
+
+            <TextView
+                android:id="@+id/textView62"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/c2c_transaction_amount_cny"
+                android:textColor="@color/c2cColorB7B7C4"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/pay_no_hint_text_view"
+                app:layout_constraintStart_toStartOf="@+id/pay_no_hint_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/pay_no_text_view" />
+
+            <TextView
+                android:id="@+id/textView63"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/c2c_order_type"
+                android:textColor="@color/c2cColorB7B7C4"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/num_hint_text_view"
+                app:layout_constraintStart_toStartOf="@+id/num_hint_text_view"
+                app:layout_constraintTop_toTopOf="@+id/textView62" />
+
+            <TextView
+                android:id="@+id/amount_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="--"
+                android:singleLine="true"
+                android:textColor="@color/c2cColor292A49"
+                android:textColorHint="@color/c2cColor292A49"
+                app:layout_constraintEnd_toEndOf="@+id/textView62"
+                app:layout_constraintStart_toStartOf="@+id/textView62"
+                app:layout_constraintTop_toBottomOf="@+id/textView62" />
+
+            <TextView
+                android:id="@+id/type_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="--"
+                android:singleLine="true"
+                android:textColor="@color/c2cColor292A49"
+                android:textColorHint="@color/c2cColor292A49"
+                app:layout_constraintEnd_toEndOf="@+id/textView63"
+                app:layout_constraintStart_toStartOf="@+id/textView63"
+                app:layout_constraintTop_toTopOf="@+id/amount_text_view" />
+
+            <TextView
+                android:id="@+id/voucher_text_view_"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/c2c_payment_voucher"
+                android:textColor="@color/c2cColorB7B7C4"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/price_hint_text_view"
+                app:layout_constraintStart_toStartOf="@+id/price_hint_text_view"
+                app:layout_constraintTop_toTopOf="@+id/textView62" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/voucher_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/c2c_view_the_payment_voucher"
+                android:textColor="@color/c2cColor8488F5"
+                app:autoSizeMaxTextSize="14sp"
+                app:autoSizeMinTextSize="4sp"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintEnd_toEndOf="@+id/voucher_text_view_"
+                app:layout_constraintStart_toStartOf="@+id/voucher_text_view_"
+                app:layout_constraintTop_toTopOf="@+id/amount_text_view" />
+
+            <TextView
+                android:id="@+id/textView66"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/c2c_shape_f6f6fb_radius_2"
+                android:padding="14dp"
+                android:text="@string/c2c_order_detail_tips"
+                android:textColor="#FF0000"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/amount_text_view" />
+
+            <TextView
+                android:id="@+id/textView52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/c2c_choose_payment_method"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView66" />
+
+            <LinearLayout
+                android:id="@+id/pay_type_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/c2c_shape_f6f6fb_radius_2"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp"
+                android:paddingTop="4dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView52"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView52">
+
+                <ImageView
+                    android:id="@+id/pay_type_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    tools:src="@drawable/c2c_ic_home_alipay" />
+
+                <TextView
+                    android:id="@+id/pay_type_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:hint="--"
+                    android:minWidth="40dp"
+                    android:textColor="@color/c2cColor292A49"
+                    android:textColorHint="@color/c2cColor292A49"
+                    android:textSize="12sp"
+                    tools:text="微信" />
+
+                <ImageView
+                    android:id="@+id/pay_type_triangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/c2c_ic_triangle_down" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/amount_text_view_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:hint="--"
+                android:textColor="@color/c2cColor292A49"
+                android:textColorHint="@color/c2cColor292A49"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView52" />
+
+            <ImageView
+                android:id="@+id/qr_image_view"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="12dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/amount_text_view_"
+                tools:srcCompat="@drawable/exc_wal_test_image_qr" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/c2c_shape_f6f6fb_frame_radius_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/qr_image_view"
+                app:layout_goneMarginTop="20dp">
+
+                <TextView
+                    android:id="@+id/account_title_text_view_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="--"
+                    android:textColor="@color/c2cColorB7B7C4"
+                    android:textColorHint="@color/c2cColorB7B7C4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/account_content_text_view_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="right"
+                    android:hint="--"
+                    android:singleLine="true"
+                    android:textColor="@color/c2cColorB7B7C4"
+                    android:textColorHint="@color/c2cColorB7B7C4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/account_title_text_view_1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/account_title_text_view_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="18dp"
+                    android:hint="--"
+                    android:textColor="@color/c2cColorB7B7C4"
+                    android:textColorHint="@color/c2cColorB7B7C4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/account_title_text_view_1"
+                    app:layout_goneMarginTop="20dp" />
+
+                <TextView
+                    android:id="@+id/account_content_text_view_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="right"
+                    android:hint="--"
+                    android:singleLine="true"
+                    android:textColor="@color/c2cColorB7B7C4"
+                    android:textColorHint="@color/c2cColorB7B7C4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/account_title_text_view_2"
+                    app:layout_constraintTop_toBottomOf="@id/account_title_text_view_1"
+                    app:layout_goneMarginTop="20dp" />
+
+                <TextView
+                    android:id="@+id/account_title_text_view_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="20dp"
+                    android:hint="--"
+                    android:textColor="@color/c2cColorB7B7C4"
+                    android:textColorHint="@color/c2cColorB7B7C4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/account_title_text_view_2"
+                    app:layout_goneMarginTop="20dp" />
+
+                <TextView
+                    android:id="@+id/account_content_text_view_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="right"
+                    android:hint="--"
+                    android:singleLine="true"
+                    android:textColor="@color/c2cColorB7B7C4"
+                    android:textColorHint="@color/c2cColorB7B7C4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/account_title_text_view_3"
+                    app:layout_constraintTop_toBottomOf="@id/account_title_text_view_2"
+                    app:layout_goneMarginTop="20dp" />
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView59"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="30dp"
+                android:drawableLeft="@drawable/c2c_ic_tips"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:text="@string/c2c_precautions"
+                android:textColor="@color/c2cColor292A49"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+            <TextView
+                android:id="@+id/textView61"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/c2c_order_detail_safe_tips"
+                android:textColor="@color/c2cColorB7B7C4"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="60dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView59" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/button_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorF1F1F1" />
+
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/buyer_cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/c2c_shape_eaeaf6_radius_2"
+            android:gravity="center"
+            android:text="@string/c2c_cancel_transaction"
+            android:textColor="@color/c2cColor292A49"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/has_pay_button"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="2.2"
+            android:background="@drawable/c2c_shape_8488f5_radius_2"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:paddingRight="10dp"
+                android:text="@string/c2c_i_have_paid"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/count_down_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/c2c_ic_order_count_down"
+                android:drawablePadding="4dp"
+                android:gravity="left|center_vertical"
+                tools:text="@string/c2c_remaining_"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/buyer_appeal_button"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/c2c_shape_eaeaf6_radius_2"
+            android:gravity="center"
+            android:text="@string/c2c_appeal"
+            android:textColor="@color/c2cColor292A49"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <!--卖家按钮-->
+        <TextView
+            android:id="@+id/seller_cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/c2c_shape_eaeaf6_radius_2"
+            android:gravity="center"
+            android:text="@string/c2c_cancel_order"
+            android:textColor="@color/c2cColor292A49"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/wait_button"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="2.2"
+            android:background="@drawable/c2c_shape_d0d1fc_radius_2"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:paddingRight="10dp"
+                android:text="@string/c2c_waiting_for_payment"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/c2c_image_order_wait" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/seller_appeal_button"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/c2c_shape_eaeaf6_radius_2"
+            android:gravity="center"
+            android:text="@string/c2c_appeal"
+            android:textColor="@color/c2cColor292A49"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/seller_get_button"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="2.2"
+            android:background="@drawable/c2c_shape_8488f5_radius_2"
+            android:gravity="center"
+            android:text="@string/c2c_confirm_receipt"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</LinearLayout>

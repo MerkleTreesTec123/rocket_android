@@ -1,0 +1,32 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ifenduo.lib_base">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application>
+        <!-- bugly sdk begin -->
+        <!--<activity-->
+            <!--android:name="com.tencent.bugly.beta.ui.BetaActivity"-->
+            <!--android:configChanges="keyboardHidden|orientation|screenSize|locale"-->
+            <!--android:theme="@android:style/Theme.Translucent" />-->
+        <!--<provider-->
+            <!--android:name=".tools.fileprovider.BuglyFileProvider"-->
+            <!--android:authorities="${applicationId}.fileProvider"-->
+            <!--android:exported="false"-->
+            <!--android:grantUriPermissions="true"-->
+            <!--tools:replace="name,authorities,exported,grantUriPermissions">-->
+            <!--<meta-data-->
+                <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
+                <!--android:resource="@xml/provider_paths"-->
+                <!--tools:replace="name,resource" />-->
+        <!--</provider>-->
+        <!-- bugly sdk end -->
+    </application>
+
+</manifest>

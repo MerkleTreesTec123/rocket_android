@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_ffffff_radius_top_4">
+
+    <TextView
+        android:id="@+id/textView58"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/c2c_choose_payment_method"
+        android:textColor="@color/c2cColor292A49"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cancel_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cancel_button" />
+
+    <ImageView
+        android:id="@+id/cancel_button"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/c2c_ic_dialog_cancel" />
+
+    <View
+        android:id="@+id/divider26"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/c2cColorF1F1F1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cancel_button" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="146dp"
+        android:orientation="vertical"
+        app:divider="@color/c2cColorF1F1F1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider26"
+        app:showDividers="middle">
+
+        <TextView
+            android:id="@+id/bank_card_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/c2c_bank_card"
+            android:textColor="@color/c2cColor292A49"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/alipay_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="@string/c2c_alipay"
+            android:paddingRight="16dp"
+            android:textColor="@color/c2cColor292A49"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/wechat_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="@string/c2c_wechat"
+            android:paddingRight="16dp"
+            android:textColor="@color/c2cColor292A49"
+            android:textSize="14sp" />
+    </android.support.v7.widget.LinearLayoutCompat>
+</android.support.constraint.ConstraintLayout>

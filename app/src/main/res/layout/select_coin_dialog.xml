@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_ffffff_radius_4"
+        android:paddingBottom="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_coin_type"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_usdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="25dp"
+            android:background="@drawable/bg_dedede_ffffff">
+
+            <ImageView
+                android:id="@+id/img_usdt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_normal"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USDT"
+                android:textColor="@color/color333333"
+                android:layout_marginLeft="20dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_cat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="25dp"
+            android:background="@drawable/bg_dedede_ffffff">
+
+            <ImageView
+                android:id="@+id/img_cat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_normal"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CAT"
+                android:textColor="@color/color333333"
+                android:layout_marginLeft="20dp"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/rocket_num"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:digits="0123456789."
+            android:hint="@string/coin_num"
+            android:background="@drawable/bg_dedede_ffffff"/>
+
+        <EditText
+            android:id="@+id/columbus_password"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:inputType="textPassword"
+            android:hint="@string/cloumbu_password"
+            android:background="@drawable/bg_dedede_ffffff"/>
+
+        <Button
+            android:id="@+id/select_btn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/title_hint"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:textSize="14sp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/ok"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_72fff9" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/img_close"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:src="@drawable/close_x"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

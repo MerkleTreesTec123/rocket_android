@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/excWalColor292A49"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="充币" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/exc_wal_quantity"
+        android:textColor="@color/excWalColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView16"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_text_view" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:text="@string/exc_wal_status"
+        android:textColor="@color/excWalColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintEnd_toStartOf="@id/textView21"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="right"
+        android:text="@string/exc_wal_time"
+        android:textColor="@color/excWalColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/num_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="--"
+        android:textColor="@color/excWalColor292A49"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView12"
+        android:singleLine="true"
+        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        tools:text="0.0000" />
+
+    <TextView
+        android:id="@+id/status_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="--"
+        android:textColor="@color/excWalColor292A49"
+        android:textSize="12sp"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="@+id/num_text_view"
+        app:layout_constraintEnd_toEndOf="@+id/textView16"
+        app:layout_constraintStart_toStartOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/time_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="--"
+        android:gravity="right"
+        android:textColor="@color/excWalColor292A49"
+        android:textSize="10sp"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="@+id/num_text_view"
+        app:layout_constraintEnd_toEndOf="@+id/textView21"
+        app:layout_constraintStart_toStartOf="@+id/textView21" />
+
+    <View
+        android:id="@+id/divider10"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/excWalColorF1F1F1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num_text_view" />
+</android.support.constraint.ConstraintLayout>

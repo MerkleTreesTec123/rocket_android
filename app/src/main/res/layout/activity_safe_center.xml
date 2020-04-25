@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_actionbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorF1F1F1" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/security_level"
+                    android:textColor="@color/color72727B"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/safe_level_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:textSize="12sp"
+                    tools:text="低" />
+            </LinearLayout>
+
+            <com.muye.rocket.widget.SafeLevelView
+                android:id="@+id/safe_level_view"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/colorF1F1F1" />
+
+            <RelativeLayout
+                android:id="@+id/phone_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/mobile_phone"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/phone_right_ic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_me_right" />
+
+                <TextView
+                    android:id="@+id/phone_status_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="6dp"
+                    android:layout_toLeftOf="@id/phone_right_ic"
+                    android:textColor="@color/excColorB7B7C4"
+                    android:textSize="14sp"
+                    tools:text="@string/opened" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:background="@color/colorF1F1F1" />
+
+            <RelativeLayout
+                android:id="@+id/email_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/email"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/email_right_ic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_me_right" />
+
+                <TextView
+                    android:id="@+id/email_status_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="6dp"
+                    android:layout_toLeftOf="@id/email_right_ic"
+                    android:textColor="@color/excColorB7B7C4"
+                    android:textSize="14sp"
+                    tools:text="@string/opened" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:background="@color/colorF1F1F1" />
+
+            <RelativeLayout
+                android:id="@+id/google_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/google_authenticator"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/google_right_ic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_me_right" />
+
+                <TextView
+                    android:id="@+id/google_status_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="6dp"
+                    android:layout_toLeftOf="@id/google_right_ic"
+                    android:textColor="@color/excColorB7B7C4"
+                    android:textSize="14sp"
+                    tools:text="@string/binded" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:background="@color/colorF1F1F1" />
+
+            <RelativeLayout
+                android:id="@+id/rel_name_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/real_name_authentication"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/rel_name_right_ic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_me_right" />
+
+                <TextView
+                    android:id="@+id/rel_name_status_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="6dp"
+                    android:layout_toLeftOf="@id/rel_name_right_ic"
+                    android:textColor="@color/excColorB7B7C4"
+                    android:textSize="14sp"
+                    tools:text="@string/uncertified" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:background="@color/colorF1F1F1" />
+
+            <RelativeLayout
+                android:id="@+id/rl_gesture_lock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/gesture_password"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/rel_gesture_lock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_me_right" />
+
+                <TextView
+                    android:id="@+id/tv_gesture_lock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="6dp"
+                    android:layout_toLeftOf="@id/rel_gesture_lock"
+                    android:textColor="@color/excColorB7B7C4"
+                    android:textSize="14sp"
+                    tools:text="@string/reset" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:background="@color/colorF1F1F1" />
+            <!-- 暂未开放 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/currency_trading_setup"
+                android:textColor="@color/color72727B"
+                android:visibility="gone"
+                android:textSize="14sp" />
+            <!-- 暂未开放 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:visibility="gone"
+                android:layout_marginLeft="16dp"
+                android:background="@color/colorF1F1F1" />
+
+            <RelativeLayout
+                android:id="@+id/c2c_pay_password_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:visibility="gone"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/c2c_c2c_payment_password"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/c2c_pay_password_right_ic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_me_right" />
+
+                <TextView
+                    android:id="@+id/c2c_pay_password_status_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="6dp"
+                    android:layout_toLeftOf="@id/c2c_pay_password_right_ic"
+                    android:text="@string/not_open"
+                    android:textColor="@color/excColorB7B7C4"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:visibility="visible"
+                android:background="@color/colorF1F1F1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/other_settings"
+                android:textColor="@color/color72727B"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:background="@color/colorF1F1F1" />
+
+            <RelativeLayout
+                android:id="@+id/login_password_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/login_password"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/login_password_right_ic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_me_right" />
+
+                <TextView
+                    android:id="@+id/login_password_status_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="6dp"
+                    android:layout_toLeftOf="@id/login_password_right_ic"
+                    android:text="@string/reset"
+                    android:textColor="@color/excColorB7B7C4"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:background="@color/colorF1F1F1" />
+
+            <RelativeLayout
+                android:id="@+id/pay_password_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/exc_wal_payment_password"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/pay_password_right_ic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_me_right" />
+
+                <TextView
+                    android:id="@+id/pay_password_status_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="6dp"
+                    android:layout_toLeftOf="@id/pay_password_right_ic"
+                    android:text="@string/reset"
+                    android:textColor="@color/excColorB7B7C4"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:background="@color/colorF1F1F1" />
+
+            <RelativeLayout
+                android:id="@+id/gesture_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:visibility="visible"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/gesture_password"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@+id/gesture_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@null"
+                    android:src="@drawable/selector_switch" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:visibility="gone"
+                android:background="@color/colorF1F1F1" />
+
+            <RelativeLayout
+                android:id="@+id/fingerprint_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:visibility="gone"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/fingerprint_password"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/fingerprint_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/selector_switch" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:visibility="visible"
+                android:background="@color/colorF1F1F1" />
+
+            <RelativeLayout
+                android:id="@+id/user_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/user_id"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/uid_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_me_right" />
+
+                <TextView
+                    android:id="@+id/uid_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="6dp"
+                    android:layout_toLeftOf="@id/uid_right"
+                    android:textColor="@color/excColorB7B7C4"
+                    android:textSize="14sp"
+                    tools:text="@string/opened" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:visibility="visible"
+                android:background="@color/colorF1F1F1" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="网络状态"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="16dp"/>
+
+                <ImageView
+                    android:id="@+id/net_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:visibility="visible"
+                    android:src="@mipmap/net_error"/>
+
+                <ImageView
+                    android:id="@+id/net_ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:visibility="visible"
+                    android:src="@mipmap/net_ok"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:visibility="visible"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="40dp"
+                android:background="@color/colorF1F1F1" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

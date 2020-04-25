@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/c2c_shape_ffffff_radius_4"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/image_dialog_show_qr"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            tools:src="@color/white" />
+
+        <TextView
+            android:id="@+id/text_dialog_show_qr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/c2cColorB7B7C4"
+            android:textSize="14sp"
+            tools:text="用支付宝扫二维码付款" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/button_dialog_show_qr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_dialog_cancel" />
+</LinearLayout>

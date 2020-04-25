@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="260dp"
+    android:background="@drawable/bg_ffffff_10">
+
+    <ImageView
+        android:id="@+id/img_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/hint_head"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/hint_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color333333"
+        android:text="@string/hint_to_realm"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/img_head"
+        android:textSize="17sp"
+        android:layout_marginTop="15dp"/>
+
+    <Button
+        android:id="@+id/btn_to_realm"
+        android:layout_width="160dp"
+        android:layout_height="35dp"
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        android:text="@string/to_realm"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/hint_txt"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_color0189ff_18"/>
+
+    <TextView
+        android:id="@+id/later_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/later_"
+        android:textColor="@color/color666666"
+        android:padding="5dp"
+        android:textSize="14sp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

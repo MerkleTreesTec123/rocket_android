@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_color_f9"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_layout_toolbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/excWalColorF1F1F1" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/personal_data_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <com.ifenduo.common.view.CircleImageView
+                    android:id="@+id/avatar_image_view"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_avatar_def"/>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/avatar_image_view"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nick_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color_999"
+                        android:textSize="16sp"
+                        tools:text="Hi，文睿睿"/>
+
+                    <TextView
+                        android:id="@+id/status_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:alpha="0.7"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color_999"
+                        android:textSize="12sp"
+                        tools:text="Hi，文睿睿"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!--邀请榜-->
+            <ImageView
+                android:id="@+id/invite_list_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_yaoqing"/>
+
+            <!--邀请好友-->
+            <RelativeLayout
+                android:id="@+id/invite_container"
+                style="@style/ClickViewRippleF2F2F2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="14dp"
+                android:paddingTop="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:drawableLeft="@drawable/ic_me_invite"
+                    android:drawablePadding="14dp"
+                    android:text="@string/invite_friends"
+                    android:textColor="@color/color292A49"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_me_right"/>
+            </RelativeLayout>
+
+            <!--账户与安全-->
+            <RelativeLayout
+                android:id="@+id/safe_center_container"
+                style="@style/ClickViewRippleF2F2F2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="14dp"
+                android:paddingTop="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:drawableLeft="@drawable/ic_me_safe_center"
+                    android:drawablePadding="14dp"
+                    android:text="@string/account_and_security"
+                    android:textColor="@color/color292A49"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_me_right"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/excWalColorF1F1F1" />
+
+            <!--帮助与支持-->
+            <RelativeLayout
+                android:id="@+id/help_container"
+                style="@style/ClickViewRippleF2F2F2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:paddingBottom="14dp"
+                android:paddingTop="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:drawableLeft="@drawable/ic_me_help"
+                    android:drawablePadding="14dp"
+                    android:text="@string/help_and_support"
+                    android:textColor="@color/color292A49"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_me_right"/>
+            </RelativeLayout>
+
+            <!--绑定钱包账户-->
+            <RelativeLayout
+                android:id="@+id/bind_wallet_container"
+                style="@style/ClickViewRippleF2F2F2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="14dp"
+                android:paddingTop="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:drawableLeft="@drawable/bind_wallet_icon"
+                    android:drawablePadding="14dp"
+                    android:text="@string/account_wallet"
+                    android:textColor="@color/color292A49"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_me_right"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/excWalColorF1F1F1" />
+
+            <!--联系客服-->
+            <RelativeLayout
+                android:id="@+id/service_container"
+                style="@style/ClickViewRippleF2F2F2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="14dp"
+                android:paddingTop="14dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:drawableLeft="@drawable/ic_me_service"
+                    android:drawablePadding="14dp"
+                    android:text="@string/contact_customer_service"
+                    android:textColor="@color/color292A49"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_me_right"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/excWalColorF1F1F1" />
+
+            <!--设置-->
+            <RelativeLayout
+                android:id="@+id/setting_container"
+                style="@style/ClickViewRippleF2F2F2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="14dp"
+                android:paddingTop="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:drawableLeft="@drawable/ic_me_setting"
+                    android:drawablePadding="14dp"
+                    android:text="@string/setting"
+                    android:textColor="@color/color292A49"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_me_right"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@color/white">
+
+    <com.mcxtzhang.swipemenulib.SwipeMenuLayout
+        android:id="@+id/swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:ios="true"
+        app:leftSwipe="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/c2cColor292A49"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="发布中 USDT" />
+
+            <TextView
+                android:id="@+id/status_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:textColor="@color/c2cColor8488F5"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/title_text_view"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:text="发布中" />
+
+            <TextView
+                android:id="@+id/total_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="18dp"
+                android:singleLine="true"
+                android:textColor="@color/c2cColorB7B7C4"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/price_text_view"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_text_view" />
+
+            <TextView
+                android:id="@+id/price_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:singleLine="true"
+                android:textColor="@color/c2cColorB7B7C4"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@id/total_text_view"
+                app:layout_constraintTop_toBottomOf="@id/title_text_view" />
+
+            <TextView
+                android:id="@+id/num_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:textColor="@color/c2cColorB7B7C4"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/time_text_view"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/total_text_view" />
+
+            <TextView
+                android:id="@+id/time_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:singleLine="true"
+                android:textColor="@color/c2cColorB7B7C4"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@id/num_text_view"
+                app:layout_constraintTop_toBottomOf="@id/total_text_view" />
+
+            <TextView
+                android:id="@+id/submit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/c2c_shape_8488f5_radius_2"
+                android:paddingLeft="20dp"
+                android:paddingTop="6dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="6dp"
+                android:text="@string/c2c_offline"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/num_text_view" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/c2cColorF1F1F1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/submit_button"
+                app:layout_goneMarginTop="20dp" />
+        </android.support.constraint.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/delete_button"
+            android:layout_width="106dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/c2c_shape_eb6678_ff4059"
+            android:scaleType="centerInside"
+            android:src="@drawable/c2c_ic_order_delete" />
+    </com.mcxtzhang.swipemenulib.SwipeMenuLayout>
+</LinearLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--头-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingTop="25dp"
+        android:paddingBottom="10dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:src="@drawable/image_login_logo"/>
+    </LinearLayout>
+
+    <!--banner-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:orientation="vertical">
+
+        <com.zhpan.bannerview.BannerViewPager
+            android:id="@+id/banner_view"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:bvp_indicator_normal_color="@color/white_alpha"
+            app:bvp_indicator_checked_color="@color/white"
+            app:bvp_page_style="multi_page" />
+
+        <LinearLayout
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:gravity="center"
+            android:orientation="horizontal"/>
+    </LinearLayout>
+
+    <!--跑马灯-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/colorF6F6FB"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/ic_marquee_"/>
+
+        <com.sunfusheng.marqueeview.MarqueeView
+            android:id="@+id/marquee_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            app:mvDirection="bottom_to_top"
+            app:mvGravity="left"
+            app:mvSingleLine="true"
+            app:mvTextColor="@color/color292A49"
+            app:mvTextSize="12sp"/>
+    </LinearLayout>
+
+    <!--交易区-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <!--币币交易-->
+        <LinearLayout
+            android:id="@+id/exchange_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@mipmap/icon_bbjy"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/c2c_"
+                android:textColor="@color/color292A49"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <!--交易挖矿-->
+        <LinearLayout
+            android:id="@+id/c2c_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@mipmap/icon_jywk"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/currency_transaction"
+                android:textColor="@color/color292A49"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <!--帮助中心-->
+        <LinearLayout
+            android:id="@+id/ll_help"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@mipmap/icon_bzzx"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="帮助中心"
+                android:textColor="@color/color292A49"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.muye.rocket.widget.RoundLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16sp"
+        app:corners="6dp">
+
+        <com.zhpan.bannerview.BannerViewPager
+            android:id="@+id/banner_advert"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:bvp_indicator_normal_color="@color/white_alpha"
+            app:bvp_indicator_checked_color="@color/white"/>
+    </com.muye.rocket.widget.RoundLayout>
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        app:tl_indicator_color="@color/colorAccent"
+        app:tl_indicator_width="34dp"
+        app:tl_tab_padding="16dp"
+        app:tl_tab_space_equal="false"
+        app:tl_textSelectColor="@color/colorAccent"
+        app:tl_textUnselectColor="@color/colorB7B7C4"
+        app:tl_textsize="14sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorF1F1F1"/>
+</LinearLayout>

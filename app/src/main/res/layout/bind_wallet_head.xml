@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/head_title"
+    android:textSize="16sp"
+    android:textColor="#3B3E43"
+    android:padding="20dp"
+    tool:text="已绑定4个哥伦布账户">
+
+</TextView>

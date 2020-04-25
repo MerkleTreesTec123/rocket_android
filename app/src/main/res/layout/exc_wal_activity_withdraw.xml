@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_color_f9"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_actionbar"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/excWalColorF1F1F1"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/withdraw_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:src="@mipmap/top_tx"/>
+
+            <!--币种选择-->
+            <LinearLayout
+                android:id="@+id/coin_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorFFF9F9"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:text="@string/exc_wal_select_currency"
+                    android:textColor="@color/excWalColorB7B7C4"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/title_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:text="--"
+                    android:textColor="@color/excWalColor292A49"
+                    android:textSize="14sp"
+                    tools:text="BTC" />
+
+                <ImageView
+                    android:id="@+id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/exc_wal_ic_more" />
+            </LinearLayout>
+
+            <!--币地址-->
+            <TextView
+                android:id="@+id/address_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:drawablePadding="12dp"
+                android:drawableRight="@drawable/exc_wal_ic_withdraw_address"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="@string/exc_wal_choose_withdrawal_address"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/excWalColorB7B7C4"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/address_tag_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/address_label"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/address_tag_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/transparent"
+                android:drawablePadding="12dp"
+                android:hint="@string/input_address_tag_hint"
+                android:paddingBottom="14dp"
+                android:paddingTop="14dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/excWalColorB7B7C4"
+                android:textSize="14sp"
+                android:visibility="gone"/>
+
+            <View
+                android:id="@+id/address_tag_divider"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/excWalColorF1F1F1"
+                android:visibility="gone"/>
+
+            <!--提币数量-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/num_edit_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/exc_wal_min_withdrawal_amount"
+                        android:inputType="numberDecimal"
+                        android:paddingBottom="14dp"
+                        android:paddingTop="14dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/excWalColorB7B7C4"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/unit_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="--"
+                        android:textColor="@color/excWalColor72727B"
+                        android:textSize="14sp"
+                        tools:text="USDT"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/all_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/exc_wal_all"
+                    android:textColor="@color/excWalColor292A49"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <!--可用-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:id="@+id/balance_text_view_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/exc_wal_available"
+                    android:textColor="@color/excWalColor72727B"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/balance_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@id/balance_text_view_"
+                    android:text="--"
+                    android:textColor="@color/excWalColor72727B"
+                    android:textSize="12sp"/>
+
+            </RelativeLayout>
+
+            <!--手续费-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:id="@+id/service_charge_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:hint="手续费--"
+                    android:paddingBottom="14dp"
+                    android:paddingTop="14dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/excWalColorB7B7C4"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/service_charge_unit_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="--"
+                    android:textColor="@color/excWalColor72727B"
+                    android:textSize="14sp"
+                    tools:text="USDT"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/service_charge_hint_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/exc_wal_service_charge_hint"
+                android:textColor="@color/excWalColorB7B7C4"
+                android:textSize="12sp"
+                android:visibility="gone"/>
+
+            <!--短信验证码-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/code_edit_text"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:digits="@string/edit_input_0zZ"
+                    android:hint="@string/exc_wal_input_sms_code_hint"
+                    android:paddingBottom="14dp"
+                    android:paddingTop="14dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/excWalColorB7B7C4"
+                    android:textSize="14sp"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/excWalColorF1F1F1"/>
+
+                <Button
+                    android:id="@+id/send_button"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingBottom="12dp"
+                    android:paddingTop="12dp"
+                    android:text="@string/send_sms"
+                    android:textColor="@color/color_enable_8488f5_8284a8"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/excWalColorF1F1F1"/>
+
+    <Button
+        android:id="@+id/submit_button"
+        style="@style/SubmitButton"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:enabled="false"
+        android:text="@string/exc_wal_confirmation_withdrawal"/>
+</LinearLayout>

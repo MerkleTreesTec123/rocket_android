@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_707070_ffffff"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/rg_country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rb_china"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="@string/select_china"
+            android:textSize="14dp"
+            android:textColor="@color/selector_rb_country_text"
+            android:gravity="center"
+            android:button="@null"
+            android:background="@drawable/selector_rb_country"/>
+
+        <RadioButton
+            android:id="@+id/rb_other"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="@string/select_other_country"
+            android:textSize="14dp"
+            android:textColor="@color/selector_rb_country_text"
+            android:gravity="center"
+            android:button="@null"
+            android:background="@drawable/selector_rb_country"/>
+    </RadioGroup>
+</LinearLayout>

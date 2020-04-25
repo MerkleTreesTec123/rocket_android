@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_actionbar" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/progress_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="0.5dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/submit_success_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="26dp"
+            android:gravity="center_horizontal"
+            android:text="@string/exc_wal_submit_success"
+            android:textColor="@color/colorB7B7C4"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/review_text_view"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/review_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:gravity="center_horizontal"
+            android:text="@string/under_review"
+            android:textColor="@color/colorB7B7C4"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/submit_success_text_view"
+            app:layout_constraintEnd_toStartOf="@+id/textView42"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/submit_success_text_view" />
+
+        <TextView
+            android:id="@+id/textView42"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center_horizontal"
+            android:text="@string/audit_results"
+            android:textColor="@color/colorB7B7C4"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/submit_success_text_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/review_text_view" />
+
+        <ImageView
+            android:id="@+id/submit_success_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/submit_success_text_view"
+            app:layout_constraintStart_toStartOf="@+id/submit_success_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/submit_success_text_view"
+            app:srcCompat="@drawable/ic_bind_google_gray_point" />
+
+        <ImageView
+            android:id="@+id/review_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/submit_success_image_view"
+            app:layout_constraintEnd_toEndOf="@+id/review_text_view"
+            app:layout_constraintStart_toStartOf="@+id/review_text_view"
+            app:layout_constraintTop_toTopOf="@id/submit_success_image_view"
+            app:srcCompat="@drawable/ic_bind_google_gray_point" />
+
+        <ImageView
+            android:id="@+id/result_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/submit_success_image_view"
+            app:layout_constraintEnd_toEndOf="@+id/textView42"
+            app:layout_constraintStart_toStartOf="@+id/textView42"
+            app:layout_constraintTop_toTopOf="@id/submit_success_image_view"
+            app:srcCompat="@drawable/ic_bind_google_gray_point" />
+
+        <View
+            android:id="@+id/divider_1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/colorF1F1F1"
+            app:layout_constraintBottom_toBottomOf="@+id/submit_success_image_view"
+            app:layout_constraintEnd_toStartOf="@+id/review_image_view"
+            app:layout_constraintStart_toEndOf="@+id/submit_success_image_view"
+            app:layout_constraintTop_toTopOf="@+id/submit_success_image_view" />
+
+        <View
+            android:id="@+id/divider_2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/colorF1F1F1"
+            app:layout_constraintBottom_toBottomOf="@+id/submit_success_image_view"
+            app:layout_constraintEnd_toStartOf="@+id/result_image_view"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/review_image_view"
+            app:layout_constraintTop_toTopOf="@+id/submit_success_image_view" />
+
+        <ImageView
+            android:id="@+id/status_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/submit_success_image_view"
+            tools:srcCompat="@drawable/image_real_name_sub_suc" />
+
+        <TextView
+            android:id="@+id/status_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/color292A49"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/status_image_view"
+            tools:text="@string/exc_wal_submit_success" />
+
+        <TextView
+            android:id="@+id/status_hint_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorB7B7C4"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:lineSpacingExtra="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/status_text_view"
+            tools:text="@string/real_name_status_submit_success_hint" />
+
+        <Button
+            android:id="@+id/submit_button"
+            style="@style/SubmitButton"
+            android:layout_width="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/recertification"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/status_hint_text_view"
+            app:layout_constraintVertical_bias="1.0" />
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

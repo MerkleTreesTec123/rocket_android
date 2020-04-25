@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_actionbar" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/c2c_ic_release_success" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="@string/successfully_initiated_a_transaction"
+        android:textColor="@color/c2cColor292A49"
+        android:textStyle="bold"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/hint_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="60dp"
+        android:gravity="center_horizontal"
+        android:text="@string/c2c_release_success_hint"
+        android:textColor="@color/c2cColorB7B7C4"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/left_button"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:background="@drawable/c2c_shape_8488f5_frame_radius_2"
+            android:text="@string/c2c_back"
+            android:textColor="@color/c2cColor8488F5"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/right_button"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_marginLeft="14dp"
+            android:includeFontPadding="false"
+            android:text="@string/c2c_my_release"
+            android:background="@drawable/c2c_shape_8488f5_radius_2"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

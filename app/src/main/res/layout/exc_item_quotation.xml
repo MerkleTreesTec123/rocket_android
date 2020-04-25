@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/gain_text_view"
+        android:layout_width="70dp"
+        android:layout_height="32dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/color07C087"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/num_text_view"
+        app:layout_constraintLeft_toRightOf="@+id/price_text_view"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_text_view"
+        tools:text="+0.00%" />
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="8dp"
+        android:textColor="@color/colorA0A0A0"
+        android:textSize="14sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/price_text_view"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="BTC/USDT" />
+
+    <TextView
+        android:id="@+id/price_text_view"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:text="--"
+        android:textColor="@color/color262626"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/title_text_view"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/title_text_view"
+        app:layout_constraintRight_toLeftOf="@id/gain_text_view"
+        tools:text="0.00"/>
+
+    <TextView
+        android:id="@+id/num_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/color9298B3"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/title_text_view"
+        app:layout_constraintStart_toStartOf="@+id/title_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/title_text_view"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="@string/quantity_24" />
+
+    <TextView
+        android:id="@+id/price_text_view_"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="¥--"
+        android:textColor="@color/color9298B3"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/num_text_view"
+        app:layout_constraintEnd_toEndOf="@+id/price_text_view"
+        app:layout_constraintStart_toStartOf="@+id/price_text_view" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,128 @@
+apply plugin: 'com.android.application'
+// 依赖插件脚本   tinker
+apply from: 'tinker-support.gradle'
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        applicationId "com.muye.rocket"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 10001030
+        versionName "0.3.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        // tinker
+        ndk {
+            abiFilters "armeabi"
+        }
+
+        multiDexEnabled true
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "f77724223b9eb3d14bb7063f", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+    signingConfigs{
+        config {
+            storeFile file('../Rocket.jks')
+            storePassword 'rocket123456'
+            keyAlias 'rocket'
+            keyPassword 'rocket123456'
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config // 配置release包的签名
+        }
+        debug{
+            signingConfig signingConfigs.config // 配置debug包的签名
+        }
+    }
+
+    //修改生成的apk名字
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            outputFileName = "Rocket_v${variant.versionName}"+ ".apk"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation rootProject.ext.deps.butterKnife
+    annotationProcessor rootProject.ext.deps.butterKnifeAnnotationProcessor
+    implementation 'com.sunfusheng:MarqueeView:1.4.1'
+    implementation project(':lib_base')
+//    implementation project(':lib-banner')
+    implementation project(':kchartlib')
+    implementation project(':lib-bottomnavigation')
+    implementation project(':lib-picture')
+    implementation project(':lockpattern')
+    //二维码
+    implementation 'com.google.zxing:core:3.3.0'
+    implementation 'cn.bingoogolapple:bga-qrcode-zxing:1.2.1'
+    //侧滑删除
+    implementation 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+    //圆角图片
+    implementation 'com.joooonho:selectableroundedimageview:1.0.1'
+    //保存数据
+    implementation 'com.tencent:mmkv:1.0.10'
+    //OSS
+    implementation 'com.aliyun.dpa:oss-android-sdk:+'
+    //
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    //compile 'com.tencent.bugly:crashreport:latest.release'//其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.3.2
+    implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+
+    implementation 'com.android.support:multidex:1.0.3'// 多dex配置
+    implementation 'com.hjq:toast:8.0'
+    //友盟
+    implementation 'com.umeng.umsdk:analytics:8.0.0'
+    implementation 'com.umeng.umsdk:common:2.0.0'
+
+    // bugly 热更新依赖  tinker
+    implementation 'com.tencent.tinker:tinker-android-lib:1.9.14'
+
+    //身份证识别
+    implementation(name: 'ocr_sdk', ext: 'aar')
+
+    // 极光推送
+    implementation 'cn.jiguang.sdk:jpush:3.4.0'
+    implementation 'cn.jiguang.sdk:jcore:2.2.2'
+
+    //状态栏
+    //基础依赖包，必须要依赖
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0-beta03'
+    //fragment快速实现（可选）
+    implementation 'com.gyf.immersionbar:immersionbar-components:3.0.0-beta03'
+
+    implementation 'com.alibaba:fastjson:1.2.33'
+
+    //banner
+    implementation 'com.zhpan.library:bannerview:2.6.0'
+    //webview进度条
+    implementation 'com.github.youlookwhat:WebProgress:1.1.0'
+
+    //rxwebsocket
+    implementation 'com.dhh:websocket:2.1.2'
+}

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F8FC"
+    android:id="@+id/rl_contain"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/ll_top_layout"
+        layout="@layout/toolbar_actionbar" />
+
+    <View
+        android:id="@+id/view_top"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/ll_top_layout"
+        android:background="@color/colorF1F1F1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-100dp"
+        android:layout_marginLeft="-100dp"
+        android:src="@drawable/shadow2"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="-100dp"
+        android:layout_marginRight="-100dp"
+        android:src="@drawable/shadow2"/>
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/view_top"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_e8d6bb_fcf8f4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请尽快关联哥伦布账户优先参与活动"
+            android:drawableLeft="@drawable/alarm_hint"
+            android:drawablePadding="8dp"
+            android:paddingLeft="10dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/close_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/close_alarm"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"/>
+
+    </LinearLayout>
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/rl_qr_code"-->
+<!--        android:layout_width="270dp"-->
+<!--        android:layout_height="245dp"-->
+<!--        android:background="@drawable/qr_code_bind"-->
+<!--        android:layout_below="@+id/ll_top"-->
+<!--        android:layout_marginTop="76dp"-->
+<!--        android:layout_centerHorizontal="true">-->
+        <ImageView
+            android:id="@+id/qr_code_bind_img"
+            android:layout_width="270dp"
+            android:layout_height="245dp"
+            android:layout_marginTop="41dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="15dp"
+            android:layout_below="@+id/ll_top"
+
+            android:layout_centerHorizontal="true"/>
+<!--    </RelativeLayout>-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="使用哥伦布钱包扫描二维码"
+        android:textColor="@color/color3B3E43"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/qr_code_bind_img"
+        android:layout_marginTop="11dp"/>
+
+    <Button
+        android:id="@+id/btn_bind"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="@string/look_my_bind_cloumbu"
+        android:textSize="15sp"
+        android:layout_marginLeft="86dp"
+        android:layout_marginRight="86dp"
+        android:layout_marginTop="86dp"
+        android:background="@drawable/bg_4986ff_ffffff"
+        android:layout_below="@+id/qr_code_bind_img"
+        android:textColor="@color/color3B84FF"/>
+
+    <TextView
+        android:id="@+id/binding_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="绑定哥伦布账户须知"
+        android:textColor="#666"
+        android:textSize="12sp"
+        android:gravity="center_horizontal"
+        android:drawablePadding="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="42dp"
+        android:drawableLeft="@drawable/tips"/>
+
+</RelativeLayout>

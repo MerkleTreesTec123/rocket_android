@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="266dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/close_withdraw_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color333333"
+            android:textSize="26sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="87dp"
+            android:text="提现通道已关闭"/>
+
+        <Button
+            android:id="@+id/btn_know"
+            android:layout_width="113dp"
+            android:layout_height="27dp"
+            android:background="@drawable/bg_091fe"
+            android:text="我知道了"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginTop="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</LinearLayout>

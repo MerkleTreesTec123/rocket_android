@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#272A3F"
+    tools:context=".MainActivity">
+
+    <com.ifenduo.lib_base.widget.CustomEditText
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        app:ce_left_button_drawable_right="@drawable/ic_phone_area_right_drawable"
+        app:ce_left_button_hint_color="@color/color2777B7" />
+
+</LinearLayout>

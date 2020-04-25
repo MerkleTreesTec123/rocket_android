@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#091D17"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <SurfaceView
+                android:id="@+id/surface_view"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@android:color/transparent" />
+
+            <TextView
+                android:id="@+id/record_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/surface_view"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/shape_ffffff_alph21_round"
+                android:paddingLeft="16dp"
+                android:paddingTop="6dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="6dp"
+                android:text="@string/my_record"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/rule_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/surface_view"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/shape_ffffff_alph21_round"
+                android:paddingLeft="16dp"
+                android:paddingTop="6dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="6dp"
+                android:text="@string/rule_description"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/info_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/record_button"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/shape_00271b_008a61_frame">
+
+                <TextView
+                    android:id="@+id/title_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="--"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="第62期已售罄" />
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/current_transaction_price"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title_text_view" />
+
+                <TextView
+                    android:id="@+id/price_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:singleLine="true"
+                    android:text="--"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView32"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView32"
+                    app:layout_constraintTop_toTopOf="@+id/textView32"
+                    tools:text="1 CAT ≈ 0.05 USDT" />
+
+                <TextView
+                    android:id="@+id/time_hint_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:lineSpacingExtra="2sp"
+                    android:text="@string/next_time_sales_countdown"
+                    android:textColor="@color/color758A83"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/time_container"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/time_container" />
+
+                <LinearLayout
+                    android:id="@+id/time_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/time_hint_text_view"
+                    app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    style="@style/IEOProgressBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/time_hint_text_view" />
+
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/converted_quantity"
+                    android:textColor="@color/colorB6C1BD"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/progress_bar" />
+
+                <TextView
+                    android:id="@+id/total_convertible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/total_convertible"
+                    android:textColor="@color/colorB6C1BD"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/progress_bar" />
+
+
+                <TextView
+                    android:id="@+id/num_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="22dp"
+                    android:text="--"
+                    android:textColor="@color/colorB6C1BD"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView34"
+                    tools:text="--" />
+
+                <TextView
+                    android:id="@+id/total_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="--"
+                    android:textColor="@color/colorB6C1BD"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/num_text_view"
+                    tools:text="--" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginBottom="22dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/total_text_view" />
+            </android.support.constraint.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/price_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/info_container"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/shape_00271b_008a61_frame"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/current_price_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="@string/this_period"
+                    android:textColor="@color/colorB6C1BD"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/next_price_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="@string/previous_period"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/release_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/price_container"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/shape_00271b_008a61_frame"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/released_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="@string/released"
+                    android:textColor="@color/colorB6C1BD"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/unreleased_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="@string/unreleased"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/buy_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/release_container"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/shape_00271b_008a61_frame"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="26dp"
+                    android:text="@string/choose_a_conversion_amount"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical"
+                    app:layoutManager="android.support.v7.widget.GridLayoutManager"
+                    app:spanCount="3" />
+
+                <Button
+                    android:id="@+id/buy_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/selector_ieo_buy_button_bg"
+                    android:enabled="false"
+                    android:text="@string/sold_out"
+                    android:textColor="@color/color_ieo_buy_button" />
+
+                <TextView
+                    android:id="@+id/tip_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="22dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/color758A83"
+                    android:textSize="10sp"
+                    tools:text="@string/ieo_end_tips" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/buy_container" />
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>

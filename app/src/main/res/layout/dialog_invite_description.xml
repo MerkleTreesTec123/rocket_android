@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp">
+
+        <ImageView
+            android:id="@+id/close_button"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_descirption_close" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/invite_description"
+            android:textColor="@color/color262626"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorF2F2F2" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="20dp"
+        android:overScrollMode="never"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/content_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:lineSpacingMultiplier="1.3"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" />
+
+    </ScrollView>
+
+
+</LinearLayout>

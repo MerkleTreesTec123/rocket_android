@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/account_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:hint="--"
+        android:textColor="@color/c2cColor000000"
+        android:textColorHint="@color/c2cColor000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="me***ey" />
+
+    <TextView
+        android:id="@+id/percentage_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:hint="--"
+        android:textColor="@color/c2cColorB7B7C4"
+        android:textColorHint="@color/c2cColorB7B7C4"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/account_text_view"
+        tools:text="90%" />
+
+    <View
+        android:id="@+id/divider22"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/c2cColorF1F1F1"
+        app:layout_constraintBottom_toBottomOf="@+id/account_text_view"
+        app:layout_constraintEnd_toStartOf="@+id/percentage_text_view"
+        app:layout_constraintTop_toTopOf="@+id/account_text_view" />
+
+    <TextView
+        android:id="@+id/percentage_num_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:hint="@string/total_amount_"
+        android:textColor="@color/c2cColorB7B7C4"
+        android:textColorHint="@color/c2cColorB7B7C4"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/account_text_view"
+        app:layout_constraintEnd_toStartOf="@+id/divider22"
+        app:layout_constraintTop_toTopOf="@+id/account_text_view"
+        tools:text="128" />
+
+    <View
+        android:id="@+id/divider23"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/c2cColorF1F1F1"
+        app:layout_constraintBottom_toBottomOf="@+id/price_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/price_title_text_view" />
+
+    <TextView
+        android:id="@+id/price_title_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/c2c_price_cny"
+        android:textColor="@color/c2cColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/divider23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/account_text_view" />
+
+    <TextView
+        android:id="@+id/price_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="--"
+        android:text="--"
+        android:textColor="@color/c2cColor00DA97"
+        android:textColorHint="@color/c2cColor00DA97"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/divider23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price_title_text_view"
+        tools:text="12.1234" />
+
+    <TextView
+        android:id="@+id/amount_hint_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/margin"
+        android:textColor="@color/c2cColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/divider23"
+        app:layout_constraintTop_toTopOf="@+id/price_title_text_view" />
+
+    <TextView
+        android:id="@+id/amount_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:hint="--"
+        android:text="--"
+        android:textColor="@color/c2cColor292A49"
+        android:textColorHint="@color/c2cColor292A49"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/amount_hint_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/amount_hint_text_view"
+        app:layout_constraintTop_toTopOf="@+id/amount_hint_text_view" />
+
+    <TextView
+        android:id="@+id/quota_hint_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/c2c_quota"
+        android:textColor="@color/c2cColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/price_text_view"
+        app:layout_constraintStart_toEndOf="@+id/divider23" />
+
+    <TextView
+        android:id="@+id/quota_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:hint="--"
+        android:text="--"
+        android:textColor="@color/c2cColor292A49"
+        android:textColorHint="@color/c2cColor292A49"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/quota_hint_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/quota_hint_text_view"
+        app:layout_constraintTop_toTopOf="@+id/quota_hint_text_view" />
+
+    <Button
+        android:id="@+id/action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/c2c_shape_8488f5_radius_2"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price_text_view"
+        tools:text="Button" />
+
+    <ImageView
+        android:id="@+id/bank_card_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/action_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/action_button"
+        app:srcCompat="@drawable/c2c_ic_home_bank_card" />
+
+    <ImageView
+        android:id="@+id/alipay_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/action_button"
+        app:layout_constraintStart_toEndOf="@+id/bank_card_icon"
+        app:layout_constraintTop_toTopOf="@+id/action_button"
+        app:layout_constraintVertical_bias="0.571"
+        app:layout_goneMarginLeft="16dp"
+        app:layout_goneMarginStart="16dp"
+        app:srcCompat="@drawable/c2c_ic_home_alipay" />
+
+    <ImageView
+        android:id="@+id/wechat_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/action_button"
+        app:layout_constraintStart_toEndOf="@+id/alipay_icon"
+        app:layout_constraintTop_toTopOf="@+id/action_button"
+        app:layout_constraintVertical_bias="0.571"
+        app:layout_goneMarginLeft="16dp"
+        app:layout_goneMarginStart="16dp"
+        app:srcCompat="@drawable/c2c_ic_home_wechat" />
+
+    <View
+        android:id="@+id/divider24"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/c2cColorF1F1F1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/action_button" />
+
+</android.support.constraint.ConstraintLayout>

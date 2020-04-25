@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_menu_layout"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    tools:background="@color/colorPageBackground">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/address_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/address_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="26dp"
+            android:src="@drawable/exc_wal_address_ic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/more_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/exc_wal_ic_address_more_point"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textColor="@color/excWalColor292A49"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/address_ic"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="戴瀚壮" />
+
+        <View
+            android:id="@+id/title_divider"
+            android:layout_width="1dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:background="@color/excWalColorF1F1F1"
+            app:layout_constraintBottom_toBottomOf="@id/title_text_view"
+            app:layout_constraintStart_toEndOf="@id/title_text_view"
+            app:layout_constraintTop_toTopOf="@id/title_text_view" />
+
+        <TextView
+            android:id="@+id/note_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textColor="@color/excWalColor292A49"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/title_text_view"
+            app:layout_constraintEnd_toStartOf="@id/more_ic"
+            app:layout_constraintStart_toEndOf="@id/title_divider"
+            app:layout_constraintTop_toTopOf="@id/title_text_view"
+            tools:text="戴瀚壮" />
+
+        <TextView
+            android:id="@+id/other_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="26dp"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@color/excWalColor72727B"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/more_ic"
+            app:layout_constraintStart_toStartOf="@id/title_text_view"
+            tools:text="TR1b3Ydq45455454odr5YAFsTR1b3Ydq45455454odr5YAFs" />
+
+        <View
+            android:id="@+id/divider15"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/excColorF1F1F1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/delete_button"
+        android:layout_width="88dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/exc_wal_eb6678_ff4059"
+        android:scaleType="centerInside"
+        android:src="@drawable/exc_wal_ic_address_delete" />
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

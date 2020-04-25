@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPageBackground">#FFFFFF</color>
+    <color name="tabSelectColor">#262626</color>
+    <color name="tabUnSelectColor">#C3C3C3</color>
+    <color name="colorF2F2F2">#F2F2F2</color>
+    <color name="color474A57">#474A57</color>
+    <color name="color9298B3">#9298b3</color>
+    <color name="color07C087">#07C087</color>
+    <color name="color262626">#262626</color>
+    <color name="colorEA4E00">#EA4E00</color>
+    <color name="colorA0A0A0">#A0A0A0</color>
+</resources>

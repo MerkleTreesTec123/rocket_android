@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">KChartLib</string>
+    <string name="kchart_high">高:</string>
+    <string name="kchart_low">低:</string>
+    <string name="kchart_open">开:</string>
+    <string name="kchart_close">关:</string>
+</resources>

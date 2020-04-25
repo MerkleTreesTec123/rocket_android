@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="18dp"
+        android:textColor="@color/c2cColor292A49"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="购买" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/title_text_view"
+        app:layout_constraintStart_toEndOf="@id/title_text_view"
+        app:layout_constraintTop_toTopOf="@id/title_text_view" />
+
+    <TextView
+        android:id="@+id/status_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/c2cColor00DA97"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/title_text_view"
+        app:layout_constraintStart_toEndOf="@id/divider"
+        tools:text="确认中" />
+
+    <TextView
+        android:id="@+id/time_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="18dp"
+        android:textColor="@color/c2cColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/view9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_text_view"
+        tools:text="02/03 12:34" />
+
+    <TextView
+        android:id="@+id/num_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/c2cColor292A49"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="+893.9308" />
+
+
+    <TextView
+        android:id="@+id/time_text_view_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="@color/color9298B3"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/time_text_view"
+        app:layout_constraintEnd_toStartOf="@+id/status_text_view"
+        tools:text="12/15" />
+
+    <View
+        android:id="@+id/view9"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/c2cColorF1F1F1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="kchart_high">high:</string>
+    <string name="kchart_low">low:</string>
+    <string name="kchart_open">open:</string>
+    <string name="kchart_close">close:</string>
+</resources>

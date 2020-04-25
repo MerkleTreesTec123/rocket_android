@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_actionbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/view_empty" />
+
+            <LinearLayout
+                android:id="@+id/account_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/bank_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/c2c_f1f1f1_frame_radius_2"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:id="@+id/bankUName_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="--"
+                        android:textColor="@color/c2cColor292A49"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/bankNumber_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="16dp"
+                        android:text="--"
+                        android:textColor="@color/c2cColor292A49"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/bankName_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/bankUName_text_view"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="14dp"
+                        android:text="--"
+                        android:textColor="@color/c2cColor292A49"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:id="@+id/line1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@id/bankName_text_view"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/c2cColorF1F1F1" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line1">
+
+                        <RelativeLayout
+                            android:id="@+id/bank_edit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_c2c_address_edit"
+                                android:drawablePadding="4dp"
+                                android:gravity="center"
+                                android:padding="16dp"
+                                android:text="@string/c2c_edit"
+                                android:textColor="@color/c2cColorB7B7C4"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/c2cColorF1F1F1" />
+
+                        <RelativeLayout
+                            android:id="@+id/bank_delete"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_c2c_address_delete"
+                                android:drawablePadding="4dp"
+                                android:gravity="center"
+                                android:padding="16dp"
+                                android:text="@string/c2c_delete"
+                                android:textColor="@color/c2cColorB7B7C4"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ali_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/c2c_f1f1f1_frame_radius_2"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="@string/c2c_alipay"
+                        android:textColor="@color/c2cColor292A49"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/aliAccount_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="16dp"
+                        android:text="--"
+                        android:textColor="@color/c2cColor292A49"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/aliUName_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/aliAccount_text_view"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="14dp"
+                        android:text="--"
+                        android:textColor="@color/c2cColor292A49"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:id="@+id/line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@id/aliUName_text_view"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/c2cColorF1F1F1" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line2">
+
+                        <RelativeLayout
+                            android:id="@+id/ali_qr"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_c2c_address_qr"
+                                android:drawablePadding="4dp"
+                                android:gravity="center"
+                                android:padding="16dp"
+                                android:text="@string/c2c_qr_code"
+                                android:textColor="@color/c2cColorB7B7C4"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/c2cColorF1F1F1" />
+
+                        <RelativeLayout
+                            android:id="@+id/ali_edit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_c2c_address_edit"
+                                android:drawablePadding="4dp"
+                                android:gravity="center"
+                                android:padding="16dp"
+                                android:text="@string/c2c_edit"
+                                android:textColor="@color/c2cColorB7B7C4"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/c2cColorF1F1F1" />
+
+                        <RelativeLayout
+                            android:id="@+id/ali_delete"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_c2c_address_delete"
+                                android:drawablePadding="4dp"
+                                android:gravity="center"
+                                android:padding="16dp"
+                                android:text="@string/c2c_delete"
+                                android:textColor="@color/c2cColorB7B7C4"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/wx_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/c2c_f1f1f1_frame_radius_2"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="@string/c2c_wechat"
+                        android:textColor="@color/c2cColor292A49"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/wxAccount_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="16dp"
+                        android:text="--"
+                        android:textColor="@color/c2cColor292A49"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/wxUName_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wxAccount_text_view"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="14dp"
+                        android:text="--"
+                        android:textColor="@color/c2cColor292A49"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:id="@+id/line3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@id/wxUName_text_view"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/c2cColorF1F1F1" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line3">
+
+                        <RelativeLayout
+                            android:id="@+id/wx_qr"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_c2c_address_qr"
+                                android:drawablePadding="4dp"
+                                android:gravity="center"
+                                android:padding="16dp"
+                                android:text="@string/c2c_qr_code"
+                                android:textColor="@color/c2cColorB7B7C4"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/c2cColorF1F1F1" />
+
+                        <RelativeLayout
+                            android:id="@+id/wx_edit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_c2c_address_edit"
+                                android:drawablePadding="4dp"
+                                android:gravity="center"
+                                android:padding="16dp"
+                                android:text="@string/c2c_edit"
+                                android:textColor="@color/c2cColorB7B7C4"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/c2cColorF1F1F1" />
+
+                        <RelativeLayout
+                            android:id="@+id/wx_delete"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_c2c_address_delete"
+                                android:drawablePadding="4dp"
+                                android:gravity="center"
+                                android:padding="16dp"
+                                android:text="@string/c2c_delete"
+                                android:textColor="@color/c2cColorB7B7C4"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/c2cColorF1F1F1" />
+
+        <Button
+            android:id="@+id/submit_button"
+            style="@style/SubmitButton"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/c2c_added_receipt_address" />
+    </FrameLayout>
+</LinearLayout>

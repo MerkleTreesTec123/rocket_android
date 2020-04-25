@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <include layout="@layout/toolbar_actionbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="扫描身份证上传图片出错信息如下"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/color333333"/>
+
+            <ImageView
+                android:id="@+id/errorImg"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:src="@mipmap/fail_real_img"
+                android:layout_marginTop="12dp"
+                android:layout_below="@+id/tv1"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_below="@+id/errorImg"
+                android:maxLines="1"
+                android:text="@string/view_line"/>
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ok_upload"
+                android:textColor="@color/color333333"
+                android:textSize="14sp"
+                android:layout_below="@+id/tv2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/take_hint"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/tv3"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="12sp"/>
+
+            <ImageView
+                android:id="@+id/readImg"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:src="@mipmap/read_wirte_img"
+                android:layout_below="@+id/tv4"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1、上面的操作完成之后，还会继续弹出下面的提示，依然需要点击允许"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/readImg"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="12sp"/>
+
+            <ImageView
+                android:id="@+id/photoImg"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:src="@mipmap/take_photo_img"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@+id/tv5"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="@string/real_name_error_hint"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="5dp"
+                android:layout_below="@+id/photoImg"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="50dp"/>
+
+            <TextView
+                android:id="@+id/tv7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@+id/tv6"
+                android:layout_marginRight="15dp"
+                android:text="@string/error_real_hint"/>
+
+            <TextView
+                android:id="@+id/tv8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/huawei_hint"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/tv7"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"/>
+
+            <TextView
+                android:id="@+id/tv9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/xiaomi_hint"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/tv8"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"/>
+
+            <TextView
+                android:id="@+id/tv10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vivo_hint"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/tv9"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"/>
+
+            <TextView
+                android:id="@+id/tv11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv10"
+                android:text="@string/last_hint"
+                android:layout_marginTop="20dp"
+                android:lineSpacingExtra="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="30dp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

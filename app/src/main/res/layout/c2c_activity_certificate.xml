@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_actionbar" />
+
+    <RelativeLayout
+        android:id="@+id/image_container"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/c2c_shape_f1f1f1_frame">
+
+        <ImageView
+            android:id="@+id/qr_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp" />
+
+        <LinearLayout
+            android:id="@+id/add_tips_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/c2c_ic_add_qr"
+                android:drawablePadding="4dp"
+                android:text="@string/c2c_payment_voucher"
+                android:textColor="@color/c2cColor292A49"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:drawablePadding="4dp"
+                android:text="@string/c2c_upload_payment_vouchers"
+                android:textColor="@color/c2cColorB7B7C4"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/c2c_select_payment_method"
+        android:textColor="@color/c2cColor000000"
+        android:textSize="12sp" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="16dp">
+
+        <RelativeLayout
+            android:id="@+id/bank_card_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/c2c_selector_8488f5_b7b7c4_radius_2"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/alipay_container"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/c2c_ic_bank_card_small"
+                android:drawablePadding="4dp"
+                android:includeFontPadding="false"
+                android:text="@string/c2c_bank_card"
+                android:textColor="@color/c2c_color_292a49_b7b7c4"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/alipay_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/c2c_selector_8488f5_b7b7c4_radius_2"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/bank_card_container"
+            app:layout_constraintRight_toLeftOf="@id/wechat_container"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginEnd="0dp"
+            app:layout_goneMarginLeft="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/c2c_ic_alipay_small"
+                android:drawablePadding="4dp"
+                android:includeFontPadding="false"
+                android:text="@string/c2c_alipay"
+                android:textColor="@color/c2c_color_292a49_b7b7c4"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wechat_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/c2c_selector_8488f5_b7b7c4_radius_2"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/alipay_container"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginLeft="10dp"
+            app:layout_goneMarginStart="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/c2c_ic_wechat_small"
+                android:drawablePadding="4dp"
+                android:includeFontPadding="false"
+                android:text="@string/c2c_wechat"
+                android:textColor="@color/c2c_color_292a49_b7b7c4"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/submit_button"
+        style="@style/SubmitButton"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="16dp"
+        android:enabled="false"
+        android:text="@string/c2c_submit" />
+</LinearLayout>

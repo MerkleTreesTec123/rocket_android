@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name" translatable="false">lib_base</string>
+
+    <string name="no_data" translatable="false">没有相关记录</string>
+</resources>

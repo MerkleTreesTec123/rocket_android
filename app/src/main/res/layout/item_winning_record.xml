@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="113dp"
+    android:background="@mipmap/border_record"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp">
+
+    <TextView
+        android:id="@+id/gx_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#333333"
+        android:text="您获得的奖项为："
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="18dp"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/tv_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#333333"
+        android:text="--"
+        android:textSize="15sp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/gx_hint"/>
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#999999"
+        android:text="百万CAT大放送"
+        android:textSize="12sp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginBottom="12dp"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:id="@+id/cat_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="19sp"
+        android:text="cat"
+        android:layout_toLeftOf="@+id/cat_num"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="3dp"
+        android:textColor="#DF7747"/>
+
+    <TextView
+        android:id="@+id/cat_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:text="--"
+        android:layout_toLeftOf="@+id/cat_g"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="6dp"
+        android:textColor="#DF7747"/>
+
+    <TextView
+        android:id="@+id/cat_g"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="19sp"
+        android:text="个"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="18dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:textColor="#DF7747"/>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#999999"
+        android:text="2019-11-15 11:12"
+        android:textSize="12sp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginBottom="12dp"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>

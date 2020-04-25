@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PasswordEditText">
+        <attr name="maxCount" format="integer" />
+        <attr name="circleColor" format="color" />
+        <attr name="bottomLineColorNormal" format="color" />
+        <attr name="bottomLineColorHasValue" format="color" />
+        <attr name="radius" format="dimension" />
+        <attr name="divideLineWidth" format="dimension" />
+        <attr name="divideLineColor" format="color" />
+        <attr name="rectAngle" format="dimension" />
+        <attr name="focusedColor" format="color" />
+        <attr name="showPassword" format="boolean" />
+        <attr name="psdType" format="enum">
+            <enum name="weChat" value="0" />
+            <enum name="bottomLine" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CustomProgressBar">
+        <attr name="max" format="float" />
+        <attr name="progress" format="float" />
+        <attr name="startColor" format="color" />
+        <attr name="endColor" format="color" />
+        <attr name="backgroundColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomTabLayout">
+        <!-- indicator -->
+        <attr name="ctl_indicator_color" />
+        <attr name="ctl_indicator_height" />
+        <attr name="ctl_indicator_width" />
+        <attr name="ctl_indicator_margin_left" />
+        <attr name="ctl_indicator_margin_top" />
+        <attr name="ctl_indicator_margin_right" />
+        <attr name="ctl_indicator_margin_bottom" />
+        <attr name="ctl_indicator_corner_radius" />
+        <attr name="ctl_indicator_gravity" />
+        <attr name="ctl_indicator_style" />
+        <attr name="ctl_indicator_anim_enable" />
+        <attr name="ctl_indicator_anim_duration" />
+        <attr name="ctl_indicator_bounce_enable" />
+
+        <!-- underline -->
+        <attr name="ctl_underline_color" />
+        <attr name="ctl_underline_height" />
+        <attr name="ctl_underline_gravity" />
+
+        <!-- divider -->
+        <attr name="ctl_divider_color" />
+        <attr name="ctl_divider_width" />
+        <attr name="ctl_divider_padding" />
+
+        <!-- tab -->
+        <attr name="ctl_tab_padding" />
+        <attr name="ctl_tab_space_equal" />
+        <attr name="ctl_tab_width" />
+
+        <!-- title -->
+        <attr name="ctl_textsize" />
+        <attr name="ctl_textSelectColor" />
+        <attr name="ctl_textUnselectColor" />
+        <attr name="ctl_textBold" />
+        <attr name="ctl_textAllCaps" />
+
+        <!-- icon -->
+        <!-- 设置icon宽度 -->
+        <attr name="ctl_iconWidth" format="dimension" />
+        <!-- 设置icon高度 -->
+        <attr name="ctl_iconHeight" format="dimension" />
+        <!-- 设置icon是否可见 -->
+        <attr name="ctl_iconVisible" format="boolean" />
+        <!-- 设置icon显示位置,对应Gravity中常量值 -->
+        <attr name="ctl_iconGravity" format="enum">
+            <enum name="LEFT" value="3" />
+            <enum name="TOP" value="48" />
+            <enum name="RIGHT" value="5" />
+            <enum name="BOTTOM" value="80" />
+        </attr>
+        <!-- 设置icon与文字间距 -->
+        <attr name="ctl_iconMargin" format="dimension" />
+
+    </declare-styleable>
+
+    <declare-styleable name="RoundLayout">
+        <attr name="corners" format="dimension" />
+    </declare-styleable>
+
+    <!--深度图DepthMapView-->
+    <declare-styleable name="DepthMapView">
+        <!--买入颜色-->
+        <attr name="buy_line_color" format="color|reference" />
+        <!--买入区域内部颜色-->
+        <attr name="buy_path_color" format="color|reference" />
+        <!--卖出颜色-->
+        <attr name="sell_line_color" format="color|reference" />
+        <!--卖出区域内部颜色-->
+        <attr name="sell_path_color" format="color|reference" />
+        <!--线条宽度-->
+        <attr name="line_width" format="dimension" />
+        <!--文字颜色-->
+        <attr name="text_color" format="color|reference" />
+        <!--背景颜色-->
+        <attr name="background_color" format="color|reference" />
+        <!--选中后文字背景颜色-->
+        <attr name="selector_background_color" format="color|reference" />
+        <!--右侧价格行数-->
+        <attr name="line_count" format="integer" />
+        <!--文字大小-->
+        <attr name="text_size" format="dimension" />
+        <!--圆圈半径-->
+        <attr name="circle_radius" format="dimension" />
+        <!--点的半径-->
+        <attr name="dot_radius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="UnderLineEditText">
+        <attr name="unFocusColor" format="color" />
+        <attr name="focusColor" format="color" />
+        <attr name="textPaddingTop" format="dimension" />
+        <attr name="textPaddingLeft" format="dimension" />
+        <attr name="textPaddingRight" format="dimension" />
+        <attr name="textPaddingBottom" format="dimension" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="color" />
+    </declare-styleable>
+</resources>

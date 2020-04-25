@@ -1,0 +1,125 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="LauncherTheme" parent="AppTheme">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+    </style>
+
+    <style name="SubmitButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">44dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/selector_submit_button</item>
+    </style>
+
+    <style name="TradingPairPicker" parent="android:Theme.Dialog">
+        <!-- 是否有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--是否在悬浮Activity之上  -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--阴影  -->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <!--背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="BottomDialog" parent="android:Theme.Dialog">
+        <!-- 是否有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--是否在悬浮Activity之上  -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--阴影  -->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <!--背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/PickerAnim</item>
+    </style>
+
+    <style name="PickerAnim">
+        <item name="android:windowEnterAnimation">@anim/anim_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_bottom_out</item>
+    </style>
+
+    <style name="MessageDialog" parent="android:Theme.Dialog">
+        <!-- 是否有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--是否在悬浮Activity之上  -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--阴影  -->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <!--背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="IEOProgressBar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:minHeight">12dp</item>
+        <item name="android:maxHeight">12dp</item>
+        <item name="android:progressDrawable">@drawable/ieo_progress_horizontal</item>
+    </style>
+
+    <style name="ClickViewRippleF2F2F2">
+        <item name="android:background">@drawable/ripple_click_view_f2f2f2</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="DialogNoFrame" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="dialogWindowAnim" parent="android:Animation" mce_bogus="1">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit_anim</item>
+    </style>
+
+    <style name="dialogAnim" parent="android:Animation" >
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+
+    <!-- 推送通知界面弹框 -->
+    <style name="DialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="PregnancyProgressbar">
+        　　<item name="android:indeterminateDrawable">@drawable/login_progressbar</item>
+        　　<item name="android:minWidth">60dip</item>
+        　　<item name="android:maxWidth">60dip</item>
+        　　<item name="android:minHeight">60dip</item>
+        　　<item name="android:maxHeight">60dip</item>
+    </style>
+
+    <!--pop动画-->
+    <style name="AnimDown" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/push_scale_out</item>
+    </style>
+</resources>

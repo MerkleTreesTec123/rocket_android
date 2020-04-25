@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/real_name_top_bg"/>
+
+    <LinearLayout
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_ffffff_solid"
+        android:paddingBottom="30dp">
+        <Button
+            android:id="@+id/china_real_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="14sp"
+            android:background="@drawable/select_btn_realname"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="38dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="大陆身份证"/>
+
+
+        <TextView
+            android:id="@+id/other_real_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:padding="3dp"
+            android:textColor="#999999"
+            android:gravity="center"
+            android:layout_gravity="right"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="40dp"
+            android:text="港澳台及海外证件"/>
+    </LinearLayout>
+
+</LinearLayout>

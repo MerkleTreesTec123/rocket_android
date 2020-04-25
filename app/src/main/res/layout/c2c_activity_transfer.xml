@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_actionbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/c2cColorF1F1F1" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/coin_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/c2c_shape_f6f6fb_radius_2"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/coin_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/c2cColor000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="USDT" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawableRight="@drawable/c2c_ic_right_gray"
+                    android:drawablePadding="8dp"
+                    android:text="@string/c2c_select_currency"
+                    android:textColor="@color/c2cColorB7B7C4"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/c2c_shape_f1f1f1_frame_radius_2">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView60"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView60"
+                    app:srcCompat="@drawable/c2c_ic_point_green" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView65"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView65"
+                    app:srcCompat="@drawable/c2c_ic_point_red" />
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/imageView6"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView6"
+                    app:layout_constraintStart_toStartOf="@+id/imageView6"
+                    app:layout_constraintTop_toBottomOf="@id/imageView7"
+                    app:srcCompat="@drawable/c2c_ic_point_gray" />
+
+                <TextView
+                    android:id="@+id/textView60"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/c2c_from"
+                    android:textColor="@color/c2cColor72727B"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView6"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/divider27"
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/c2cColorF1F1F1"
+                    app:layout_constraintEnd_toStartOf="@+id/exchange_button"
+                    app:layout_constraintStart_toStartOf="@id/textView60"
+                    app:layout_constraintTop_toBottomOf="@+id/textView60" />
+
+                <TextView
+                    android:id="@+id/textView65"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/c2c_to"
+                    android:textColor="@color/c2cColor72727B"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView7"
+                    app:layout_constraintTop_toBottomOf="@id/divider27" />
+
+                <TextView
+                    android:id="@+id/from_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:textColor="@color/c2cColor292A49"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView60"
+                    app:layout_constraintStart_toEndOf="@+id/textView60"
+                    tools:text="@string/c2c_assets" />
+
+                <TextView
+                    android:id="@+id/to_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:textColor="@color/c2cColor292A49"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/textView65"
+                    app:layout_constraintStart_toEndOf="@+id/textView65"
+                    tools:text="@string/c2c_wallet" />
+
+                <ImageView
+                    android:id="@+id/exchange_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:background="@drawable/c2c_shape_f6f6fb_right_radius_2"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:scaleType="centerInside"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/c2c_ic_transfer_exchange" />
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/c2c_quantity"
+                android:textColor="@color/c2cColor000000"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp">
+
+                <EditText
+                    android:id="@+id/num_edit_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/please_enter_the_transfer_amount"
+                    android:inputType="numberDecimal"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"
+                    android:singleLine="true"
+                    android:textColor="@color/c2cColor292A49"
+                    android:textColorHint="@color/c2cColorB7B7C4"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/num_coin_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="right"
+                    android:minWidth="40dp"
+                    android:textColor="@color/c2cColor72727B"
+                    android:textSize="14sp"
+                    tools:text="USDT" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/c2cColorF1F1F1" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <TextView
+                    android:id="@+id/balance_hint_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/c2c_available"
+                    android:textColor="@color/c2cColorB7B7C4"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/balance_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@id/balance_hint_text_view"
+                    android:text="--"
+                    android:textColor="@color/c2cColorB7B7C4"
+                    android:textSize="14sp"
+                    tools:text="0.0000 USDT" />
+
+                <TextView
+                    android:id="@+id/all_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/c2c_all"
+                    android:textColor="@color/c2cColor292A49"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="16dp"
+                android:background="#F2F2F2"
+                android:lineSpacingExtra="4dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="20dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="20dp"
+                android:text="@string/c2c_transfer_tips"
+                android:textColor="@color/c2cColor72727B"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/submit_button"
+                style="@style/SubmitButton"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="80dp"
+                android:enabled="false"
+                android:text="@string/c2c_transfer" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

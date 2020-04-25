@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="exc_buy">买入</string>
+    <string name="exc_sell">卖出</string>
+    <string name="exc_24h_vol">24h 成交量</string>
+    <string name="exc_highest">最高</string>
+    <string name="exc_lowest">最低</string>
+    <string name="excTime">时间</string>
+    <string name="exc_direction">方向</string>
+    <string name="exc_price_">价格(%1$s)</string>
+    <string name="exc_quantity_">数量(%1$s)</string>
+    <string name="publish_time">发行时间</string>
+    <string name="exc_total_circulation">流通总量</string>
+    <string name="exc_official_website">官网</string>
+    <string name="exc_introduction">简介</string>
+    <string name="exc_1_min">1分钟</string>
+    <string name="exc_5_min">5分钟</string>
+    <string name="exc_15_min">15分钟</string>
+    <string name="exc_30_min">30分钟</string>
+    <string name="exc_60_min">60分钟</string>
+    <string name="exc_1_day">1天</string>
+    <string name="exc_transaction">成交</string>
+    <string name="exc_quantity">数量</string>
+    <string name="exc_price">价格</string>
+    <string name="exc_available_balance_">可用余额:</string>
+    <string name="transaction_amount">交易额</string>
+    <string name="exc_no_commission_record">还没有委托记录额</string>
+    <string name="exc_no_commission_record_hint">当前还没有委托记录，买入或卖出后可在此查看到相关的记录</string>
+    <string name="exc_deal_done">已成交</string>
+    <string name="exc_average_transaction_price">成交均价</string>
+    <string name="exc_freeze_fee">冻结手续费</string>
+    <string name="exc_cancel_order">撤单</string>
+    <string name="exc_current_commission">当前委托</string>
+    <string name="exc_historical_commission">历史委托</string>
+    <string name="exc_please_enter_the_price">请输入价格</string>
+    <string name="exc_please_enter_quantity">请输入数量</string>
+    <string name="exc_price_must_be_greater_than_0">价格必须大于0</string>
+    <string name="exc_quantity_must_be_greater_than_0">数量必须大于0</string>
+    <string name="exc_insufficient_balance">余额不足</string>
+    <string name="exc_exchange_submit_success">交易提交成功</string>
+    <string name="exc_cancel_order_success">撤单成功</string>
+    <string name="exc_coin_coin">币币</string>
+</resources>

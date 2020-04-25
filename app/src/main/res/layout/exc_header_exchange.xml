@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/buy_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/exc_selector_00da97_04d192_f1f1f1_radius_2"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/exc_buy"
+        android:textColor="@color/exc_color_ffffff_b7b7c4"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/sell_text_view"
+        app:layout_constraintHorizontal_weight="102"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sell_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/exc_selector_f3752e_e95602_f1f1f1_radius_2"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/exc_sell"
+        android:textColor="@color/exc_color_ffffff_b7b7c4"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buy_text_view"
+        app:layout_constraintEnd_toStartOf="@+id/price_title_text_view"
+        app:layout_constraintHorizontal_weight="102"
+        app:layout_constraintStart_toEndOf="@+id/buy_text_view" />
+
+    <TextView
+        android:id="@+id/price_title_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:text="@string/exc_price"
+        android:textColor="@color/excColorB7B7C4"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@+id/num_title_text_view"
+        app:layout_constraintHorizontal_weight="65"
+        app:layout_constraintStart_toEndOf="@+id/sell_text_view"
+        app:layout_constraintTop_toTopOf="@+id/buy_text_view" />
+
+    <TextView
+        android:id="@+id/num_title_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:gravity="right"
+        android:paddingRight="16dp"
+        android:text="@string/exc_quantity"
+        android:textColor="@color/excColorB7B7C4"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="65"
+        app:layout_constraintStart_toEndOf="@+id/price_title_text_view"
+        app:layout_constraintTop_toTopOf="@+id/buy_text_view" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="22dp"
+        android:text="@string/exc_available_balance_"
+        android:textColor="@color/excColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buy_text_view" />
+
+    <TextView
+        android:id="@+id/balance_unit_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="--"
+        android:textColor="@color/excColor9298B3"
+        android:textColorHint="@color/excColor9298B3"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView14"
+        app:layout_constraintEnd_toEndOf="@+id/sell_text_view"
+        tools:text="USDT" />
+
+    <TextView
+        android:id="@+id/balance_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:ellipsize="end"
+        android:gravity="right"
+        android:hint="--"
+        android:singleLine="true"
+        android:textColor="@color/excColor9298B3"
+        android:textColorHint="@color/excColor9298B3"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView14"
+        app:layout_constraintEnd_toStartOf="@+id/balance_unit_text_view"
+        app:layout_constraintStart_toEndOf="@+id/textView14" />
+
+    <LinearLayout
+        android:id="@+id/price_edit_container"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/exc_shape_f1f1f1_frame_radius_2"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/sell_text_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView14">
+
+        <EditText
+            android:id="@+id/price_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="@string/exc_price"
+            android:inputType="numberDecimal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:singleLine="true"
+            android:textColor="@color/excColor292A49"
+            android:textColorHint="@color/excColorB7B7C4"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/excColorF1F1F1" />
+
+        <ImageButton
+            android:id="@+id/less_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:minWidth="38dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:src="@drawable/exc_ic_price_less" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/excColorF6F6FB" />
+
+        <ImageButton
+            android:id="@+id/add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:minWidth="38dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:src="@drawable/exc_ic_price_add" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/num_edit_container"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/exc_shape_f1f1f1_frame_radius_2"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/sell_text_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/price_edit_container">
+
+        <EditText
+            android:id="@+id/num_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="@string/exc_quantity"
+            android:inputType="numberDecimal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:textColor="@color/excColor292A49"
+            android:textColorHint="@color/excColorB7B7C4"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/num_unit_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="12dp"
+            android:hint="--"
+            android:textColor="@color/excColor72727B"
+            android:textColorHint="@color/excColor72727B"
+            android:textSize="14sp"
+            tools:text="USDT" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/rate_text_view_25"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/exc_f6f6fb_radius_2"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:singleLine="true"
+        android:text="25%"
+        android:textColor="@color/excColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/rate_text_view_50"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num_edit_container"
+        app:layout_constraintVertical_weight="1" />
+
+    <TextView
+        android:id="@+id/rate_text_view_50"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/exc_f6f6fb_radius_2"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:singleLine="true"
+        android:text="50%"
+        android:textColor="@color/excColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/rate_text_view_75"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/rate_text_view_25"
+        app:layout_constraintTop_toBottomOf="@id/num_edit_container"
+        app:layout_constraintVertical_weight="1" />
+
+    <TextView
+        android:id="@+id/rate_text_view_75"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/exc_f6f6fb_radius_2"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:singleLine="true"
+        android:text="75%"
+        android:textColor="@color/excColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/rate_text_view_100"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/rate_text_view_50"
+        app:layout_constraintTop_toBottomOf="@id/num_edit_container"
+        app:layout_constraintVertical_weight="1" />
+
+    <TextView
+        android:id="@+id/rate_text_view_100"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/exc_f6f6fb_radius_2"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:singleLine="true"
+        android:text="100%"
+        android:textColor="@color/excColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/sell_text_view"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/rate_text_view_75"
+        app:layout_constraintTop_toBottomOf="@id/num_edit_container"
+        app:layout_constraintVertical_weight="1" />
+
+    <TextView
+        android:id="@+id/amount_hint_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/transaction_amount"
+        android:textColor="@color/excColor72727B"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rate_text_view_25" />
+
+    <TextView
+        android:id="@+id/amount_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:hint="--"
+        android:textColor="@color/excColor292A49"
+        android:textColorHint="@color/excColor292A49"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/sell_text_view"
+        android:singleLine="true"
+        app:layout_constraintStart_toEndOf="@id/amount_hint_text_view"
+        app:layout_constraintTop_toBottomOf="@id/rate_text_view_25" />
+<!--    // 暂时关闭   @drawable/exc_shape_00da97_04d192_radius_2 -->
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/exc_shape_00da97_04d192_radius_2"
+        android:minHeight="42dp"
+        android:text="@string/exc_buy"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/sell_text_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/amount_hint_text_view" />
+
+    <LinearLayout
+        android:id="@+id/sell_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/price_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/price_title_text_view"
+        app:layout_constraintTop_toBottomOf="@id/price_title_text_view"
+        app:layout_constraintVertical_weight="1" />
+
+    <TextView
+        android:id="@+id/price_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:hint="--"
+        android:singleLine="true"
+        android:textColor="@color/excColor00DA97"
+        android:textColorHint="@color/excColor00DA97"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/price_text_view_"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/price_title_text_view"
+        app:layout_constraintTop_toBottomOf="@id/sell_container"
+        tools:text="1.0031" />
+
+    <TextView
+        android:id="@+id/price_text_view_"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:hint="--"
+        android:singleLine="true"
+        android:textColor="@color/excColorB7B7C4"
+        android:textColorHint="@color/excColorB7B7C4"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/buy_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/price_title_text_view"
+        app:layout_constraintTop_toBottomOf="@id/price_text_view"
+        tools:text="≈6.90CNY" />
+
+    <LinearLayout
+        android:id="@+id/buy_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/submit_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/price_title_text_view"
+        app:layout_constraintTop_toBottomOf="@id/price_text_view_"
+        app:layout_constraintVertical_weight="1" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/excColorF6F6FB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/submit_button" />
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        app:tl_indicator_height="0dp"
+        app:tl_indicator_width="0dp"
+        app:tl_tab_padding="16dp"
+        app:tl_tab_space_equal="false"
+        app:tl_textSelectColor="@color/excColor292A49"
+        app:tl_textUnselectColor="@color/excColorB7B7C4"
+        app:tl_textsize="14sp" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/excColorF1F1F1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,56 @@
+ext {
+    android = [
+            compileSdkVersion: 28,
+            buildToolsVersion: "28.0.2",
+            minSdkVersion    : 19,
+            targetSdkVersion : 28,
+            versionCode      : 1,
+            versionName      : "1.0"
+    ]
+
+    desVersion = [
+            supportVersion         : '28.0.0',
+            retrofitVersion        : '2.5.0',
+            rxAndroidVersion       : '2.1.0',
+            rxJavaVersion          : '2.2.4',
+//            butterKnifeVersion     : '8.5.1',
+            butterKnifeVersion     : '8.5.1',
+            glidVersion            : "4.8.0",
+            constraintLayoutVersion: "1.1.3",
+            okhttp3LoggingVersion  : "3.8.1",
+            loggerVersion          : "2.2.0",
+            mmkvVersion            : "1.0.10",
+            eventBusVersion        : "3.0.0",
+            photoViewVersion       : "1.2.4"
+    ]
+
+    deps = [
+            //-----------------Android---------------//
+            supportV4                     : "com.android.support:support-v4:${desVersion.supportVersion}",
+            supportV7                     : "com.android.support:appcompat-v7:${desVersion.supportVersion}",
+            recyclerView                  : "com.android.support:recyclerview-v7:${desVersion.supportVersion}",
+            cardView                      : "com.android.support:cardview-v7:${desVersion.supportVersion}",
+            design                        : "com.android.support:design:${desVersion.supportVersion}",
+            constraintLayout              : "com.android.support.constraint:constraint-layout:${desVersion.constraintLayoutVersion}",
+
+            //-----------------三方库---------------//
+            butterKnife                   : "com.jakewharton:butterknife:${desVersion.butterKnifeVersion}",
+            butterKnifeAnnotationProcessor: "com.jakewharton:butterknife-compiler:${desVersion.butterKnifeVersion}",
+            glide                         : "com.github.bumptech.glide:glide:${desVersion.glidVersion}",
+            glideAnnotationProcessor      : "com.github.bumptech.glide:compiler:${desVersion.glideVersion}",
+            loggerTools                   : "com.orhanobut:logger:${desVersion.loggerVersion}",
+            mmkv                          : "com.tencent:mmkv:${desVersion.mmkvVersion}",
+            eventBus                      : "org.greenrobot:eventbus:${desVersion.eventBusVersion}",
+            photoView                     : "com.commit451:PhotoView:${desVersion.photoViewVersion}",
+
+            //RxJava 和 RxAndroid
+            rxAndroid                     : "io.reactivex.rxjava2:rxandroid:${desVersion.rxAndroidVersion}",
+            rxJava                        : "io.reactivex.rxjava2:rxjava:${desVersion.rxJavaVersion}",
+            retrofit                      : "com.squareup.retrofit2:retrofit:${desVersion.retrofitVersion}",
+            converterGson                 : "com.squareup.retrofit2:converter-gson:${desVersion.retrofitVersion}",//转换器，请求结果转换成Model
+            adapterRxJava                 : "com.squareup.retrofit2:adapter-rxjava2:${desVersion.retrofitVersion}",//配合Rxjava 使用
+            okhttp3Logging                : "com.squareup.okhttp3:logging-interceptor:${desVersion.okhttp3LoggingVersion}"//log依赖，如果需要打印OkHttpLog需要添加
+
+    ]
+
+}

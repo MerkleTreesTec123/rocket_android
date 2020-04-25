@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@color/white">
+
+    <TextView
+        android:id="@+id/status_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:text="--"
+        android:textColor="@color/c2cColorB7B7C4"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="已下线" />
+
+    <TextView
+        android:id="@+id/total_hint_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:singleLine="true"
+        android:text="@string/c2c_total_purchase"
+        android:textColor="@color/c2cColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/num_hint_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/status_text_view" />
+
+    <TextView
+        android:id="@+id/num_hint_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="left"
+        android:singleLine="true"
+        android:text="@string/c2c_volume_already_traded"
+        android:textColor="@color/c2cColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/total_hint_text_view"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/total_hint_text_view"
+        app:layout_constraintRight_toLeftOf="@id/price_hint_text_view"
+        app:layout_constraintTop_toTopOf="@+id/total_hint_text_view" />
+
+    <TextView
+        android:id="@+id/price_hint_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="right"
+        android:singleLine="true"
+        android:text="@string/c2c_price_cny"
+        android:textColor="@color/c2cColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/total_hint_text_view"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/num_hint_text_view"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/total_hint_text_view" />
+
+    <TextView
+        android:id="@+id/total_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:singleLine="true"
+        android:text="--"
+        android:textColor="@color/c2cColor292A49"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/total_hint_text_view"
+        app:layout_constraintStart_toStartOf="@+id/total_hint_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/total_hint_text_view" />
+
+    <TextView
+        android:id="@+id/num_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="--"
+        android:textColor="@color/c2cColor292A49"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/total_text_view"
+        app:layout_constraintEnd_toEndOf="@+id/num_hint_text_view"
+        app:layout_constraintStart_toStartOf="@+id/num_hint_text_view"
+        app:layout_constraintTop_toTopOf="@+id/total_text_view" />
+
+    <TextView
+        android:id="@+id/price_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:singleLine="true"
+        android:text="--"
+        android:textColor="@color/c2cColor292A49"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/total_text_view"
+        app:layout_constraintEnd_toEndOf="@+id/price_hint_text_view"
+        app:layout_constraintStart_toStartOf="@+id/price_hint_text_view"
+        app:layout_constraintTop_toTopOf="@+id/total_text_view" />
+
+    <TextView
+        android:id="@+id/coin_hint_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="left"
+        android:singleLine="true"
+        android:text="@string/c2c_currency"
+        android:textColor="@color/c2cColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="@id/total_hint_text_view"
+        app:layout_constraintRight_toRightOf="@id/total_hint_text_view"
+        app:layout_constraintTop_toBottomOf="@id/total_text_view" />
+
+    <TextView
+        android:id="@+id/type_hint_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="left"
+        android:singleLine="true"
+        android:text="@string/c2c_release_type"
+        android:textColor="@color/c2cColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="@id/num_hint_text_view"
+        app:layout_constraintRight_toRightOf="@id/num_hint_text_view"
+        app:layout_constraintTop_toBottomOf="@id/total_text_view" />
+
+    <TextView
+        android:id="@+id/time_hint_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:singleLine="true"
+        android:text="@string/c2c_time"
+        android:textColor="@color/c2cColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="@id/price_hint_text_view"
+        app:layout_constraintRight_toRightOf="@id/price_hint_text_view"
+        app:layout_constraintTop_toBottomOf="@id/total_text_view" />
+
+    <TextView
+        android:id="@+id/coin_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:singleLine="true"
+        android:text="--"
+        android:textColor="@color/c2cColor292A49"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/total_hint_text_view"
+        app:layout_constraintStart_toStartOf="@+id/total_hint_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/coin_hint_text_view" />
+
+    <TextView
+        android:id="@+id/type_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:singleLine="true"
+        android:text="--"
+        android:textColor="@color/c2cColor292A49"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/num_hint_text_view"
+        app:layout_constraintStart_toStartOf="@+id/num_hint_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/coin_hint_text_view" />
+
+    <TextView
+        android:id="@+id/time_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:singleLine="true"
+        android:text="--"
+        android:textColor="@color/c2cColor292A49"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/coin_text_view"
+        app:layout_constraintEnd_toEndOf="@+id/price_hint_text_view"
+        app:layout_constraintStart_toStartOf="@+id/price_hint_text_view"
+        app:layout_constraintTop_toTopOf="@+id/coin_text_view" />
+
+    <TextView
+        android:id="@+id/action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="28dp"
+        android:visibility="gone"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/c2c_shape_8488f5_frame_radius_2"
+        android:paddingLeft="18dp"
+        android:paddingTop="6dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="6dp"
+        android:textColor="@color/c2cColor8488F5"
+        android:textSize="12sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/coin_text_view"
+        tools:text="@string/c2c_delete" />
+
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="14dp"
+        android:background="#F6F6FB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/action_button"
+        app:layout_goneMarginTop="18dp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/c2c_transaction_record"
+        android:textColor="@color/c2cColor292A49"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider6" />
+</android.support.constraint.ConstraintLayout>

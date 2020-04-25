@@ -1,0 +1,379 @@
+<resources>
+    <string name="app_name" translatable="false">Rocket Pro</string>
+
+    <string name="edit_input_password" translatable="false">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ._/=+@%#?</string>
+    <string name="edit_input_sfznum" translatable="false">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ._/=+@%#?()</string>
+    <string name="edit_input_0zZ" translatable="false">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+
+    <string name="input_phone_email" translatable="false">请输入手机号或邮箱地址</string>
+    <string name="input_phone_hint" translatable="false">请输入手机号</string>
+    <string name="first_get_phone_vertcode" translatable="false">请先获取验证码</string>
+    <string name="error_code_phone" translatable="false">请输入获取验证码的手机号</string>
+    <string name="error_code_email" translatable="false">请输入获取验证码的邮箱号</string>
+    <string name="input_email_hint" translatable="false">请输入邮箱地址</string>
+    <string name="phone_registration" translatable="false">手机号注册</string>
+    <string name="email_registration" translatable="false">邮箱注册</string>
+    <string name="do_you_have_an_account" translatable="false">已有账号？</string>
+    <string name="email_login_hint" translatable="false">若使用手机号长时间收不到验证码，请尝试使用邮箱注册</string>
+    <string name="next_step" translatable="false">下一步</string>
+    <string name="send_code" translatable="false">发送验证码</string>
+    <string name="phone_register_tips" translatable="false">使用常用手机号进行注册，更便捷</string>
+    <string name="email_register_tips" translatable="false">使用常用邮箱进行注册</string>
+    <string name="search_for_countries_or_regions" translatable="false">搜索国家或地区</string>
+    <string name="country_or_region" translatable="false">国家或地区</string>
+    <string name="sms_verification_code" translatable="false">注册验证码</string>
+    <string name="has_send_sms_to_phone" translatable="false">验证码已发送到你的手机 </string>
+    <string name="has_send_sms_to_email" translatable="false">验证码已发送到你的邮箱 </string>
+    <string name="has_not_get_code" translatable="false">没收到验证码？</string>
+    <string name="resend" translatable="false">重新发送</string>
+    <string name="create_password" translatable="false">创建密码</string>
+    <string name="create_password_tips">创建登录密码可增强资产安全性，用于登录账号</string>
+    <string name="confirm_login_password" translatable="false">请确认登录密码</string>
+    <string name="create_payment_password" translatable="false">设置支付密码</string>
+    <string name="create_pay_password_tips" translatable="false">创建支付密码可加大资产安全性，用于资产的支出</string>
+    <string name="invitation_code" translatable="false">邀请码</string>
+    <string name="input_invite_code_tips" translatable="false">填写正确格式邀请码(非必填)</string>
+    <string name="input_invite_code_hint" translatable="false">请输入邀请码</string>
+    <string name="confirm_registration" translatable="false">完成注册</string>
+    <string name="login" translatable="false">登录</string>
+    <string name="not_have_account" translatable="false">还没有平台账号？</string>
+    <string name="password" translatable="false">密码</string>
+    <string name="forget_password" translatable="false">忘记密码</string>
+    <string name="please_enter_the_correct_phone_number" translatable="false">请输入正确的电话号码</string>
+    <string name="enter_ok_email_address" translatable="false">请输入正确的邮箱地址</string>
+    <string name="please_select_country_region" translatable="false">请选择国家或地区</string>
+    <string name="sms_code_error_hint" translatable="false">你输入的验证码错误，请重新输入</string>
+    <string name="input_login_password_hint" translatable="false">请输入登录密码</string>
+    <string name="login_password_format_error" translatable="false">登录密码格式不正确</string>
+    <string name="inconsistent_password_entered_twice" translatable="false">两次输入的密码不一致</string>
+    <string name="pay_password_format_error" translatable="false">支付密码格式不正确</string>
+    <string name="register_success" translatable="false">注册成功</string>
+    <string name="send_code_ok" translatable="false">验证码已发送</string>
+    <string name="register" translatable="false">注册</string>
+    <string name="input_correct_phone" translatable="false">请输入正确的电话号码或者邮箱</string>
+    <string name="input_password_hint" translatable="false">请输入密码</string>
+    <string name="input_pay_password_hint" translatable="false">请输入支付密码（字母开头，至少6位）</string>
+    <string name="the_registrar_agrees_to_the" translatable="false">注册代表同意</string>
+    <string name="platform_user_agreement" translatable="false">《用户协议》</string>
+    <string name="currency_transaction">法币交易</string>
+    <string name="easily_buy_digital_assets">轻松购买数字资产</string>
+    <string name="c2c_">币币交易</string>
+    <string name="easy_to_ask_for_orders_without_worry">轻松挂单无需烦恼</string>
+    <string name="my_assets_">我的资产(¥)</string>
+    <string name="bind_ok" translatable="false">绑定成功</string>
+    <string name="qr">二维码</string>
+    <string name="transfer">划转</string>
+    <string name="c2c_wallet_">C2C钱包(¥)</string>
+    <string name="exc_total_amount_of_issuance">发行总量</string>
+    <string name="clear_cache" translatable="false">是否清空缓存</string>
+    <string name="ver_code_error" translatable="false">手机验证码已失效，是否返回重新获取验证码！</string>
+    <string name="quantity_24">24h量</string>
+    <string name="forget_payment_password_">忘记支付密码？</string>
+    <string name="ok">确定</string>
+    <string name="save_screenshot" translatable="false">保存截图</string>
+    <string name="hintCodeMess" translatable="false">请务必保存该密钥或者截图二维码</string>
+    <string name="save_screenshot_successfully" translatable="false">保存截图成功</string>
+    <string name="input_payment_password">输入支付密码</string>
+    <string name="request_read_write_permissions">需要读写权限</string>
+    <string name="save_success" translatable="false">保存成功</string>
+    <string name="cancel">取消</string>
+    <string name="send_sms">发送验证码</string>
+    <string name="request_camera_read_write_permissions">需要相机和读写权限</string>
+    <string name="exc_wal_submit_success">提交成功</string>
+    <string name="home">首页</string>
+    <string name="c2c">C2C</string>
+    <string name="trade">交易</string>
+    <!--<string name="discover">发现</string>-->
+    <string name="capital">资产</string>
+    <string name="me">我的</string>
+    <string name="account">账户</string>
+    <string name="my_assets">我的资产</string>
+    <string name="account_and_security">账户与安全</string>
+    <string name="watting_for_" translatable="false">暂未开放</string>
+    <string name="bind_phone_num" translatable="false">绑定手机号</string>
+    <string name="bind_email_num" translatable="false">绑定邮箱</string>
+    <string name="invitation_list">邀请榜</string>
+    <string name="help_and_support">帮助与支持</string>
+    <string name="about_us">关于我们</string>
+    <string name="rocket_" translatable="false">Rocket简介</string>
+    <string name="invite_friends">邀请好友</string>
+    <string name="contact_customer_service">联系客服</string>
+    <string name="setting">设置</string>
+    <string name="security_level">安全级别</string>
+    <string name="mobile_phone">手机</string>
+    <string name="email">邮箱</string>
+    <string name="user_id">UID</string>
+    <string name="email_service_one" translatable="false">1961373652@qq.com</string>
+    <string name="email_service_two" translatable="false">3408503835@qq.com</string>
+    <string name="opened">已绑定</string>
+    <string name="unopened">未绑定</string>
+    <string name="binded">已绑定</string>
+    <string name="start_bind" translatable="false">绑 定</string>
+    <string name="unbinded">未绑定</string>
+    <string name="google_authenticator">谷歌身份验证器</string>
+    <string name="real_name_authentication">实名认证</string>
+    <string name="uncertified">未认证</string>
+    <string name="certified">已认证</string>
+    <string name="currency_trading_setup">法币交易设置</string>
+    <string name="other_settings">其他设置</string>
+    <string name="login_password">登录密码</string>
+    <string name="gesture_password">手势密码</string>
+    <string name="fingerprint_password">指纹密码(尚未开放)</string>
+    <string name="reset">重置</string>
+    <string name="not_set">未设置</string>
+    <string name="pending_review">待审核</string>
+    <string name="rejected">已驳回</string>
+    <string name="install_verifier">安装验证器</string>
+    <string name="binding_verifier">绑定验证器</string>
+    <string name="input_verification_code">输入验证码</string>
+    <string name="download_google_verifier_app">下载谷歌验证器APP</string>
+    <string name="download_google_hint">安卓用户登录应用商店或使用手机浏览器搜索“谷歌验证器”下载。iOS用户登录App Store搜索“Authenticator”下载。</string>
+    <string name="bind_google_hint">打开谷歌验证器，扫描下方二维码或手动输入下述密钥添加验证令牌。</string>
+    <string name="key_">密钥:</string>
+    <string name="copy">复制</string>
+    <string name="bind_google_save_hint">密钥用于手机更换或遗失找回谷歌验证器，绑定前请务必将下述密钥备份保存。</string>
+    <string name="complete">完成</string>
+    <string name="bind_google_code_success">绑定谷歌验证码成功</string>
+    <string name="identity_information">身份信息</string>
+    <string name="name">姓名</string>
+    <string name="input_real_name_hint">请输入真实姓名</string>
+    <string name="id_number">身份证号</string>
+    <string name="id_card" translatable="false">身份证</string>
+    <string name="input_id_number_hint">请输入身份证号</string>
+    <string name="input_card_number_hint" translatable="false">请输入证件号码</string>
+    <string name="idcard_num" translatable="false">证件号码</string>
+    <string name="submit">提交</string>
+    <string name="under_review">审核中</string>
+    <string name="audit_results">审核结果</string>
+    <string name="recertification">重新认证</string>
+    <string name="review">审核</string>
+    <string name="real_name_status_submit_success_hint">实名认证资料已提交成功\n请等待平台认证</string>
+    <string name="real_name_status_under_review">正在进行审核\n请耐心等待</string>
+    <string name="successful_review">审核成功</string>
+    <string name="real_name_status_success_hint">恭喜您，审核成功</string>
+    <string name="audit_failure">审核失败</string>
+    <string name="rel_name_status_fail_hint">很遗憾，审核失败 \n 请重新进行实名认证</string>
+    <string name="input_old_password_hint">请输入原密码</string>
+    <string name="create_a_payment_password">创建支付密码</string>
+    <string name="reset_pay_password_title_hint">请重置至少6位数字和字母支付密码</string>
+    <string name="input_6_12_pay_password_hint">请输入至少6位字母和数字</string>
+    <string name="confirm_pay_password_hint">请确认支付密码</string>
+    <string name="set_safe_password_google_code_title_hint">打开 身份验证器 获取 6 位谷歌验证码(如您未绑定可直接点击完成按钮)</string>
+    <string name="google_code_error">谷歌验证码错误</string>
+    <string name="reset_payment_password">重置支付密码</string>
+    <string name="input_google_code_hint_">谷歌验证码（如未绑定可不填）</string>
+    <string name="reset_pay_password_success">重置支付密码成功</string>
+    <string name="old_passord_error">原密码错误</string>
+    <string name="sms_send_to_phone">验证码已发送到你的手机</string>
+    <string name="didn_t_receive_the_verification_code">没有收到验证码？</string>
+    <string name="change_password">修改登录密码</string>
+    <string name="modify_payment_password">修改支付密码</string>
+    <string name="update_password_success">修改密码成功</string>
+    <string name="retrieve_the_password">重置登录密码</string>
+    <string name="input_register_phone">请输入您注册的手机号</string>
+    <string name="security_verification">安全验证</string>
+    <string name="i_accumulated_awards">我累计获得奖励</string>
+    <string name="my_weekly_rank">我的周榜排名</string>
+    <string name="no_ranking_yet">暂无排名</string>
+    <string name="my_inviter">我的邀请者</string>
+    <string name="my_inviter_cat">我的邀请</string>
+    <string name="personal_direct_push_record">个人推荐记录</string>
+    <string name="exclusive_invitation_poster">专属邀请海报</string>
+    <string name="invite_description">说明</string>
+    <string name="invitation_week">邀请周榜</string>
+    <string name="invited_people_total">邀请人数总榜</string>
+    <string name="invited_pay_total">邀请支付总榜</string>
+    <string name="invite_people_num_">邀请 %1$s 人</string>
+    <string name="invite_payed">已支付</string>
+    <string name="scanning_registration">扫码注册</string>
+    <string name="not_open">尚未开放</string>
+    <string name="language">语言</string>
+    <string name="feedback">问题反馈</string>
+    <string name="current_cache" translatable="false">清除缓存</string>
+    <string name="current_account_exit">当前账号退出</string>
+    <string name="the_coin_not_support_currency_transaction">该币不支持币币交易</string>
+    <string name="privacy_policy">隐私政策</string>
+    <string name="current_version">当前版本</string>
+    <string name="ahout_rocket" translatable="false">Rocket简介</string>
+    <string name="help_center">帮助中心</string>
+    <string name="service_agreement">服务协议</string>
+    <string name="loginout_hint">是否退出当前账号？</string>
+    <string name="cumulative_total">累计总额</string>
+    <string name="invite_inactivated">未激活</string>
+    <string name="invite_freeze">冻结</string>
+    <string name="invite_released">已释放</string>
+    <string name="invite_related_records">相关记录</string>
+    <string name="my_record">我的记录</string>
+    <string name="rule_description">规则说明</string>
+
+    <string name="current_transaction_price">当前交易价格：</string>
+    <string name="next_time_sales_countdown">距离下一次\n销售倒计时</string>
+    <string name="converted_quantity">已兑换数量</string>
+    <string name="recommend">推荐</string>
+    <string name="all">全部</string>
+    <string name="not_choose_other_coin">不可选择其他币种</string>
+    <string name="list">列表</string>
+    <string name="total_convertible">可兑换总量</string>
+    <string name="this_period">本期:</string>
+    <string name="choose_a_conversion_amount">选择兑换金额</string>
+    <string name="sold_out">已售罄</string>
+    <string name="phase_is_sold_out_">第%1$s期已售罄</string>
+    <string name="previous_period">上期:</string>
+    <string name="released">已释放:</string>
+    <string name="unreleased">未释放:</string>
+    <string name="ieo_end_tips">第%1$s期已售罄，请等待下期进行兑换</string>
+    <string name="phase_is_on_sale_">第%1$s期正在出售中</string>
+    <string name="exchange_ieo_tips">可获得 %1$s CAT，累计投入 2000 USDT 激活节点全部权限</string>
+    <string name="choose_conversion_amount_hint">请选择兑换金额</string>
+    <string name="purchase_amount_usdt">购买金额(USDT)</string>
+    <string name="number_of_locks_ufo">锁仓数量(CAT)</string>
+    <string name="number_of_days_released">释放天数</string>
+    <string name="release_today_ufo">今日释放(CAT)</string>
+    <string name="total_released_ufo">已释放总量(CAT)</string>
+    <string name="details">详情</string>
+    <string name="transaction_record">成交记录</string>
+    <string name="view_exchange_records">查看兑换记录</string>
+    <string name="space_plan_phase_">氪星计划第%1$s期</string>
+    <string name="exchange_gains_ufo_">兑换获得 %1$s CAT</string>
+    <string name="re_exchange">重新兑换</string>
+    <string name="exchange_now">立即兑换</string>
+    <string name="ufo_statement">Rocket 声明</string>
+    <string name="dapp_dailog_hint">请务必留意该 DAPP 的相关用户协议和隐私政策，保护您的资产安全。您在这一 DAPP 中的所有行为和使用情况，均由该 DAPP 供应商负责。</string>
+    <string name="enter_third_party_dapp">您即将进入第三方DAPP:</string>
+    <string name="dapp_name_">\"%1$s\"</string>
+    <string name="depth">深度</string>
+    <string name="trust_price">委托价</string>
+    <string name="trust_quantity">委托量</string>
+    <string name="personal_data">个人资料</string>
+    <string name="avatar">头像</string>
+    <string name="nick">昵称</string>
+    <string name="chinese">简体中文</string>
+    <string name="english">English</string>
+    <string name="krypton_project">氪星计划</string>
+    <string name="home_krypton_tips">计划已开启，正在热购中</string>
+    <string name="exchange_success">兑换成功</string>
+    <string name="exchange_success_tips">恭喜您，兑换成功</string>
+    <string name="exchange_failure">兑换失败</string>
+    <string name="exchange_failed_tips">很遗憾，兑换失败</string>
+    <string name="skip">跳过</string>
+    <string name="low">低</string>
+    <string name="medium">中</string>
+    <string name="high">高</string>
+    <string name="ieo_has_open">氪星计划 已开启</string>
+    <string name="ieo_not_open">氪星计划 未开启</string>
+    <string name="not_begun">尚未开启</string>
+    <string name="ieo_is_about_to_open">氪星计划 即将开启</string>
+    <string name="coming_soon">即将开启</string>
+    <string name="distance_on_countdown">距离开启\n倒计时</string>
+    <string name="pay_password_cant_not_equals_login_password">支付密码不能与登录密码相同</string>
+    <string name="already_the_latest_version">已是最新版本</string>
+    <string name="exit_hint">再按一次退出</string>
+    <string name="old_password_format_error">原密码格式有误，6-12位数字加字母组合</string>
+    <string name="notice">公告</string>
+    <string name="waiting" translatable="false">等待开放中</string>
+    <string name="bind_you_phone" translatable="false">请先绑定手机号</string>
+    <string name="account_wallet" translatable="false">绑定钱包账户</string>
+    <string name="bind_wallet_user" translatable="false">绑定钱包用户</string>
+    <string name="bind_konw_cat" translatable="false">绑定须知</string>
+    <string name="bind_friend_hint" translatable="false">实名审核为AI审核，请务必按照规则提交</string>
+    <string name="fee_withdraw" translatable="false">免费转入到火箭交易所</string>
+    <string name="bind_remaining" translatable="false">以上仅为哥伦布账户余额,暂未转入火箭</string>
+    <string name="play_after_realname" translatable="false">请实名认证通过之后再操作</string>
+    <string name="rule_lottery" translatable="false">规则说明</string>
+    <string name="waiting_result_win" translatable="false">正在获取抽奖结果，请稍候</string>
+    <string name="lottery_start_time" translatable="false">活动开始时间：2019-11-15</string>
+    <string name="startting_lottery" translatable="false">正在启动抽奖设备...</string>
+
+    <string name="later_" translatable="false">以后再说</string>
+    <string name="to_realm" translatable="false">去认证</string>
+    <string name="hint_to_realm" translatable="false">请完成实名认证</string>
+
+    <string name="rocket_content" translatable="false">\t\t\t\t智能经济全球领先的分布式数字资产交易平台（Smart Economy）
+        \n\t\tRocket成立于2019年3月，总部位于塞舌尔共和国，是一家领先的全球性的加密数字资产服务商。
+    \nRocket交易所由华尔街以及日本、英国等资深量化交易团队联合全球知名区块链投资机构、量化基金与社区成立的专注于分布式智能应用场景的数字资产交换平台。
+    \n\t\tRocket为用户提供安全、便捷、智能的分布式数字资产交易服务、聚合全球优质区块链项目，融合全球顶尖的安全技术，致力于打造全球最顶尖的分布式数字资产交易平台；平台提供币币交易、OTC交易、智能聚合交易、交易挖矿、理财管理等数字资产服务</string>
+    <string name="look_my_bind_cloumbu" translatable="false">查看已绑定的哥伦布账户</string>
+    <string name="go_invate_code" translatable="false">去邀请</string>
+    <string name="invate_dialog_title" translatable="false">邀请规则</string>
+    <string name="invate_dialog_content" translatable="false">当天邀请一人以上注册火箭交易所且实名认证的用户，可获得当天一次抽宝箱机会！</string>
+    <string name="can_lottery" translatable="false">您今天已获得一次抽宝箱机会</string>
+    <string name="data_loading" translatable="false">数据更新中</string>
+    <string name="quick_real_name" translatable="false">未实名的用户请尽快完成实名</string>
+    <string name="have_lottery" translatable="false">您今天抽过了哦！</string>
+    <string name="click_send_phone_code" translatable="false">点击发送验证码</string>
+    <string name="usdt" translatable="false">USDT</string>
+    <string name="cat" translatable="false">CAT</string>
+    <string name="cag" translatable="false">CAG</string>
+    <string name="select_coin_type" translatable="false">请选择要提现币种</string>
+    <string name="reflect_ok" translatable="false">提现成功</string>
+    <string name="reject_reason" translatable="false">失败原因：</string>
+    <string name="update_name" translatable="false">去修改</string>
+    <string name="confirm_info" translatable="false">信息确认</string>
+    <string name="name_h" translatable="false">姓名：</string>
+    <string name="id_card_num" translatable="false">证件号码：</string>
+    <string name="no_trade" translatable="false">暂无数据可以展示</string>
+    <string name="cloumbu_password" translatable="false">请输入绑定的钱包支付密码</string>
+    <string name="phone_ver_code_iput" translatable="false">请输入手机验证码</string>
+    <string name="get_phone_ver_code" translatable="false">获取手机验证码</string>
+    <string name="reset_phone_vercode" translatable="false">重新获取验证码</string>
+    <string name="free_with_draw" translatable="false">免费提现到哥伦布钱包</string>
+    <string name="rocket_password" translatable="false">请输入交易所支付密码</string>
+    <string name="coin_num" translatable="false">请输入要提取的数量</string>
+    <string name="with_draw_success" translatable="false">提币成功</string>
+    <string name="select_columnbu_tb" translatable="false">请选择一个哥伦布账号进行免费提币</string>
+    <string name="select_tb_account" translatable="false">请选择免费提币账户</string>
+    <string name="search_error" translatable="false">查询余额失败</string>
+    <string name="free_column_title" translatable="false">哥伦布免费专享通道</string>
+
+    <string name="view_line" translatable="false">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </string>
+    <string name="real_name_error_hint" translatable="false">\t\t\t 注： 在第一次进行实名认证的时候，点击拍照时，一定需要按照上面的操作进行，一定要点击允许，否则会出现照片无法上传错误。</string>
+    <string name="error_real_hint" translatable="false">若由于操作失误，在点击拍照时权限点击失误，请参照下面的操作步骤进行尝试!</string>
+    <string name="real_name_guide" translatable="false">实名拍照错误指引</string>
+    <string name="file_dialog_msg" translatable="false">图片上传失败，现在去查看正确的操作指引</string>
+    <string name="faile_title" translatable="false">上传失败</string>
+    <string name="huawei_hint" translatable="false">1、华为手机处理办法：\n 打开手机  进入 “设置” --》  “应用” --》  “权限管理”  --》  “RocketPro”  打开之后，查看 “存储” 是否已经开打，若未打开，需要在这里点击打开    </string>
+    <string name="xiaomi_hint" translatable="false">1、小米手机处理办法：\n 打开手机 进入 “设置” --》  “应用设置”  --》  “授权管理”  --》  “应用权限管理” --》 “RocketPro” --》 点击打开之后，查看 “读写手机存储” 是否已经打开，若未打开，需要在这里打开   </string>
+    <string name="vivo_hint" translatable="false">1、vivo手机处理办法： \n 打开手机  “设置” --》  “更多设置”  --》  “权限管理”  --》  “RocketPro”  --》  点击打开之后，查看“使用摄像头”是否允许，若未允许，请打开   </string>
+    <string name="last_hint" translatable="false">若使用上诉办法仍然无法解决您的问题，请先卸载应用，在重新安装，重复上诉正确的的操作步骤，若还是无法解决，请将手机品牌和型号上报至官方客服寻求解决办法。谢谢合作！</string>
+    <string name="take_hint" translatable="false">1、点击拍照时，会出现如下提示，需要您按照下图红色的标注进行操作</string>
+    <string name="ok_upload" translatable="false">正确上传照片信息方式：</string>
+    <string name="safe_hint_address" translatable="false">检测到您输入的地址有导致资金丢失的风险</string>
+
+
+    <string name="regist">注册账户</string>
+    <string name="tips">温馨提示</string>
+    <string name="tips1">※请使用有效证件进行实名认证</string>
+    <string name="tips2">※实名认证一旦通过无法更改</string>
+    <string name="tips3">※上传图片支持紧jpg、jpeg、png格式，大小请控制在1M以内</string>
+    <string name="tips4">※上传图片包含证件照正反面和手持证件照</string>
+    <string name="tips5">※中国大陆用户使用身份证实名认证无需提交证照图片</string>
+    <string name="select_country">请选择国家</string>
+    <string name="select_card_type">请选择证件类型</string>
+    <string name="upload_img">点击上传文件</string>
+
+
+    <string name="select_china">+86[中国大陆]</string>
+    <string name="select_other_country">[其他国家及地区]</string>
+    <string name="other">其他</string>
+    <string name="upload_img_hint">请先上传图片</string>
+    <string name="sure">确认</string>
+    <string name="welcome">欢迎使用</string>
+    <string name="get_code_first">请先获取验证码</string>
+
+    <!-- Create gesture activity -->
+    <string name="create_gesture_default">绘制安全锁路径</string>
+    <string name="create_gesture_correct">再次绘制安全锁路径</string>
+    <string name="create_gesture_less_error">至少连接4个点，请重新输入</string>
+    <string name="create_gesture_confirm_error">与上一次绘制不一致，请重新绘制</string>
+    <string name="create_gesture_confirm_correct">设置成功</string>
+    <string name="create_gesture_reset">重新设置</string>
+    <!-- Gesture login activity -->
+    <string name="gesture_forget_gesture">忘记手势密码</string>
+    <string name="gesture_default">请输入手势密码</string>
+    <string name="gesture_error">手势密码输入错误</string>
+    <string name="gesture_correct">输入正确</string>
+    <string name="safety_lock">安全锁</string>
+    <string name="confirm_password">确认密码</string>
+    <string name="regist_success_tips">恭喜您注册成功</string>
+    <string name="set_gesture_first">请先设置手势密码</string>
+</resources>

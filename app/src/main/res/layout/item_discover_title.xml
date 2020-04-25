@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="12dp">
+
+    <View
+        android:id="@+id/divider_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/colorF1F1F1" />
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider_view"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:text="交易所"
+        android:textColor="@color/color292A49"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/all_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/title_text_view"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="@string/all"
+        android:textColor="@color/color8488F5"
+        android:textSize="14sp" />
+</RelativeLayout>

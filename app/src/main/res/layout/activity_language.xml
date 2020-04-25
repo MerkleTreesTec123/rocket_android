@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_color_f9"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_actionbar"/>
+
+    <RelativeLayout
+        android:id="@+id/chinese_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            android:paddingBottom="24dp"
+            android:paddingTop="24dp"
+            android:text="@string/chinese"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:id="@+id/chinese_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_language_checked"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorF1F1F1"/>
+
+    <RelativeLayout
+        android:id="@+id/english_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="0.5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            android:paddingBottom="24dp"
+            android:paddingTop="24dp"
+            android:text="@string/english"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:id="@+id/english_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_language_checked"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

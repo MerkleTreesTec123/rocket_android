@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.bingoogolapple.qrcode.zxing.ZXingView
+        android:id="@+id/zx_scan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:qrcv_animTime="1000"
+        app:qrcv_cornerColor="@color/colorPrimary"
+        app:qrcv_isShowTipBackground="false"
+        app:qrcv_isShowTipTextAsSingleLine="true"
+        app:qrcv_isTipTextBelowRect="true"
+        app:qrcv_maskColor="#a5000000"
+        app:qrcv_qrCodeTipText="@string/exc_wal_scan_tip"
+        app:qrcv_scanLineColor="@color/colorPrimary"
+        app:qrcv_tipTextColor="@android:color/white"
+        app:qrcv_tipTextMargin="24dp"
+        app:qrcv_isOnlyDecodeScanBoxArea="true"
+        app:qrcv_tipTextSize="12sp"
+        app:qrcv_topOffset="140dp" />
+
+    <include layout="@layout/toolbar_actionbar" />
+</RelativeLayout>

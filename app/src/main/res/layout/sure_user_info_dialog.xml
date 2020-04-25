@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_ffffff_radius_4">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm_info"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="20dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorC3C3C3"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/color333333"
+            android:text="@string/name_h" />
+
+        <TextView
+            android:id="@+id/id_card_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/color333333"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/color333333"
+            android:text="@string/id_card_num" />
+
+        <TextView
+            android:id="@+id/id_card_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/color333333"
+            android:text="411526199210291950"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="40dp">
+
+        <Button
+            android:id="@+id/update_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_below="@+id/title_hint"
+            android:textSize="14sp"
+            android:text="@string/update_name"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_72fff9" />
+
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_below="@+id/title_hint"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_72fff9" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

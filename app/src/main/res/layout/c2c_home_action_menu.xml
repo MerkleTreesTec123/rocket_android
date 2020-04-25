@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/c2c_shape_ffffff_radius_4"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/menu_address"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/c2c_ic_menu_address"
+        android:drawablePadding="16dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="22dp"
+        android:paddingTop="14dp"
+        android:paddingRight="22dp"
+        android:paddingBottom="14dp"
+        android:singleLine="true"
+        android:text="@string/c2c_receipt_address"
+        android:textColor="@color/c2cColor292A49"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/menu_wallet"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/c2c_ic_menu_wallet"
+        android:drawablePadding="16dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="22dp"
+        android:paddingTop="14dp"
+        android:paddingRight="22dp"
+        android:paddingBottom="14dp"
+        android:singleLine="true"
+        android:text="@string/c2c_c2c_wallet"
+        android:textColor="@color/c2cColor292A49"
+        android:textSize="14sp" />
+</LinearLayout>

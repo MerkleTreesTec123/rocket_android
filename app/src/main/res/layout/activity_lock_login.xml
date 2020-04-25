@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_actionbar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/safety_lock"
+        android:textSize="18sp"
+        android:textColor="@color/text_color_333"/>
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:textSize="15sp"/>
+
+    <com.star.lockpattern.widget.LockPatternView
+        android:id="@+id/lpv_lock"
+        android:layout_width="270dp"
+        android:layout_height="270dp"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/btn_forget_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/selector_submit_button"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="@string/gesture_forget_gesture"
+        android:textSize="14sp"
+        android:textColor="@color/white"/>
+</LinearLayout>

@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:paddingTop="20dp">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:scaleType="centerInside"
+            android:src="@drawable/rc_back_icon_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="@string/invitation_list"
+            android:textColor="@color/colorToolbarTitle"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+<!--        // 暂未开放-->
+        <TextView
+            android:id="@+id/description_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/invite_ic_invite_description"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/invite_description"
+            android:visibility="visible"
+            android:textColor="@color/color262626"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorF1F1F1" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/shape_343c54_radius_6"
+                android:orientation="horizontal"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_invite_ranking" />
+
+            <com.flyco.tablayout.CommonTabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                app:tl_indicator_color="#AC9377"
+                app:tl_indicator_width="84dp"
+                app:tl_textSelectColor="@color/color262626"
+                app:tl_textUnselectColor="@color/color262626"
+                app:tl_textsize="14sp" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/ranking_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp">
+
+                <ImageView
+                    android:id="@+id/no2_image_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/no1_image_view"
+                    app:layout_constraintEnd_toStartOf="@+id/no1_image_view"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/image_invite_ranking_2" />
+
+                <ImageView
+                    android:id="@+id/no1_image_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toStartOf="@+id/no3_image_view"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@+id/no2_image_view"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/image_invite_ranking_1" />
+
+                <ImageView
+                    android:id="@+id/no3_image_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/no1_image_view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@+id/no1_image_view"
+                    app:srcCompat="@drawable/image_invite_ranking_3" />
+
+                <TextView
+                    android:id="@+id/account_text_view_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="--"
+                    android:textColor="@color/color9298B3"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/no2_image_view"
+                    app:layout_constraintStart_toStartOf="@+id/no2_image_view"
+                    app:layout_constraintTop_toBottomOf="@+id/no2_image_view" />
+
+                <TextView
+                    android:id="@+id/account_text_view_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="--"
+                    android:textColor="@color/color9298B3"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/no1_image_view"
+                    app:layout_constraintStart_toStartOf="@+id/no1_image_view"
+                    app:layout_constraintTop_toBottomOf="@+id/no1_image_view" />
+
+                <TextView
+                    android:id="@+id/account_text_view_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="--"
+                    android:textColor="@color/color9298B3"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/no3_image_view"
+                    app:layout_constraintStart_toStartOf="@+id/no3_image_view"
+                    app:layout_constraintTop_toBottomOf="@+id/no3_image_view" />
+
+                <TextView
+                    android:id="@+id/num_text_view_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="--"
+                    android:textColor="@color/color9298B3"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/no2_image_view"
+                    app:layout_constraintStart_toStartOf="@+id/no2_image_view"
+                    app:layout_constraintTop_toBottomOf="@+id/account_text_view_2" />
+
+                <TextView
+                    android:id="@+id/num_text_view_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="--"
+                    android:textColor="@color/color9298B3"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/no1_image_view"
+                    app:layout_constraintStart_toStartOf="@+id/no1_image_view"
+                    app:layout_constraintTop_toBottomOf="@+id/account_text_view_1" />
+
+                <TextView
+                    android:id="@+id/num_text_view_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="--"
+                    android:textColor="@color/color9298B3"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/no3_image_view"
+                    app:layout_constraintStart_toStartOf="@+id/no3_image_view"
+                    app:layout_constraintTop_toBottomOf="@+id/account_text_view_3" />
+            </android.support.constraint.ConstraintLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/shape_d5d5d5_frame_radius_6"
+                android:paddingLeft="12dp"
+                android:paddingTop="20dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/my_weekly_rank"
+                    android:textColor="@color/color262626"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/my_rank_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="--"
+                    android:textColor="@color/colorAC9377"
+                    android:textSize="12sp"
+                    tools:text="@string/no_ranking_yet" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorF1F1F1" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/invitation_code"
+            android:textColor="@color/color9298B3"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/invite_code_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:text="--"
+            android:textColor="@color/colorAC9377"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView36"
+            app:layout_constraintStart_toEndOf="@+id/textView36"
+            app:layout_constraintTop_toTopOf="@+id/textView36" />
+
+        <TextView
+            android:id="@+id/copy_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:drawableLeft="@drawable/ic_inivte_ranking_copy"
+            android:drawablePadding="2dp"
+            android:includeFontPadding="false"
+            android:paddingLeft="12dp"
+            android:paddingTop="6dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="6dp"
+            android:text="@string/copy"
+            android:textColor="#BEB7AE"
+            android:background="@drawable/shape_fefaf4_corners_4"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/textView36"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView36" />
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="6dp"
+            android:includeFontPadding="false"
+            android:text="@string/my_inviter"
+            android:textColor="@color/color9298B3"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+        <TextView
+            android:id="@+id/parent_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:text="--"
+            android:textColor="@color/color9298B3"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/textView39"
+            app:layout_constraintTop_toTopOf="@+id/textView39" />
+
+        <Button
+            android:id="@+id/record_button"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shape_01aa78_frame_radius_2"
+            android:text="@string/personal_direct_push_record"
+            android:textColor="@color/color01AA78"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/poster_button"
+            app:layout_constraintHorizontal_weight="1.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+        <Button
+            android:id="@+id/poster_button"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/shape_01aa78_radius_2"
+            android:text="@string/exclusive_invitation_poster"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/record_button"
+            app:layout_constraintTop_toTopOf="@id/record_button" />
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

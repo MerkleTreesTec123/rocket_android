@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_layout_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/colorAccent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/assets_title_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/home_selector_home_assets_eye"
+            android:text="@string/exc_wal_conversion_of_total_assets_rmb"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="16dp"
+                android:src="@mipmap/icon_zc"/>
+
+            <TextView
+                android:id="@+id/assets_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:includeFontPadding="false"
+                android:text="--"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:text="0.00" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_recharge"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:textColor="@color/colorAccent"
+                android:background="@drawable/bg_ffffff_5"
+                android:text="@string/exc_wal_recharge"
+                android:layout_marginRight="10dp"/>
+
+            <Button
+                android:id="@+id/btn_withdraw"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:textColor="@color/colorAccent"
+                android:background="@drawable/bg_ffffff_5"
+                android:text="@string/exc_wal_withdraw"
+                android:layout_marginRight="10dp"/>
+
+            <Button
+                android:id="@+id/btn_transfer"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:textColor="@color/colorAccent"
+                android:background="@drawable/bg_ffffff_5"
+                android:text="@string/exc_wal_transfer"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

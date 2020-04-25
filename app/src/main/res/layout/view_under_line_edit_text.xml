@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="@android:color/transparent"
+        android:singleLine="true" />
+
+    <View
+        android:id="@+id/under_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
+</merge>

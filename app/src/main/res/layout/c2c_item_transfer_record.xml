@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:text="--"
+        android:textColor="@color/c2cColor292A49"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView70"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/c2c_quantity"
+        android:textColor="@color/c2cColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/textView71"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_text_view" />
+
+    <TextView
+        android:id="@+id/textView71"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/c2c_status"
+        android:textColor="@color/c2cColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/textView72"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/textView70"
+        app:layout_constraintTop_toTopOf="@+id/textView70" />
+
+    <TextView
+        android:id="@+id/textView72"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/c2c_time"
+        android:textColor="@color/c2cColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/textView71"
+        app:layout_constraintTop_toTopOf="@+id/textView71" />
+
+    <TextView
+        android:id="@+id/num_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="--"
+        android:textColor="@color/c2cColor292A49"
+        android:textSize="14sp"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="@+id/textView70"
+        app:layout_constraintStart_toStartOf="@+id/textView70"
+        app:layout_constraintTop_toBottomOf="@+id/textView70" />
+
+    <TextView
+        android:id="@+id/status_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="--"
+        android:textColor="@color/c2cColor292A49"
+        android:textSize="14sp"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="@+id/textView71"
+        app:layout_constraintStart_toStartOf="@+id/textView71"
+        app:layout_constraintTop_toTopOf="@+id/num_text_view" />
+
+    <TextView
+        android:id="@+id/time_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="--"
+        android:textColor="@color/c2cColor292A49"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/status_text_view"
+        app:layout_constraintEnd_toEndOf="@+id/textView72"
+        app:layout_constraintStart_toStartOf="@+id/textView72" />
+
+    <View
+        android:id="@+id/divider28"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/c2cColorF1F1F1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num_text_view" />
+</android.support.constraint.ConstraintLayout>

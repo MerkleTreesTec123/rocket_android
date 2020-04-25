@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="35dp"
+        android:background="@drawable/shape_ffffff_radius_4">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/free_with_draw"
+            android:textColor="@color/color3B3E43"
+            android:textSize="16sp"
+            android:layout_marginTop="22dp"/>
+
+        <LinearLayout
+            android:id="@+id/free_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/title">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/rocket_tranlogo"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/icon_rocket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="---"
+                    android:textSize="12sp"
+                    android:drawablePadding="8dp"
+                    android:layout_centerHorizontal="true" />
+
+            </LinearLayout>
+
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/check"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="16dp"
+                android:layout_marginLeft="33dp"
+                android:layout_marginRight="33dp"/>
+
+            <TextView
+                android:id="@+id/icon_columbu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                android:text="---"
+                android:drawableTop="@mipmap/columbu_logo"
+                android:layout_centerHorizontal="true" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/lin_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eeeeee"
+            android:layout_below="@+id/free_logo"
+            android:layout_marginTop="21dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginRight="27dp"/>
+
+        <TextView
+            android:id="@+id/usdt_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="火箭USDT余额"
+            android:textColor="#666666"
+            android:textSize="12sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="26dp"
+            android:layout_below="@+id/lin_view"/>
+
+        <TextView
+            android:id="@+id/usdt_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0000个"
+            android:textColor="@color/colorE08E2D"
+            android:textSize="20sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:layout_toRightOf="@+id/usdt_y"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/lin_view"/>
+
+        <TextView
+            android:id="@+id/cat_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="火箭CAT余额"
+            android:textColor="#666666"
+            android:textSize="12sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="18dp"
+            android:layout_below="@+id/usdt_y"/>
+
+        <TextView
+            android:id="@+id/cat_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0000个"
+            android:textColor="@color/colorE08E2D"
+            android:textSize="20sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_toRightOf="@+id/cat_y"
+            android:gravity="end"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="7dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/usdt_num"/>
+
+        <Button
+            android:id="@+id/transfer_btn"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_below="@+id/cat_num"
+            android:layout_marginTop="57dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:textSize="14sp"
+            android:text="@string/free_with_draw"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_e08e2d" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_close"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:src="@drawable/close_x"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

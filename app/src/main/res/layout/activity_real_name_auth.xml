@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_actionbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:background="@color/colorF1F1F1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/real_name_authentication"
+                android:textSize="22sp"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorAccent"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/colorAccent"
+                android:gravity="center_vertical"
+                android:text="@string/regist"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:drawableLeft="@mipmap/icon_regist"
+                android:drawablePadding="5dp"
+                android:paddingLeft="10dp"/>
+
+            <!--选择国家-->
+            <TextView
+                android:id="@+id/tv_country"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@drawable/bg_707070_ffffff"
+                android:gravity="center_vertical"
+                android:text="@string/select_country"
+                android:textColor="@color/text_color_999"
+                android:textSize="14sp"/>
+
+            <!--选择证件类型-->
+            <TextView
+                android:id="@+id/tv_idcard_type"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@drawable/bg_707070_ffffff"
+                android:gravity="center_vertical"
+                android:text="@string/select_card_type"
+                android:textColor="@color/text_color_999"
+                android:textSize="14sp"/>
+
+            <!--姓名-->
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@drawable/bg_707070_ffffff"
+                android:hint="@string/input_real_name_hint"
+                android:maxLines="50"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/colorB7B7C4"
+                android:textSize="14sp" />
+
+            <!--证件号-->
+            <EditText
+                android:id="@+id/et_id_card"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@drawable/bg_707070_ffffff"
+                android:digits="@string/edit_input_sfznum"
+                android:hint="@string/input_card_number_hint"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/colorB7B7C4"
+                android:textSize="14sp" />
+
+            <!--上传图片[其他国家]-->
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/ctl_other_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_707070_ffffff"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/front_image_view"
+                    android:layout_width="0dp"
+                    android:layout_height="104dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/shape_e5e5e5_radius_4"
+                    android:padding="0.5dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/real_name_image_front_id_card"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/back_image_view"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/back_image_view"
+                    android:layout_width="0dp"
+                    android:layout_height="104dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/shape_e5e5e5_radius_4"
+                    android:padding="0.5dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/real_name_image_back_id_card"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toRightOf="@id/front_image_view"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/front_image_view" />
+
+                <ImageView
+                    android:id="@+id/case_image_view"
+                    android:layout_width="0dp"
+                    android:layout_height="104dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="14dp"
+                    android:src="@drawable/real_name_image_id_card_case"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/handle_image_view"
+                    app:layout_constraintTop_toBottomOf="@id/front_image_view" />
+
+                <ImageView
+                    android:id="@+id/handle_image_view"
+                    android:layout_width="0dp"
+                    android:layout_height="104dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/shape_e5e5e5_radius_4"
+                    android:padding="0.5dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/real_name_image_handle_id_card"
+                    app:layout_constraintBottom_toBottomOf="@id/case_image_view"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toRightOf="@id/case_image_view"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/case_image_view" />
+            </android.support.constraint.ConstraintLayout>
+
+            <!--身份证识别[中国]-->
+            <LinearLayout
+                android:id="@+id/ll_china_shibie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_707070_ffffff"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/ll_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <ImageView
+                        android:id="@+id/iv_front"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/idcard_tx"/>
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="77dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/colorCCCCCC"/>
+
+                    <ImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/idcard_gh"/>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/iv_handle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="45dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="16dp"
+                    android:scaleType="fitXY"
+                    android:layout_below="@+id/ll_card"
+                    android:src="@mipmap/idcard_sc"/>
+            </LinearLayout>
+
+            <!--提交-->
+            <TextView
+                android:id="@+id/tv_submit"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:background="@drawable/selector_submit_button"
+                android:text="@string/submit"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <!--温馨提示-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/tips"
+                android:textSize="15sp"
+                android:textColor="@color/color333333"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/tips1"
+                android:textSize="13sp"
+                android:textColor="@color/text_color_999"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/tips2"
+                android:textSize="13sp"
+                android:textColor="@color/text_color_999"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/tips3"
+                android:textSize="13sp"
+                android:textColor="@color/text_color_999"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/tips4"
+                android:textSize="13sp"
+                android:textColor="@color/text_color_999"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/tips5"
+                android:textSize="13sp"
+                android:textColor="@color/text_color_999"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

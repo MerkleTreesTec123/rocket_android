@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/exc_wal_image_wallet_header"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/assets_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/home_selector_home_assets_eye"
+                android:drawablePadding="10dp"
+                android:includeFontPadding="false"
+                android:text="@string/exc_wal_conversion_of_total_assets_rmb"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/assets_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="14dp"
+                android:includeFontPadding="false"
+                android:text="--"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:text="0.00" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

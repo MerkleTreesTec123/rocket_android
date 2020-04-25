@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_actionbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorF1F1F1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="18dp"
+        android:background="@drawable/bg_f1f1f1_4">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@mipmap/hint_normal"
+            android:layout_marginTop="18dp"/>
+
+        <TextView
+            android:id="@+id/title_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="为确保您的身份认证审核效率，请您拿出本人有效身份证拍摄，拍摄时请确保证件边框完整，字迹清楚，证件表面无遮挡，照片清晰无遮挡，感谢您的配合！"
+            android:textSize="10dp"
+            android:textColor="@color/color333333"
+            android:layout_toRightOf="@+id/icon"
+            android:layout_marginLeft="4dp"
+            android:lineSpacingExtra="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="@color/color01AA78"
+            android:textSize="8dp"
+            android:text="点击下方扫描身份证正面按钮"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_below="@+id/title_hint"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <RelativeLayout
+                android:id="@+id/ll_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp">
+
+                <ImageView
+                    android:id="@+id/front_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/idcard_tx"/>
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="77dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/colorCCCCCC"/>
+
+                <ImageView
+                    android:id="@+id/back_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/idcard_gh"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/handle_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_marginTop="28dp"
+                android:scaleType="fitXY"
+                android:layout_below="@+id/ll_card"
+                android:src="@mipmap/idcard_sc"/>
+
+            <EditText
+                android:id="@+id/name_edit_text"
+                android:layout_width="261dp"
+                android:layout_height="27dp"
+                android:background="@drawable/bg_707070_ffffff"
+                android:layout_marginTop="26dp"
+                android:hint="@string/name"
+                android:textSize="12sp"
+                android:paddingLeft="13dp"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/handle_image_view"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/color333333"/>
+
+            <TextView
+                android:id="@+id/sfz_edit_text"
+                android:layout_width="261dp"
+                android:layout_height="27dp"
+                android:background="@drawable/bg_707070_ffffff"
+                android:layout_marginTop="10dp"
+                android:hint="@string/id_card"
+                android:textSize="12sp"
+                android:paddingLeft="13dp"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/name_edit_text"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/color333333"/>
+
+            <TextView
+                android:id="@+id/ic_card_edit_text"
+                android:layout_width="261dp"
+                android:layout_height="27dp"
+                android:background="@drawable/bg_707070_ffffff"
+                android:layout_marginTop="10dp"
+                android:hint="@string/idcard_num"
+                android:textSize="12sp"
+                android:paddingLeft="13dp"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/sfz_edit_text"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/color333333"/>
+
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="261dp"
+                android:layout_height="33dp"
+                android:textSize="12sp"
+                style="@style/SubmitButton"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="30dp"
+                android:enabled="false"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/ic_card_edit_text"
+                android:text="@string/submit" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

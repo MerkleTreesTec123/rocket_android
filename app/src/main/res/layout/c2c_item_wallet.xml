@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="16dp"
+    android:background="@drawable/c2c_shape_f1f1f1_frame_radius_4">
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="20dp"
+        tools:text="USDT"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/c2cColor000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/more_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:text="@string/c2c_view_details"
+        android:textColor="@color/c2cColorB7B7C4"
+        android:textSize="12sp"
+        android:drawablePadding="6dp"
+        android:drawableRight="@drawable/c2c_ic_double_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/title_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_text_view" />
+
+    <TextView
+        android:id="@+id/textView67"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/c2c_available"
+        android:textColor="@color/c2cColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/textView68"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_text_view" />
+
+    <TextView
+        android:id="@+id/textView68"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:text="@string/c2c_freeze"
+        android:textColor="@color/c2cColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/textView67"
+        app:layout_constraintTop_toTopOf="@+id/textView67" />
+
+    <TextView
+        android:id="@+id/balance_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="20dp"
+        android:text="--"
+        android:textColor="@color/c2cColor292A49"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView67"
+        app:layout_constraintStart_toStartOf="@+id/textView67"
+        app:layout_constraintTop_toBottomOf="@+id/textView67" />
+
+    <TextView
+        android:id="@+id/freeze_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="20dp"
+        android:text="--"
+        android:textColor="@color/c2cColor292A49"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView68"
+        app:layout_constraintStart_toStartOf="@+id/textView68"
+        app:layout_constraintTop_toBottomOf="@+id/textView68" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.mcxtzhang.swipemenulib.SwipeMenuLayout
+        android:id="@+id/swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:ios="true"
+        app:leftSwipe="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/c2cColor292A49"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="出售 USDT" />
+
+            <TextView
+                android:id="@+id/status_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:textColor="@color/c2cColor8488F5"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/title_text_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/title_text_view"
+                tools:text="已付款" />
+
+            <TextView
+                android:id="@+id/price_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="18dp"
+                android:textColor="@color/c2cColorB7B7C4"
+                android:textSize="14sp"
+                android:singleLine="true"
+                app:layout_constraintEnd_toStartOf="@+id/num_text_view"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_text_view"
+                tools:text="@string/c2c_price_cny" />
+
+            <TextView
+                android:id="@+id/num_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:textColor="@color/c2cColorB7B7C4"
+                android:textSize="14sp"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@id/price_text_view"
+                app:layout_constraintTop_toTopOf="@+id/price_text_view"
+                tools:text="@string/c2c_quantity" />
+
+            <TextView
+                android:id="@+id/amount_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:textColor="@color/c2cColorB7B7C4"
+                android:textSize="14sp"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="@+id/price_text_view"
+                app:layout_constraintStart_toStartOf="@+id/price_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/price_text_view"
+                tools:text="@string/c2c_amount" />
+
+            <TextView
+                android:id="@+id/time_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color656885"
+                android:textSize="14sp"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="@+id/num_text_view"
+                app:layout_constraintStart_toStartOf="@+id/num_text_view"
+                app:layout_constraintTop_toTopOf="@+id/amount_text_view"
+                tools:text="07/28 12:23" />
+
+            <TextView
+                android:id="@+id/left_action_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/c2c_shape_eaeaf6_radius_2"
+                android:paddingLeft="12dp"
+                android:paddingTop="6dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="6dp"
+                android:textColor="@color/c2cColor292A49"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/right_action_button"
+                app:layout_constraintTop_toBottomOf="@id/time_text_view"
+                app:layout_goneMarginEnd="16dp"
+                app:layout_goneMarginRight="16dp"
+                tools:text="取消订单" />
+
+            <TextView
+                android:id="@+id/right_action_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/c2c_shape_8488f5_radius_2"
+                android:paddingLeft="12dp"
+                android:paddingTop="6dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="6dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/time_text_view"
+                tools:text="我已付款" />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/c2cColorF1F1F1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/left_action_button"
+                app:layout_goneMarginTop="20dp" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/delete_button"
+            android:layout_width="106dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/c2c_shape_eb6678_ff4059"
+            android:scaleType="centerInside"
+            android:src="@drawable/c2c_ic_order_delete" />
+    </com.mcxtzhang.swipemenulib.SwipeMenuLayout>
+</LinearLayout>

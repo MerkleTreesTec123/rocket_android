@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/total_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/exc_wal_image_detail_header_bg_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:text="--"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="USDT" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:alpha="0.6"
+            android:text="@string/exc_wal_available"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/textView22"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="@+id/title_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/title_text_view" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:alpha="0.6"
+            android:text="@string/exc_wal_freeze"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/textView11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/available_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="26dp"
+            android:text="--"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/released_text_view_"
+            app:layout_constraintEnd_toEndOf="@+id/textView11"
+            app:layout_constraintStart_toStartOf="@+id/textView11"
+            app:layout_constraintTop_toBottomOf="@+id/textView11"
+            app:layout_goneMarginBottom="30dp"
+            tools:text="0.0000" />
+
+        <TextView
+            android:id="@+id/freeze_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="--"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView22"
+            app:layout_constraintStart_toStartOf="@+id/textView22"
+            app:layout_constraintTop_toBottomOf="@+id/textView22"
+            app:layout_goneMarginBottom="30dp"
+            tools:text="0.0000" />
+
+        <TextView
+            android:id="@+id/released_text_view_"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:alpha="0.6"
+            android:singleLine="true"
+            android:text="@string/exc_wal_released"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/released_text_view"
+            app:layout_constraintEnd_toEndOf="@id/textView11"
+            app:layout_constraintStart_toStartOf="@id/textView11"
+            app:layout_goneMarginBottom="30dp" />
+
+        <TextView
+            android:id="@+id/released_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:singleLine="true"
+            android:text="--"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/textView11"
+            app:layout_constraintStart_toStartOf="@id/textView11"
+            app:layout_goneMarginBottom="30dp"
+            tools:text="0.0000" />
+
+        <TextView
+            android:id="@+id/unreleased_text_view_"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:alpha="0.6"
+            android:singleLine="true"
+            android:text="@string/exc_wal_unreleased"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/unreleased_text_view"
+            app:layout_constraintEnd_toEndOf="@id/textView22"
+            app:layout_constraintStart_toStartOf="@id/textView22"
+            app:layout_goneMarginBottom="30dp" />
+
+        <TextView
+            android:id="@+id/unreleased_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:singleLine="true"
+            android:text="--"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/textView22"
+            app:layout_constraintStart_toStartOf="@id/textView22"
+            app:layout_goneMarginBottom="30dp"
+            tools:text="0.0000" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/recharge_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:drawableTop="@drawable/exc_wal_ic_recharge_"
+        android:drawablePadding="4dp"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="@string/exc_wal_recharge"
+        android:textColor="@color/excColor292A49"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/withdraw_button"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total_container" />
+
+    <TextView
+        android:id="@+id/withdraw_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:drawableTop="@drawable/exc_wal_ic_withdraw_"
+        android:drawablePadding="4dp"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="@string/exc_wal_withdraw"
+        android:textColor="@color/excColor292A49"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/recharge_button"
+        app:layout_constraintEnd_toStartOf="@id/transfer_button"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/recharge_button" />
+
+    <TextView
+        android:id="@+id/transfer_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:drawableTop="@drawable/exc_wal_ic_transfer_"
+        android:drawablePadding="4dp"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="@string/exc_wal_transfer"
+        android:textColor="@color/excColor292A49"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/recharge_button"
+        app:layout_constraintEnd_toStartOf="@+id/exchange_button"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/withdraw_button" />
+
+    <TextView
+        android:id="@+id/exchange_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:drawableTop="@drawable/exc_wal_ic_exchange_"
+        android:drawablePadding="4dp"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="@string/c2c_"
+        android:textColor="@color/excColor292A49"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/recharge_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/transfer_button" />
+
+    <View
+        android:id="@+id/divider11"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:background="@color/excWalColorF6F6FB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recharge_button" />
+
+    <com.muye.rocket.widget.CustomTabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        app:ctl_indicator_width="0dp"
+        app:ctl_tab_padding="16dp"
+        app:ctl_tab_space_equal="false"
+        app:ctl_textSelectColor="@color/excWalColor292A49"
+        app:ctl_textUnselectColor="@color/excWalColorB7B7C4"
+        app:ctl_textsize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider11" />
+
+    <View
+        android:id="@+id/divider12"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="@color/excWalColorF1F1F1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout" />
+</android.support.constraint.ConstraintLayout>

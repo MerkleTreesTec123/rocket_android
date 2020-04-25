@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color131e30">
+
+    <TextView
+        android:id="@+id/price_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="--"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="7952.66"/>
+
+    <TextView
+        android:id="@+id/gain_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="--%"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price_text_view"
+        tools:text="+2.42%"/>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="120dp"
+        android:layout_marginRight="120dp"
+        android:text="@string/exc_highest"
+        android:textColor="@color/excColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/gain_text_view"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/highest_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="8dp"
+        android:gravity="right"
+        android:text="--"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/gain_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        tools:text="8049.0000"/>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/exc_24h_vol"
+        android:textColor="@color/excColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gain_text_view"/>
+
+    <TextView
+        android:id="@+id/num_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:text="--"
+        android:textColor="#768ba6"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+        app:layout_constraintStart_toEndOf="@+id/textView8"/>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exc_lowest"
+        android:textColor="@color/excColorB7B7C4"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="@+id/textView6"/>
+
+    <TextView
+        android:id="@+id/lowest_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="8dp"
+        android:gravity="right"
+        android:text="--"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        tools:text="555.00"/>
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:tl_indicator_color="@color/excColor8488F5"
+        app:tl_indicator_width="24dp"
+        app:tl_textSelectColor="@color/excColor8488F5"
+        app:tl_textUnselectColor="#7488a1"
+        app:tl_textsize="12sp"/>
+
+    <ImageView
+        android:layout_width="172dp"
+        android:layout_height="27dp"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_130"
+        android:src="@mipmap/kline_logo"
+        app:layout_constraintBottom_toBottomOf="@+id/k_chart_view"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <com.github.tifezh.kchartlib.chart.KChartView
+        android:id="@+id/k_chart_view"
+        android:layout_width="match_parent"
+        android:layout_height="382dp"
+        app:kc_fall_color="#00DA97"
+        app:kc_grid_line_width="0.5dp"
+        app:kc_grid_line_color="@color/color243040"
+        app:kc_background_color="@color/color0e1824"
+        app:kc_line_width="0.5dp"
+        app:kc_rise_color="#F95D04"
+        app:kc_selector_background_color="#1e000000"
+        app:kc_tab_background_color="@color/white"
+        app:kc_tab_indicator_color="@color/excColor8488F5"
+        app:kc_tab_text_color="@color/excColor8488F5"
+        app:kc_text_size="8sp"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:background="#122337"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/k_chart_view"/>
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/tab_layout_"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        app:tl_indicator_color="@color/excColor8488F5"
+        app:tl_indicator_width="34dp"
+        app:tl_textSelectColor="@color/excColor8488F5"
+        app:tl_textUnselectColor="@color/excColorB7B7C4"
+        app:tl_textsize="14sp"/>
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/color071724"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_layout_" />
+
+    <LinearLayout
+        android:id="@+id/title_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout_">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="2"
+            android:text="@string/excTime"
+            android:textColor="@color/excColorB7B7C4"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="@string/exc_direction"
+            android:textColor="@color/excColorB7B7C4"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/price_hint_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="2"
+            android:gravity="right"
+            android:text="@string/exc_price_"
+            android:textColor="@color/excColorB7B7C4"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/vol_hint_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="2"
+            android:gravity="right"
+            android:text="@string/exc_quantity_"
+            android:textColor="@color/excColorB7B7C4"
+            android:textSize="10sp"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
